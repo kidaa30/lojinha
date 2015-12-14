@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="djclassifiedspayment"  method="upgrade">
+	<name>DJ Classifieds Paypal payment</name>
+	<author>DJ-Extensions.com</author>
+	<creationDate>September 2011</creationDate>
+	<copyright>Copyright (C) 2010 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>contact@design-jooma.eu</authorEmail>
+	<authorUrl>http://design-joomla.eu</authorUrl>
+	<version>3.4.1</version>
+	<description>DJ Classifieds Paypal payment</description>
+	<files>
+		<filename plugin="djcfPaypal">djcfPaypal.php</filename>
+		<folder>djcfPaypal</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_djclassifiedspayment_djcfPaypal.ini</language>
+		<language tag="pl-PL">pl-PL.plg_djclassifiedspayment_djcfPaypal.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="email_id" type="text" size="50" default="" label="Business email id" description="Paypal Business email id"/>
+		        <field name="test" type="radio" default="1" label="Test Mode" description="Select No for Production">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="currency_code" type="text" size="50" default="USD" label="Currency code" description="Currency Code Eg.=USD"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

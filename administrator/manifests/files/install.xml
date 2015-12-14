@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file"	version="2.5"	client="site"	method="upgrade"	>
+    <name>[pt-BR] Portugalian(Brasil) language pack for DJ-Classifieds</name>
+	<creationDate>January 2014</creationDate>
+    <author>Blue Constant Media LTD</author>
+    <copyright>2010 Blue Constant Media LTD</copyright>
+    <license>http://www.gnu.org/licenses GNU/GPL</license>
+    <authorUrl>dj-extensions.com</authorUrl>
+    <version>3.1.4</version>
+    <description>Portugalian(Brasil) language pack for DJ-Classifieds</description>
+	<fileset>
+		<files folder="administrator" target="administrator/language/pt-BR">
+			<filename>pt-BR.com_djclassifieds.ini</filename>
+			<filename>pt-BR.com_djclassifieds.sys.ini</filename>
+			<filename>pt-BR.plg_djclassifiedspayment_djcfAuthorizeNET.ini</filename>
+			<filename>pt-BR.plg_djclassifiedspayment_djcfBankTransfer.ini</filename>
+			<filename>pt-BR.plg_djclassifiedspayment_djcfPaypal.ini</filename>
+			<filename>pt-BR.plg_djclassifiedspayment_djcfPayU.ini</filename>
+			<filename>pt-BR.plg_djclassifiedspayment_djcfPrzelewy24.ini</filename>
+		</files>
+		<files folder="site" target="language/pt-BR">
+			<filename>pt-BR.com_djclassifieds.ini</filename>
+			<filename>pt-BR.mod_djclassifieds_items.ini</filename>
+			<filename>pt-BR.mod_djclassifieds_maps.ini</filename>
+			<filename>pt-BR.mod_djclassifieds_menu.ini</filename>
+			<filename>pt-BR.mod_djclassifieds_search.ini</filename>
+			<filename>pt-BR.mod_djclassifieds_user_menu.ini</filename>
+			<filename>pt-BR.mod_djclassifieds_user_points.ini</filename>
+		</files>
+	</fileset>
+</extension>

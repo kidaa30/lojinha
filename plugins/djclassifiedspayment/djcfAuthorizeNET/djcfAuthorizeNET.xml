@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="djclassifiedspayment" method="upgrade">
+	<name>DJ Classifieds Authorize.net payment</name>
+	<author>DJ-Extensions.com</author>
+	<creationDate>September 2011</creationDate>
+	<copyright>Copyright (C) 2010 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>contact@design-jooma.eu</authorEmail>
+	<authorUrl>http://design-joomla.eu</authorUrl>
+	<version>3.4</version>
+	<description>DJ Classifieds Authorize.net payment</description>
+	<files>
+		<filename plugin="djcfAuthorizeNET">djcfAuthorizeNET.php</filename>
+		<folder>djcfAuthorizeNET</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_djclassifiedspayment_djcfAuthorizeNET.ini</language>
+		<language tag="pl-PL">pl-PL.plg_djclassifiedspayment_djcfAuthorizeNET.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="login_id" type="text" default="" label="API Login ID" description="API Login ID"/>
+				<field name="transaction_key" type="text" default="" label="Transaction Key" description="Transaction Key"/>
+				<field name="account_type" type="radio" default="test" label="Type of this Account" description="Test Account [sandbox] OR Real Account">
+				  <option value="test">Test</option>
+				  <option value="secure">Real</option>
+				</field>
+				<field name="currency_code" type="text" size="10"  default="USD" label="Currency Symbol" description="Currency Symbol"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

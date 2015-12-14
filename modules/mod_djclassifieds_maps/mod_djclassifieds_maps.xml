@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0"  method="upgrade">
+	<name>DJClassifieds Maps</name>
+	<creationDate>January 2013</creationDate>
+	<author>DJ-Extensions.com</author>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<copyright>dj-extensions.com</copyright>
+	<license>GPL</license>
+    <version>3.4</version>
+	<description>DJ Classifieds Google Maps module</description>
+	<files>
+		<filename module="mod_djclassifieds_maps">mod_djclassifieds_maps.php</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="layout" type="list" default="cluster" label="MOD_DJCLASSIFIEDS_MAPS_CLUSTERRING" description="MOD_DJCLASSIFIEDS_MAPS_CLUSTERRING_DESC">
+					<option value="default">JNO</option>
+					<option value="cluster">JYES</option>
+				</field>
+				<field name="map_width" type="text" default="500px" label="MOD_DJCLASSIFIEDS_MAPS_MAP_WIDTH" description="MOD_DJCLASSIFIEDS_MAPS_MAP_WIDTH_DESC" />
+				<field name="map_height" type="text" default="400px" label="MOD_DJCLASSIFIEDS_MAPS_MAP_HEIGHT" description="MOD_DJCLASSIFIEDS_MAPS_MAP_HEIGHT_DESC" />
+				<field name="items_limit" type="text" default="20" label="MOD_DJCLASSIFIEDS_MAPS_ITEMS_LIMIT" description="MOD_DJCLASSIFIEDS_MAPS_ITEMS_LIMIT_DESC" />
+				<field name="start_geoloc" type="list" default="0" label="MOD_DJCLASSIFIEDS_DEFAULT_ADDRESS_GEOLOCALIZATION" description="MOD_DJCLASSIFIEDS_DEFAULT_ADDRESS_GEOLOCALIZATION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="start_address" type="text" default="England, London" label="MOD_DJCLASSIFIEDS_MAPS_DEFAULT_ADDRESS" description="MOD_DJCLASSIFIEDS_MAPS_ITEMS_DEFAULT_ADDRESS_DESC" />
+				<field name="gm_type" type="list" default="ROADMAP" label="MOD_DJCLASSIFIEDS_MAPS_MAP_TYPE" description="MOD_DJCLASSIFIEDS_MAPS_TYPE_DESC"  menu="hide">
+					<option value="ROADMAP">MOD_DJCLASSIFIEDS_MAPS_ROADMAP</option>
+					<option value="SATELLITE">MOD_DJCLASSIFIEDS_MAPS_SATELLITE</option>
+					<option value="HYBRID">MOD_DJCLASSIFIEDS_MAPS_HYBRID</option>
+					<option value="TERRAIN">MOD_DJCLASSIFIEDS_MAPS_TERRAIN</option>
+				</field>
+				<field name="start_zoom" type="text" default="10" label="MOD_DJCLASSIFIEDS_MAPS_START_ZOOM" description="MOD_DJCLASSIFIEDS_MAPS_START_ZOOM" />				
+				<field name="items_ord" type="radio" default="0" label="MOD_DJCLASSIFIEDS_MAPS_ORDERING">
+					<option value="0">MOD_DJCLASSIFIEDS_MAPS_MOST_RECENT</option>
+					<option value="1">MOD_DJCLASSIFIEDS_MAPS_POPULAR</option>
+					<option value="2">MOD_DJCLASSIFIEDS_MAPS_RANDOM</option>
+				</field>
+				<field name="follow_category" type="list" default="1" label="MOD_DJCLASSIFIEDS_FOLLOW_CATEGORY" description="MOD_DJCLASSIFIEDS_FOLLOW_CATEGORY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="follow_search" type="list" default="1" label="MOD_DJCLASSIFIEDS_FOLLOW_SEARCH_RESULTS" description="MOD_DJCLASSIFIEDS_FOLLOW_SEARCH_RESULTS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="follow_advert" type="list" default="1" label="MOD_DJCLASSIFIEDS_FOLLOW_ADVERT" description="MOD_DJCLASSIFIEDS_FOLLOW_ADVERT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="enable_zoom" type="list" default="true" label="MOD_DJCLASSIFIEDS_ZOOM_CONTROL" description="MOD_DJCLASSIFIEDS_ZOOM_CONTROL_DESC">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field name="enable_scrolling" type="list" default="true" label="MOD_DJCLASSIFIEDS_MOUSE_SCROLLING" description="MOD_DJCLASSIFIEDS_MOUSE_SCROLLING_DESC">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field name="enable_places_search" type="list" default="0" label="MOD_DJCLASSIFIEDS_MAPS_PLACES_SEARCH" description="MOD_DJCLASSIFIEDS_MAPS_PLACES_SEARCH_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>		
+				<field name="api_country" type="text" default="" label="MOD_DJCLASSIFIEDS_MAPS_ADDRESS_COUNTRY" description="MOD_DJCLASSIFIEDS_MAPS_ADDRESS_COUNTRY_DESC" />		
+			</fieldset>
+		</fields>
+	</config>
+</extension>

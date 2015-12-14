@@ -1,0 +1,63 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+// Body reset
+// -------------------------
+
+body {
+  margin: 0;
+  font-family: @JMbaseFontFamily; //JM
+  font-size: @JMbaseFontSize; //JM
+  line-height: @JMbaseLineHeight; //JM edited
+  color: @JMbaseFontColor; //JM
+  background-color: @JMfooterBackground; //JM edited
+}
+
+
+// Links
+// -------------------------
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  .transition(all 0.2s ease-in);  
+  &:hover,
+  &:focus {
+    color: @JMstyleLink;
+  }
+  &:focus {
+  	outline: 0;
+  }
+}
+
+//JM added
+.jm-bottom a:hover {
+  color: @JMstyleInnerLink;
+}
+
+.jm-module.white-ms a:hover {
+  color: @JMstyleLink;
+}
+
+// Images
+// -------------------------
+
+// Rounded corners
+.img-rounded {
+  .border-radius(6px);
+}
+
+// Add polaroid-esque trim
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);
+  .box-shadow(0 1px 3px rgba(0,0,0,.1));
+}
+
+// Perfect circle
+.img-circle {
+  .border-radius(500px); // crank the border-radius so it works with most reasonably sized images
+}

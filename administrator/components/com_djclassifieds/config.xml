@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<config addfieldpath="/administrator/components/com_djclassifieds/models/fields" >
+		<fieldset name="global" label="COM_DJCLASSIFIEDS_CONFIG_GLOBAL_SETTINGS">
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_GENERAL_LABEL" />
+				<field name="durations_list" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_DURATIONS_LIST"  description="COM_DJCLASSIFIEDS_CONFIG_DURATIONS_LIST_DESC"  menu="hide" >
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="exp_days" type="text" label="COM_DJCLASSIFIEDS_CONFIG_EXPDAYS" description="COM_DJCLASSIFIEDS_CONFIG_EXPDAYS_DESC" size="5" default="7"  menu="hide" />
+				<field name="autopublish" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_AUTOPUBLISH" description="COM_DJCLASSIFIEDS_CONFIG_AUTOPUBLISH_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>						
+				<field name="user_type" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_ACCESSLEVEL" description="COM_DJCLASSIFIEDS_CONFIG_ACCESSLEVEL_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_REGISTERED</option>
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_ALL_USERS</option>
+				</field>
+				<field name="guest_can_edit" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_GUESTS_CAN_EDIT" description="COM_DJCLASSIFIEDS_CONFIG_GUESTS_CAN_EDIT_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="guest_can_delete" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_GUESTS_CAN_DELETE" description="COM_DJCLASSIFIEDS_CONFIG_GUESTS_CAN_DELETE_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="adverts_limit" type="text" label="COM_DJCLASSIFIEDS_CONFIG_ADVERTS_LIMIT_FOR_USER" description="COM_DJCLASSIFIEDS_CONFIG_ADVERTS_LIMIT_FOR_USER_DESC" size="5" default="0"  menu="hide" />	
+				<field name="renew_days" type="text" label="COM_DJCLASSIFIEDS_CONFIG_RENEWDAYS" description="COM_DJCLASSIFIEDS_CONFIG_RENEWDAYS_DESC" size="5" default="3"  menu="hide" />
+				<field name="promotion" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_PROMOTION" description="COM_DJCLASSIFIEDS_CONFIG_PROMOTION_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="promotion_move_top" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_PROMOTION_MOVE_TO_TOP" description="COM_DJCLASSIFIEDS_CONFIG_PROMOTION_MOVE_TO_TOP_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="promotion_move_top_price" type="text" label="COM_DJCLASSIFIEDS_CONFIG_PROMOTION_MOVE_TO_TOP_PRICE" description="COM_DJCLASSIFIEDS_CONFIG_PROMOTION_MOVE_TO_TOP_PRICE_DESC" size="5" default="0"  menu="hide" />
+				<field name="promotion_move_top_points" type="text" label="COM_DJCLASSIFIEDS_CONFIG_PROMOTION_MOVE_TO_TOP_POINTS" description="COM_DJCLASSIFIEDS_CONFIG_PROMOTION_MOVE_TO_TOP_POINTS_DESC" size="5" default="0"  menu="hide" />
+				<field name="search_type_phrase" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_TYPE_OF_SEARCHING_PHRASES" description="COM_DJCLASSIFIEDS_CONFIG_TYPE_OF_SEARCHING_PHRASES_DESC"  menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_EXACT_PHRASE</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_ALL_WORDS_IN_ANY_ORDER</option>
+				</field>				
+				<field name="vat_value" type="list" default="-1" label="COM_DJCLASSIFIEDS_CONFIG_VAT_INFORMATION" description="COM_DJCLASSIFIEDS_CONFIG_VAT_INFORMATION_DESC" menu="hide">
+					<option value="-1">COM_DJCLASSIFIEDS_CONFIG_DISABLED</option>
+					<option value="0">0%</option>
+					<option value="1">1%</option>
+					<option value="2">2%</option>
+					<option value="3">3%</option>
+					<option value="4">4%</option>
+					<option value="5">5%</option>
+					<option value="6">6%</option>
+					<option value="7">7%</option>
+					<option value="8">8%</option>
+					<option value="9">9%</option>
+					<option value="10">10%</option>
+					<option value="11">11%</option>
+					<option value="12">12%</option>
+					<option value="13">13%</option>
+					<option value="14">14%</option>
+					<option value="15">15%</option>
+					<option value="16">16%</option>
+					<option value="17">17%</option>
+					<option value="18">18%</option>
+					<option value="19">19%</option>
+					<option value="20">20%</option>
+					<option value="21">21%</option>
+					<option value="22">22%</option>
+					<option value="23">23%</option>
+					<option value="24">24%</option>
+					<option value="25">25%</option>
+					<option value="26">26%</option>
+					<option value="27">27%</option>
+					<option value="28">28%</option>
+					<option value="29">29%</option>
+					<option value="30">30%</option>
+					<option value="31">31%</option>
+					<option value="32">32%</option>
+					<option value="33">33%</option>
+					<option value="34">34%</option>
+					<option value="35">35%</option>
+					<option value="36">36%</option>
+					<option value="37">37%</option>
+					<option value="38">38%</option>
+					<option value="39">39%</option>
+					<option value="40">40%</option>
+				</field>	
+				<field name="show_archived" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_ARCHIVED" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_ARCHIVED_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="allow_user_archive" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ALLOW_USERS_TO_ARCHIVE_ADS" description="COM_DJCLASSIFIEDS_CONFIG_ALLOW_USERS_TO_ARCHIVE_ADS_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="allow_user_delete_archive" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ALLOW_USERS_TO_DELETE_ARCHIVE_ADS" description="COM_DJCLASSIFIEDS_CONFIG_ALLOW_USERS_TO_DELETE_ARCHIVE_ADS_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="user_ad_delete" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ACTION_ON_USER_DELETE" description="COM_DJCLASSIFIEDS_CONFIG_ACTION_ON_USER_DELETE_DESC"  menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_DELETE</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_MOVE_TO_ARCHIVE</option>					
+				</field>
+										
+								
+				
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_ADVERT_LABEL" />
+				<field name="auctions" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_AUCTIONS" description="COM_DJCLASSIFIEDS_CONFIG_AUCTIONS_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+				<field name="bids_displayed" type="list" default="5" label="COM_DJCLASSIFIEDS_CONFIG_AUCTIONS_BIDS_DISPLAYED" description="COM_DJCLASSIFIEDS_CONFIG_AUCTIONS_BIDS_DISPLAYED_DESC" menu="hide">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+				</field>
+				<field name="mask_bidder_name" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_MASK_BIDDER_NAME" description="COM_DJCLASSIFIEDS_CONFIG_MASK_BIDDER_NAME_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+				<field name="buynow" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_BUYNOW" description="COM_DJCLASSIFIEDS_CONFIG_BUYNOW_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="show_contact_only_registered" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_CONTACT_ONLY_FOR_REGISTERED" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_CONTACT_ONLY_FOR_REGISTERED_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+				<field name="show_types" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_TYPES" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_TYPES_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="types_required" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_TYPES_REQUIRED" description="COM_DJCLASSIFIEDS_CONFIG_TYPES_REQUIRED_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="points" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_POINTS" description="COM_DJCLASSIFIEDS_CONFIG_POINTS_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="show_postcode" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_POSTCODE" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_POSTCODE_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="show_contact" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_CONTACT" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_CONTACT_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_CUSTOM_FIELD</option>
+				</field>	
+				<field name="show_price" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_PRICE" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_PRICE_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_CUSTOM_FIELD</option>
+				</field>
+				<field name="show_price_negotiable" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_PRICE_NEGOTIABLE" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_PRICE_NEGOTIABLE_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="show_introdesc" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_INTRODESC" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_INTRODESC_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="show_website" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_WEBSITE" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_WEBSITE_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="website_nofollow" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_WEBSITE_NOFOLLOW" description="COM_DJCLASSIFIEDS_CONFIG_WEBSITE_NOFOLLOW_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="show_video" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_VIDEO" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_VIDEO_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="show_regions" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_REGIONS" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_REGIONS_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="show_address" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_ADDRESS" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_ADDRESS_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="favourite" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_FAVOURITES" description="COM_DJCLASSIFIEDS_CONFIG_FAVOURITES_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="email_for_guest" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_EMAIL_FOR_GUESTS_IN_NEW_ADVERS" description="COM_DJCLASSIFIEDS_CONFIG_EMAIL_FOR_GUESTS_IN_NEW_ADVERS_DESC"  menu="hide">					
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_REQUIRED</option>
+				</field>
+				<field name="cf_values_to_labels" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_CUSTOM_FIELDS_VALUES_TO_LABELS" description="COM_DJCLASSIFIEDS_CONFIG_CUSTOM_FIELDS_VALUES_TO_LABELS_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>							
+				
+				
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_PRICES_LABEL" />
+				<field name="unit_price" type="text" label="COM_DJCLASSIFIEDS_CONFIG_PRICE_UNIT_DEFAULT" description="COM_DJCLASSIFIEDS_CONFIG_PRICE_UNIT_DEFAULT_DESC" size="20" default="EUR"  menu="hide" />
+				<field name="unit_price_list" type="text" label="COM_DJCLASSIFIEDS_CONFIG_PRICE_UNIT_LIST" description="COM_DJCLASSIFIEDS_CONFIG_PRICE_UNIT_LIST_DESC" size="20" default=""  menu="hide" />
+				<field name="unit_price_position" type="list" label="COM_DJCLASSIFIEDS_CONFIG_UNITPRICE_POSITION" description="COM_DJCLASSIFIEDS_CONFIG_UNITPRICE_POSITION_DESC" default="0"  menu="hide" >
+					<option value="1">COM_DJCLASSIFIEDS_LEFT</option>
+					<option value="0">COM_DJCLASSIFIEDS_RIGHT</option>
+				</field>
+				<field name="unit_price_space" type="list" label="COM_DJCLASSIFIEDS_CONFIG_SPACE_BETWEEND_PRICE_UNIT" description="COM_DJCLASSIFIEDS_CONFIG_SPACE_BETWEEND_PRICE_UNIT_DESC" default="1"  menu="hide" >
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field> 
+				<field name="price_format" type="list" label="COM_DJCLASSIFIEDS_CONFIG_PRICE_FORMAT" description="COM_DJCLASSIFIEDS_CONFIG_PRICE_FORMAT_DESC" default="0"  menu="hide" >
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="price_thousand_separator" type="list"  default="0" label="COM_DJCLASSIFIEDS_CONFIG_THOUSAND_SEPARATOR" description="COM_DJCLASSIFIEDS_CONFIG_THOUSAND_SEPARATOR_DESC" menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_NONE</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_SPACE</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_APOSTROPHE</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_COMMA</option>
+					<option value="4">COM_DJCLASSIFIEDS_CONFIG_PERIOD</option>
+				</field>
+				<field name="price_decimal_separator" type="list"  default="0" label="COM_DJCLASSIFIEDS_CONFIG_DECIMAL_SEPARATOR" description="COM_DJCLASSIFIEDS_CONFIG_DECIMAL_SEPARATOR_DESC" menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_COMMA</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_PERIOD</option>
+				</field>
+				<field name="price_decimals" type="list"  default="2" label="COM_DJCLASSIFIEDS_CONFIG_DECIMALS" description="COM_DJCLASSIFIEDS_CONFIG_DECIMALS_DESC" menu="hide">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+				</field>
+				<field name="price_only_numbers" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_PRICE_ONLY_NUMBER" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_PRICE_ONLY_NUMBER_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				
+							
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_NOTIFICATIONS_LABEL" />
+				<field name="notify_days" type="text" label="COM_DJCLASSIFIEDS_CONFIG_NOTIFYDAYS" description="COM_DJCLASSIFIEDS_CONFIG_NOTIFYDAYS_DESC" size="5" default="3"  menu="hide" />
+				<field name="notify_days_trigger" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_NOTIFYDAYS_RUNPLACE" description="COM_DJCLASSIFIEDS_CONFIG_NOTIFYDAYS_RUNPLACE_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_ADMINISTRATOR</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_FRONT</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_FRONT_CRON_LINK</option>
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_DISABLED</option>
+				</field>			
+				<field name="notify_admin" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_NOTIFYADMIN" description="COM_DJCLASSIFIEDS_CONFIG_NOTIFYADMIN_DESC"  menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_NEW_AND_EDIT</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_ONLY_NEW</option>				
+				</field>
+				<field name="notify_user_email" type="text" label="COM_DJCLASSIFIEDS_CONFIG_NOTIFYADMINEMAIL" description="COM_DJCLASSIFIEDS_CONFIG_NOTIFYADMINEMAIL_DESC" size="55" default=""  menu="hide" />
+				<field name="user_new_ad_email" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_EMAIL_TO_USER_AFTER_NEW_AD" description="COM_DJCLASSIFIEDS_CONFIG_EMAIL_TO_USER_AFTER_NEW_AD_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>				
+				<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_EMAIL_TEMPLATES_INFO_LABEL" />				
+				
+				
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_DATE_LABEL" />
+				<field name="date_format_type" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_DATE_FORMAT_TYPE" description="COM_DJCLASSIFIEDS_CONFIG_DATE_FORMAT_TYPE_DESC"  menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_DATE_EXACT</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_DATE_APPROXIMATE</option>
+				</field>
+				<field name="date_format_type_item" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_DATE_FORMAT_TYPE_ITEM" description="COM_DJCLASSIFIEDS_CONFIG_DATE_FORMAT_TYPE_ITEM_DESC"  menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_DATE_EXACT</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_DATE_APPROXIMATE</option>
+				</field>
+				<field name="date_format_type_modules" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_DATE_FORMAT_TYPE_MODULES" description="COM_DJCLASSIFIEDS_CONFIG_DATE_FORMAT_TYPE_MODULES_DESC"  menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_DATE_EXACT</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_DATE_APPROXIMATE</option>
+				</field>	
+				<field name="date_format" type="text" label="COM_DJCLASSIFIEDS_CONFIG_DATE_FORMAT" description="COM_DJCLASSIFIEDS_CONFIG_DATE_FORMAT_DESC" default="Y-m-d H:i:s" size="20"  menu="hide" />
+				<field name="date_format_ago_limit" type="list" default="2" label="COM_DJCLASSIFIEDS_CONFIG_DATE_FORMAT_AGO_LIMIT" description="COM_DJCLASSIFIEDS_CONFIG_DATE_FORMAT_AGO_LIMIT_DESC"  menu="hide">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</field>
+				<field name="date_persian" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_PERSIAN_DATE" description="COM_DJCLASSIFIEDS_CONFIG_PERSIAN_DATE_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+				
+				
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_MAP_LOCATIONS_LABEL" />
+				<field name="allow_user_lat_lng" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ALLOW_LAT_LNG" description="COM_DJCLASSIFIEDS_CONFIG_ALLOW_LAT_LNG_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ENTER_VALUES_OR_SELECT_ON_MAP</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="map_lat_lng_address" type="text" label="COM_DJCLASSIFIEDS_CONFIG_DEFAULT_ADDRESS_FOR_LAT_LNG_MAP" description="COM_DJCLASSIFIEDS_CONFIG_DEFAULT_ADDRESS_FOR_LAT_LNG_MAP_DESC" default="England, London" size="20"  menu="hide" />
+				<field name="show_lat_lng" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_LAT_LNG" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_LAT_LNG_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="show_googlemap" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_MAPS" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_MAPS_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="gm_type" type="list" default="ROADMAP" label="COM_DJCLASSIFIEDS_MAP_TYPE" description="COM_DJCLASSIFIEDS_MAP_TYPE_DESC"  menu="hide">
+					<option value="ROADMAP">COM_DJCLASSIFIEDS_ROADMAP</option>
+					<option value="SATELLITE">COM_DJCLASSIFIEDS_SATELLITE</option>
+					<option value="HYBRID">COM_DJCLASSIFIEDS_HYBRID</option>
+					<option value="TERRAIN">COM_DJCLASSIFIEDS_TERRAIN</option>
+				</field>
+				<field name="gm_zoom" type="text" label="COM_DJCLASSIFIEDS_CONFIG_MAPS_ZOOM" description="COM_DJCLASSIFIEDS_CONFIG_MAPS_ZOOM_DESC" size="5" default="10"  menu="hide" />
+				<field name="show_gm_driving" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_MAPS_DRIVING_DIR" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_MAPS_DRIVING_DIR_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="gm_icon" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_MAPS_ICON" description="COM_DJCLASSIFIEDS_CONFIG_MAPS_ICON_DESC"  menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_DEFAULT</option>
+					<option value="1">COM_DJCLASSIFIEDS_CUSTOM</option>
+				</field>
+				
+				
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_DESC_CHARS_PAYMENT_LABEL" />	
+				<field name="pay_desc_chars" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_PAYMENT_FOR_DESC_CHARS" description="COM_DJCLASSIFIEDS_CONFIG_PAYMENT_FOR_DESC_CHARS_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="pay_desc_chars_limit" type="text" label="COM_DJCLASSIFIEDS_CONFIG_PAYED_DESC_CHARS_LIMIT" description="COM_DJCLASSIFIEDS_CONFIG_PAYED_DESC_CHARS_LIMIT_DESC" size="5" default="0"  menu="hide" />
+				<field name="pay_desc_chars_free_limit" type="text" label="COM_DJCLASSIFIEDS_CONFIG_PAYED_DESC_FREE_CHARS_LIMIT" description="COM_DJCLASSIFIEDS_CONFIG_PAYED_DESC_FREE_CHARS_LIMIT_DESC" size="5" default="0"  menu="hide" />
+				<field name="desc_char_price" type="text" label="COM_DJCLASSIFIEDS_CONFIG_DESC_CHAR_PRICE" description="COM_DJCLASSIFIEDS_CONFIG_DESC_CHAR_PRICE_DESC" size="5" default="0"  menu="hide" />
+				<field name="desc_char_price_points" type="text" label="COM_DJCLASSIFIEDS_CONFIG_DESC_CHAR_PRICE_POINTS" description="COM_DJCLASSIFIEDS_CONFIG_DESC_CHAR_PRICE_POINTS_DESC" size="5" default="0"  menu="hide" />
+				<field name="desc_char_price_renew" type="text" label="COM_DJCLASSIFIEDS_CONFIG_DESC_CHAR_PRICE_RENEW" description="COM_DJCLASSIFIEDS_CONFIG_DESC_CHAR_PRICE_RENEW_DESC" size="5" default="0"  menu="hide" />
+				<field name="desc_char_price_renew_points" type="text" label="COM_DJCLASSIFIEDS_CONFIG_DESC_CHAR_PRICE_RENEW_POINTS" description="COM_DJCLASSIFIEDS_CONFIG_DESC_CHAR_PRICE_RENEW_POINTS_DESC" size="5" default="0"  menu="hide" />
+				
+																			
+		</fieldset>
+		
+		
+		<fieldset name="view" label="COM_DJCLASSIFIEDS_CONFIG_VIEWS_SETTINGS">
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_GENERAL_VIEW_LABEL" />
+				<field name="theme" type="folderlist" directory="components/com_djclassifieds/themes" label="COM_DJCLASSIFIEDS_CONFIG_THEME" description="COM_DJCLASSIFIEDS_CONFIG_THEME_DESC" default="default" menu="hide" hide_none="true" hide_default="true" />
+				<field name="include_css" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_INCLUDE_DEFAULT_CSS" description="COM_DJCLASSIFIEDS_CONFIG_INCLUDE_DEFAULT_CSS_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="table_type" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_TABLE_TYPE" description="COM_DJCLASSIFIEDS_CONFIG_TABLE_TYPE_DESC" menu="hide">
+					<option value="">COM_DJCLASSIFIEDS_CLASSIC_TABLE</option>
+					<option value="rwd">COM_DJCLASSIFIEDS_RWD_TABLE</option>
+					<option value="smart">COM_DJCLASSIFIEDS_SMART_TABLE</option>
+				</field>
+				<field name="profileitems_table_type" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_ITEMS_IN_PROFILE_TABLE_TYPE" description="COM_DJCLASSIFIEDS_CONFIG_ITEMS_IN_PROFILE_TABLE_TYPE_DESC" menu="hide">
+					<option value="">COM_DJCLASSIFIEDS_RWD_TABLE</option>
+					<option value="smart">COM_DJCLASSIFIEDS_SMART_TABLE</option>
+					<option value="blog">COM_DJCLASSIFIEDS_BLOG</option>
+				</field>							
+				<field name="limit_djitem_show" type="text" label="COM_DJCLASSIFIEDS_CONFIG_NUMBER_ITEMS" description="COM_DJCLASSIFIEDS_CONFIG_NUMBER_ITEMS_DESC" size="5" default="7" menu="hide" />
+				<field name="introdesc_char_limit" type="text" label="COM_DJCLASSIFIEDS_CONFIG_INTRODESCCHARLIMIT" description="COM_DJCLASSIFIEDS_CONFIG_INTRODESCCHARLIMIT_DESC" size="5" default="120" menu="hide"/>
+				<field name="title_char_limit" type="text" label="COM_DJCLASSIFIEDS_CONFIG_TITLE_CHAR_LIMIT" description="COM_DJCLASSIFIEDS_CONFIG_TITLE_CHAR_LIMIT_DESC" size="5" default="0" menu="hide"/>
+				<field name="show_tooltips_newad" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_TOOLTIPS_ON_NEW_ADS" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_TOOLTIPS_ON_NEW_ADS_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="desc_plugins" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_ALLOW_PLUGINS_IN_DESCRIPTION" description="COM_DJCLASSIFIEDS_CONFIG_ALLOW_PLUGINS_IN_DESCRIPTION_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="desc_editor" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_EDITOR_IN_DESC" description="COM_DJCLASSIFIEDS_CONFIG_EDITOR_IN_DESC_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="allow_htmltags" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ALLOWHTMLTAGS" description="COM_DJCLASSIFIEDS_CONFIG_ALLOWHTMLTAGS_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="allowed_htmltags" type="text" label="COM_DJCLASSIFIEDS_ALLOWED_HTMLTAGS" description="COM_DJCLASSIFIEDS_ALLOWED_HTMLTAGS" size="50" default="div;p;span;strong;i;b;em;ul;li;ol;br;hr" menu="hide" />
+				<field name="allow_htmltags_cf" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ALLOWHTMLTAGS_CUSTOM_FIELDS" description="COM_DJCLASSIFIEDS_CONFIG_ALLOWHTMLTAGS_CUSTOM_FIELDS_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="allowed_htmltags_cf" type="text" label="COM_DJCLASSIFIEDS_CONFIG_ALLOWED_HTMLTAGS_CUSTOM_FIELDS" description="COM_DJCLASSIFIEDS_CONFIG_ALLOWED_HTMLTAGS_CUSTOM_FIELDS" size="50" default="div;p;span;strong;i;b;em;ul;li;ol;br;a" menu="hide" />			
+				<field name="showitem_jump" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_JUMPTOCLASSIFIED" description="COM_DJCLASSIFIEDS_CONFIG_JUMPTOCLASSIFIED_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>	
+				<field name="title_breadcrumb" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_TITLEBREADCRUMB" description="COM_DJCLASSIFIEDS_CONFIG_TITLEBREADCRUMB_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="items_ordering" type="list" default="date_e" label="COM_DJCLASSIFIEDS_CONFIG_DEFAULT_ORDERING" description="COM_DJCLASSIFIEDS_CONFIG_DEFAULT_ORDERING_DESC" menu="hide">
+					<option value="date_e">COM_DJCLASSIFIEDS_EXPIRATION_DATE</option>
+					<option value="date_a">COM_DJCLASSIFIEDS_ADD_DATE</option>
+					<option value="date_sort">COM_DJCLASSIFIEDS_ADD_DATE_WITH_PROMOTIONS</option>
+					<option value="title">COM_DJCLASSIFIEDS_NAME</option>
+					<option value="cat">COM_DJCLASSIFIEDS_CATEGORY</option>
+					<option value="loc">COM_DJCLASSIFIEDS_LOCALIZATION</option>
+					<option value="price">COM_DJCLASSIFIEDS_PRICE</option>
+					<option value="display">COM_DJCLASSIFIEDS_DISPLAY</option>
+					<option value="random">COM_DJCLASSIFIEDS_RANDOM</option>				
+				</field>
+				<field name="items_ordering_dir" type="list" default="desc" label="COM_DJCLASSIFIEDS_CONFIG_DEFAULT_ORDERING_DIRECTION" description="COM_DJCLASSIFIEDS_CONFIG_DEFAULT_ORDERING_DIRECTION_DESC" menu="hide">
+					<option value="desc">COM_DJCLASSIFIEDS_CONFIG_DESC</option>
+					<option value="asc">COM_DJCLASSIFIEDS_CONFIG_ASC</option>				
+				</field>
+				<field name="rss_feed" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_RSSFEED" description="COM_DJCLASSIFIEDS_CONFIG_RSSFEED_DESC" menu="hide">
+					<option value="2">Atom</option>
+					<option value="1">RSS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="icon_new" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_ICONNEW" description="COM_DJCLASSIFIEDS_CONFIG_ICONNEW_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="icon_new_time" type="list" default="3" label="COM_DJCLASSIFIEDS_CONFIG_ICONNEW_TIME" description="COM_DJCLASSIFIEDS_CONFIG_ICONNEW_TIME_DESC" menu="hide">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+				</field>
+
+
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_ADVERT_VIEW_LABEL" />
+				<field name="ad_image_default" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_DEFAULT_IMAGE" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_DEFAULT_IMAGE_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="auctions_position" type="list" default="top" label="COM_DJCLASSIFIEDS_CONFIG_AUCTIONS_POSITION" description="COM_DJCLASSIFIEDS_CONFIG_AUCTIONS_POSITIONS_DESC"  menu="hide">
+					<option value="top">COM_DJCLASSIFIEDS_CONFIG_TOP</option>
+					<option value="middle">COM_DJCLASSIFIEDS_CONFIG_MIDDLE</option>
+					<option value="bottom">COM_DJCLASSIFIEDS_CONFIG_BOTTOM</option>					
+				</field>
+				<field name="auctions_price_link" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_AUCTIONS_PRICE_LINK" description="COM_DJCLASSIFIEDS_CONFIG_AUCTIONS_PRICE_LINK_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="intro_desc_in_advert" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_INTRODESC_IN_ADVERT" description="COM_DJCLASSIFIEDS_CONFIG_INTRODESC_IN_ADVERT_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="ask_seller" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_ASKSELLERFORM" description="COM_DJCLASSIFIEDS_CONFIG_ASKSELLERFORM_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="ask_seller_copy_admin" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ASKSELLERFORM_ADMIN_COPY" description="COM_DJCLASSIFIEDS_CONFIG_ASKSELLERFORM_ADMIN_COPY_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="ask_seller_type" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ASKSELLERTYPE" description="COM_DJCLASSIFIEDS_CONFIG_ASKSELLERTYPE_DESC" menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_REGISTERED</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_GUEST_CAPTCHA</option>
+				</field>
+				<field name="ask_seller_file" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ASKSELLERFORM_FILE" description="COM_DJCLASSIFIEDS_CONFIG_ASKSELLERFORM_FILE_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="ask_seller_file_types" type="text" default="doc,pdf,zip" label="COM_DJCLASSIFIEDS_CONFIG_ASKSELLERFORM_FILE_TYPE" description="COM_DJCLASSIFIEDS_CONFIG_ASKSELLERFORM_FILE_TYPE_DESC" menu="hide" size="5" />
+				<field name="ask_seller_file_size" type="list" default="2" label="COM_DJCLASSIFIEDS_CONFIG_ASKSELLERFORM_FILE_TYPE_SIZE" description="COM_DJCLASSIFIEDS_CONFIG_ASKSELLERFORM_FILE_TYPE_SIZE_DESC"  menu="hide">
+					<option value="0">0</option>
+					<option value="0.1">0.1</option>
+					<option value="0.2">0.2</option>
+					<option value="0.3">0.3</option>
+					<option value="0.4">0.4</option>
+					<option value="0.5">0.5</option>
+					<option value="1">1</option>
+					<option value="1.5">1.5</option>
+					<option value="2">2</option>
+					<option value="2.5">2.5</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="abuse_reporting" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_ABUSEREPOTRING" description="COM_DJCLASSIFIEDS_CONFIG_ABUSEREPOTRING_DESC"  menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="ask_seller_position" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ASKSELLER_ABUSE_POSITION" description="COM_DJCLASSIFIEDS_CONFIG_ASKSELLER_ABUSE_POSITION_DESC" menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_RIGHT_UNDER_GENERAL_DETAILS</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_BOTTOM_UNDER_IMAGES</option>
+				</field>
+				<field name="showaddetails" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOWADDETAILS" description="COM_DJCLASSIFIEDS_CONFIG_SHOWADDETAILS_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="show_ad_added_date" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_ADEED_DATE_IN_ADVERT" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_ADEED_DATE_IN_ADVERT_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_IN_ADDITIONAL_DETAILS</option>
+				</field>
+				<field name="showauthor" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOWAUTHOR" description="COM_DJCLASSIFIEDS_CONFIG_SHOWAUTHOR_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="authorname" type="list" default="name" label="COM_DJCLASSIFIEDS_CONFIG_AUTHOR_NAME" description="COM_DJCLASSIFIEDS_CONFIG_AUTHOR_NAME_DESC" menu="hide">
+					<option value="name">COM_DJCLASSIFIEDS_CONFIG_UNAME</option>
+					<option value="username">COM_DJCLASSIFIEDS_CONFIG_USERNAME_LOGIN</option>				
+				</field>
+				<field name="profile_avatar_source" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_PROFILE_AVATAR_SOURCE" description="COM_DJCLASSIFIEDS_CONFIG_PROFILE_AVATAR_SOURCE_DESC" menu="hide">
+					<option value="">DJ-Classifieds</option>
+					<option value="easysocial">EasySocial</option>
+					<option value="joomsocial">JoomSocial</option>
+					<option value="cb">Community Builder</option>
+				</field>
+				<field name="profile_social_link" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_PROFILE_LINK_TO_SOCIAL" description="COM_DJCLASSIFIEDS_CONFIG_PROFILE_LINK_TO_SOCIAL_DESC" menu="hide">
+					<option value="">COM_DJCLASSIFIEDS_CONFIG_DISABLED</option>
+					<option value="easysocial">EasySocial</option>
+					<option value="joomsocial">JoomSocial</option>
+					<option value="cb">Community Builder</option>
+				</field>					
+				<field name="show_empty_cf" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_EMPTY_CUSTOM_FIEDS" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_EMPTY_CUSTOM_FIEDS_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option> 
+				</field>							
+				<field name="sb_position" type="list" default="bottom" label="COM_DJCLASSIFIEDS_CONFIG_SOCIAL_BUTTONS_POSITION" description="COM_DJCLASSIFIEDS_CONFIG_SOCIAL_BUTTONS_POSITION_DESC" menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_HIDE</option>
+					<option value="top">COM_DJCLASSIFIEDS_TOP</option>
+					<option value="bottom">COM_DJCLASSIFIEDS_BOTTOM</option>
+				</field>
+				<field name="sb_code" type="textarea" filter="raw" label="COM_DJCLASSIFIEDS_CONFIG_SOCIAL_BUTTONS_CODE" cols="50" rows="5" description="COM_DJCLASSIFIEDS_CONFIG_SOCIAL_BUTTONS_CODE_DESC" default="&lt;div class=&quot;addthis_toolbox addthis_default_style &quot;&gt;&lt;a class=&quot;addthis_button_preferred_1&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_button_preferred_2&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_button_preferred_3&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_button_preferred_4&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_button_compact&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_counter addthis_bubble_style&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-501a7c83604a8bb4&quot;&gt;&lt;/script&gt;"  menu="hide" />
+				<field name="comments" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_COMMENTS" description="COM_DJCLASSIFIEDS_CONFIG_COMMENTS_DESC" menu="hide">					
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_DISABLED</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_FACEBOOK_COMMENTS</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_DISQUS_COMMENTS</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_JCOMMENTS</option>
+					<option value="4">COM_DJCLASSIFIEDS_CONFIG_KOMENTO</option>
+				</field>
+				<field name="fb_comments_admin" type="text" default="" label="COM_DJCLASSIFIEDS_CONFIG_FACEBOOK_USER_ID" description="COM_DJCLASSIFIEDS_CONFIG_FACEBOOK_USER_ID_DESC" menu="hide" size="5" />
+				<field name="fb_comments_width" type="text" default="550px" label="COM_DJCLASSIFIEDS_CONFIG_FACEBOOK_COMMENTS_WIDTH" description="COM_DJCLASSIFIEDS_CONFIG_FACEBOOK_COMMENTS_WIDTH_DESC" menu="hide" size="5" />						
+				<field name="fb_comments_posts" type="text" default="10" label="COM_DJCLASSIFIEDS_CONFIG_FACEBOOK_COMMENTS_POSTS_NUMBER" description="COM_DJCLASSIFIEDS_CONFIG_FACEBOOK_COMMENTS_POSTS_NUMBER_DESC" menu="hide" size="5" />				
+				<field name="disqus_shortname" type="text" default="" label="COM_DJCLASSIFIEDS_CONFIG_DISQUS_SHORTNAME" description="COM_DJCLASSIFIEDS_CONFIG_DISQUS_SHORTNAME_DESC" menu="hide" size="50" />				
+				
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_CATEGORIES_VIEW_LABEL" />
+				<field name="show_adsn_cat" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_NUMBEROFADSINCATEGORY" description="COM_DJCLASSIFIEDS_CONFIG_NUMBEROFADSINCATEGORY_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+				<field name="show_subcats" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_ON_ITEMS" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_ON_ITEMS_DESC" menu="hide">					
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="2">COM_DJCLASSIFIEDS_ONLY_ON_MAIN_CATEGORY</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="subcats_dir" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_DIRECTION" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_DIRECTION_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_HORIZONTAL</option>
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_VERTICAL</option>
+				</field>
+				<field name="subcats_ordering" type="list" default="ord" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_ORDERING" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_ORDERING_DESC" menu="hide">				
+					<option value="ord">COM_DJCLASSIFIEDS_ORDERING</option>
+					<option value="name">COM_DJCLASSIFIEDS_NAME</option>
+				</field>
+				<field name="subcats_hide_empty" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_HIDE_EMPTY" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_HIDE_EMPTY_DESC" menu="hide">				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="subcats_columns" type="list" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_COLUMNS_NUMBER" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_COLUMNS_NUMBER_DESC" default="3" menu="hide" >
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="title_in_items" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_ITEMS_HIDE_HEADER" description="COM_DJCLASSIFIEDS_CONFIG_ITEMS_HIDE_HEADER_DESC" menu="hide">				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="main_cat_desc" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ITEMS_HEADER_CATEGORY_DESCRIPTION" description="COM_DJCLASSIFIEDS_CONFIG_ITEMS_HEADER_CATEGORY_DESCRIPTION_DESC" menu="hide">				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="sub_cat_desc" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_ITEMS_CATEGORIES_DESCRIPTION" description="COM_DJCLASSIFIEDS_CONFIG_ITEMS_CATEGORIES_DESCRIPTION_DESC" menu="hide">				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="items_in_main_cat" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_HIDE_ITEMS_ON_MAIN_CAT" description="COM_DJCLASSIFIEDS_CONFIG_HIDE_ITEMS_ON_MAIN_CAT_DESC" menu="hide">				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="category_jump" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_JUMPTOCATEGORY" description="COM_DJCLASSIFIEDS_CONFIG_JUMPTOCATEGORY_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>				
+								
+							
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_TABLE_VIEW_LABEL" />
+				<field name="tooltip_img" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_TOOLTIPIMGTABLEVIEW" description="COM_DJCLASSIFIEDS_CONFIG_TOOLTIPIMGTABLEVIEW_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="tooltip_title" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_TOOLTIPTITLETABLEVIEW" description="COM_DJCLASSIFIEDS_CONFIG_TOOLTIPTITLETABLEVIEW_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="tooltip_images" type="text" default="3" label="COM_DJCLASSIFIEDS_CONFIG_TOOLTIPIMAGES" description="COM_DJCLASSIFIEDS_CONFIG_TOOLTIPIMAGES_DESC" menu="hide" size="5" />
+				<field name="tooltip_price" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_TOOLTIPPRICE" description="COM_DJCLASSIFIEDS_CONFIG_TOOLTIPPRICE_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="tooltip_contact" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_TOOLTIP_CONTACT" description="COM_DJCLASSIFIEDS_CONFIG_TOOLTIP_CONTACT_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="tooltip_location" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_TOOLTIP_LOCATION" description="COM_DJCLASSIFIEDS_CONFIG_TOOLTIP_LOCATION_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="column_image" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_IMAGE_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_IMAGE_COLUMN_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+				<field name="column_loc" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_LOCALIZATION_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_LOCALIZATION_COLUMN_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_price" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOWPRICE_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOWPRICE_COLUMN_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_desc" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_DESC_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_DESC_COLUMN_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_category" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_CATEGORY_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_CATEGORY_COLUMN_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_date_a" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_DATE_ADD_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_DATE_ADD_COLUMN_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_date_e" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_DATE_EXP_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_DATE_EXP_COLUMN_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_displayed" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_DISPLAYED_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_DISPLAYED_COLUMN_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_distance" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_DISTANCE_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_DISTANCE_COLUMN_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>					
+				<field name="column_distance_unit" type="list" default="km" label="COM_DJCLASSIFIEDS_CONFIG_DISTANCE_UNIT_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_DISTANCE_UNIT_COLUMN_DESC" menu="hide">
+					<option value="km">MOD_DJCLASSIFIEDS_KILOMETER</option>
+					<option value="mile">MOD_DJCLASSIFIEDS_MILE</option>
+				</field>													
+							
+			
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_BLOG_VIEW_LABEL" />
+				<field name="blog_columns_number" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_COLUMNS_NUMBER" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_COLUMNS_NUMBER_DESC" default="2" menu="hide" >
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="blog_desc_position" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_DESC_POSITION" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_DESC_POSITION_DESC" default="right" menu="hide" >
+					<option value="right">COM_DJCLASSIFIEDS_RIGHT</option>
+					<option value="bottom">COM_DJCLASSIFIEDS_BOTTOM</option>
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_DISABLED</option>					
+				</field>
+				<field name="blog_image" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_IMAGE" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_IMAGE_DESC" menu="hide">
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_ADVERT_IMAGE</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ADVERT_IMAGE_AND_DEFAULT_IMAGE</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+				<field name="blog_category" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_CATEGORY" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_CATEGORY_DESC" default="0" menu="hide" >
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_PLAN_TEXT</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_LINK</option>
+				</field>
+				<field name="blog_location" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_LOCATION" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_LOCATION_DESC" default="1" menu="hide" >
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="blog_price" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_PRICE" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_PRICE_DESC" default="1" menu="hide" >
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="blog_readmore" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_SEEDETAILS" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_SEEDETAILS_DESC" default="1" menu="hide" >
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="blog_sorting" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_SORTING" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_SORTING_DESC" default="1" menu="hide" >
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="blog_sorting_fields" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_ALLOWED_SORTING_VALUES" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_ALLOWED_SORTING_VALUES_DESC" default="" menu="hide" multiple="true" size="5" >
+					<option value="title">COM_DJCLASSIFIEDS_NAME</option>
+					<option value="cat">COM_DJCLASSIFIEDS_CATEGORY</option>
+					<option value="loc">COM_DJCLASSIFIEDS_LOCALIZATION</option>
+					<option value="price">COM_DJCLASSIFIEDS_PRICE</option>
+					<option value="display">COM_DJCLASSIFIEDS_DISPLAY</option>
+					<option value="date_a">COM_DJCLASSIFIEDS_ADD_DATE</option>
+					<option value="date_sort">COM_DJCLASSIFIEDS_EXPIRATION_DATE</option>
+					<option value="distance">COM_DJCLASSIFIEDS_DISTANCE</option>
+				</field>
+				
+				
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_CAT_TREE_VIEW_LABEL" />
+				<field name="cattree_type" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_CATTREE_SORT_TYPE" description="COM_DJCLASSIFIEDS_CONFIG_CATTREE_SORT_TYPE_DESC" menu="hide">
+					<option value="">COM_DJCLASSIFIEDS_CONFIG_CATTREE_EQUAL_COLUMN</option>
+					<option value="cat">COM_DJCLASSIFIEDS_CONFIG_CATTREE_MAINCAT_COLUMN</option>
+				</field>
+				<field name="cattree_cols" type="list" default="3" label="COM_DJCLASSIFIEDS_CONFIG_COLUMNS_IN_CATTREE" description="COM_DJCLASSIFIEDS_CONFIG_COLUMNS_IN_CATTREE_DESC" menu="hide">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>	
+				<field name="cattree_levels" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_LEVELS_IN_CATTREE" description="COM_DJCLASSIFIEDS_CONFIG_LEVELS_IN_CATTREE_DESC" menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_ALL</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>		
+				<field name="cattree_ic" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_ITEMS_COUNT_IN_CATTREE" description="COM_DJCLASSIFIEDS_CONFIG_ITEMS_COUNT_IN_CATTREE_DESC" menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_HIDE</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_SHOW_ONLY_MAIN</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_SHOW_ALL</option>
+				</field>
+				<field name="cattree_img" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_IMG_IN_CATTREE" description="COM_DJCLASSIFIEDS_CONFIG_IMG_IN_CATTREE_DESC" menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_DISABLED</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>
+				<field name="cattree_last_level_type" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_LAST_CATTREE_LEVEL_TYPE" description="COM_DJCLASSIFIEDS_CONFIG_LAST_CATTREE_LEVEL_TYPE_DESC" menu="hide">
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_VERTICAL_LIST</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_FLAT_LIST</option>					
+				</field>					
+		</fieldset>	
+		
+		<fieldset name="images" label="COM_DJCLASSIFIEDS_CONFIG_IMAGES_SETTINGS">
+			<field name="img_limit" type="text" label="COM_DJCLASSIFIEDS_CONFIG_IMGLIMIT" description="COM_DJCLASSIFIEDS_CONFIG_IMGLIMIT_DESC" size="5" default="5" menu="hide"/>
+			<field name="img_free_limit" type="list" default="-1" label="COM_DJCLASSIFIEDS_CONFIG_FREE_IMG_LIMIT" description="COM_DJCLASSIFIEDS_CONFIG_FREE_IMG_LIMIT"  menu="hide">
+				<option value="-1">COM_DJCLASSIFIEDS_CONFIG_EQUAL_TO_IMAGES_LIMIT</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>				
+			</field>
+			<field name="img_maxsize" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_IMGMAXSIZELIMIT" description="COM_DJCLASSIFIEDS_CONFIG_IMGMAXSIZELIMIT_DESC"  menu="hide">
+				<option value="0">0</option>
+				<option value="0.1">0.1</option>
+				<option value="0.2">0.2</option>
+				<option value="0.3">0.3</option>
+				<option value="0.4">0.4</option>
+				<option value="0.5">0.5</option>
+				<option value="1">1</option>
+				<option value="1.5">1.5</option>
+				<option value="2">2</option>
+				<option value="2.5">2.5</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>			
+			<field name="img_price" type="text" label="COM_DJCLASSIFIEDS_CONFIG_EXTRA_IMAGE_PRICE" description="COM_DJCLASSIFIEDS_CONFIG_EXTRA_IMAGE_PRICE_DESC" size="5" default="0"  menu="hide" />
+			<field name="img_price_points" type="text" label="COM_DJCLASSIFIEDS_CONFIG_EXTRA_IMAGE_PRICE_POINTS" description="COM_DJCLASSIFIEDS_CONFIG_EXTRA_IMAGE_PRICE_POINTS_DESC" size="5" default="0"  menu="hide" />
+			<field name="img_price_renew" type="text" label="COM_DJCLASSIFIEDS_CONFIG_EXTRA_IMAGE_PRICE_RENEW" description="COM_DJCLASSIFIEDS_CONFIG_EXTRA_IMAGE_PRICE_RENEW_DESC" size="5" default="0"  menu="hide" />
+			<field name="img_price_renew_points" type="text" label="COM_DJCLASSIFIEDS_CONFIG_EXTRA_IMAGE_PRICE_RENEW_POINTS" description="COM_DJCLASSIFIEDS_CONFIG_EXTRA_IMAGE_PRICE_RENEW_POINTS_DESC" size="5" default="0"  menu="hide" />			
+			<field name="lightbox_type" type="list" default="slimbox" label="COM_DJCLASSIFIEDS_CONFIG_LIGHTBOX_TYPE" description="COM_DJCLASSIFIEDS_CONFIG_LIGHTBOX_TYPE_DESC" menu="hide">
+				<option value="slimbox">Slimbox</option>
+				<option value="picbox">PicBox</option>
+			</field>
+			<field name="gallery_width" type="text" label="COM_DJCLASSIFIEDS_CONFIG_GALLERY_WIDTH" description="COM_DJCLASSIFIEDS_CONFIG_GALLERY_WIDTH_DESC" size="20" default="200"  menu="hide" />
+				<field name="gallery_thumbs_in_row" type="list" default="3" label="COM_DJCLASSIFIEDS_CONFIG_GALLERY_THUMBS_IN_ROW" description="COM_DJCLASSIFIEDS_CONFIG_GALLERY_THUMBS_IN_ROW_DESC" menu="hide">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_IMAGE_WATERMARK_CONFIG" />
+			<field name="watermark" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_IMAGE_WATERMARK" description="COM_DJCLASSIFIEDS_CONFIG_IMAGE_WATERMARK_DESC" menu="hide">
+				<option value="1">COM_DJCLASSIFIEDS_YES</option>
+				<option value="0">COM_DJCLASSIFIEDS_NO</option>
+			</field>
+			<field name="watermark_size" type="list" default="20" label="COM_DJCLASSIFIEDS_CONFIG_IMAGE_WATERMARK_SIZE" description="COM_DJCLASSIFIEDS_CONFIG_IMAGE_WATERMARK_DESC" menu="hide">
+				<option value="10">10%</option>
+				<option value="20">20%</option>
+				<option value="30">30%</option>
+				<option value="40">40%</option>
+				<option value="50">50%</option>
+				<option value="60">60%</option>
+				<option value="70">70%</option>
+				<option value="80">80%</option>
+				<option value="90">90%</option>					
+			</field>
+			<field name="watermark_alignment_h" type="list"  default="l" label="COM_DJCLASSIFIEDS_CONFIG_IMAGE_WATERMARK_ALIGNMENT_H" description="COM_DJCLASSIFIEDS_CONFIG_IMAGE_WATERMARK_ALIGNMENT_H_DESC" menu="hide">
+				<option value="l">COM_DJCLASSIFIEDS_CONFIG_LEFT</option>
+				<option value="m">COM_DJCLASSIFIEDS_CONFIG_MIDDLE</option>
+				<option value="r">COM_DJCLASSIFIEDS_CONFIG_RIGHT</option>
+			</field>			
+			<field name="watermark_alignment_v" type="list"  default="b" label="COM_DJCLASSIFIEDS_CONFIG_IMAGE_WATERMARK_ALIGNMENT_V" description="COM_DJCLASSIFIEDS_CONFIG_IMAGE_WATERMARK_ALIGNMENT_V_DESC" menu="hide">
+				<option value="t">COM_DJCLASSIFIEDS_CONFIG_TOP</option>
+				<option value="m">COM_DJCLASSIFIEDS_CONFIG_MIDDLE</option>
+				<option value="b">COM_DJCLASSIFIEDS_CONFIG_BOTTOM</option>
+			</field>				
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_IMAGE_RECREATE_INFO" />
+			<field name="image_quality" type="list" default="100" label="COM_DJCLASSIFIEDS_CONFIG_IMAGE_QUALITY" description="COM_DJCLASSIFIEDS_CONFIG_IMAGE_QUALITY_DESC" menu="hide">
+				<option value="0">0</option>
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="30">30</option>
+				<option value="40">40</option>
+				<option value="50">50</option>
+				<option value="60">60</option>
+				<option value="70">70</option>
+				<option value="80">80</option>
+				<option value="90">90</option>
+				<option value="100">100</option>					
+			</field>
+			<field name="store_org_img" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_STORE_ORIGINAL_IMAGES" description="COM_DJCLASSIFIEDS_CONFIG_STORE_ORIGINAL_IMAGES_DESC" menu="hide">
+				<option value="1">COM_DJCLASSIFIEDS_YES</option>
+				<option value="0">COM_DJCLASSIFIEDS_NO</option>
+			</field>
+			<field name="image_label_from_name" type="list"  default="1" label="COM_DJCLASSIFIEDS_CONFIG_IMAGE_LABEL_FROM_NAME" description="COM_DJCLASSIFIEDS_CONFIG_IMAGE_LABEL_FROM_NAME_DESC" menu="hide">
+				<option value="1">COM_DJCLASSIFIEDS_YES</option>
+				<option value="0">COM_DJCLASSIFIEDS_NO</option>
+			</field>	
+			<field name="image_resize" type="list"  default="0" label="COM_DJCLASSIFIEDS_CONFIG_IMAGE_RESIZE_METHOD" description="COM_DJCLASSIFIEDS_CONFIG_IMAGE_RESIZE_METHOD_DESC" menu="hide">
+				<option value="0">COM_DJCLASSIFIEDS_CONFIG_IMAGE_RESIZE_AND_CROP</option>
+				<option value="1">COM_DJCLASSIFIEDS_CONFIG_IMAGE_RESIZE</option>
+			</field>			
+			<field name="crop_alignment_h" type="list"  default="m" label="COM_DJCLASSIFIEDS_CONFIG_IMAGE_CROP_ALIGNMENT_H" description="COM_DJCLASSIFIEDS_CONFIG_IMAGE_CROP_ALIGNMENT_H_DESC" menu="hide">
+				<option value="l">COM_DJCLASSIFIEDS_CONFIG_LEFT</option>
+				<option value="m">COM_DJCLASSIFIEDS_CONFIG_MIDDLE</option>
+				<option value="r">COM_DJCLASSIFIEDS_CONFIG_RIGHT</option>
+			</field>			
+			<field name="crop_alignment_v" type="list"  default="m" label="COM_DJCLASSIFIEDS_CONFIG_IMAGE_CROP_ALIGNMENT_V" description="COM_DJCLASSIFIEDS_CONFIG_IMAGE_CROP_ALIGNMENT_V_DESC" menu="hide">
+				<option value="t">COM_DJCLASSIFIEDS_CONFIG_TOP</option>
+				<option value="m">COM_DJCLASSIFIEDS_CONFIG_MIDDLE</option>
+				<option value="b">COM_DJCLASSIFIEDS_CONFIG_BOTTOM</option>
+			</field>					
+			<field name="smallth_width" type="text" label="COM_DJCLASSIFIEDS_CONFIG_SMALLTHWIDTH" description="COM_DJCLASSIFIEDS_CONFIG_SMALLTHWIDTH_DESC" size="5" default="56" menu="hide"/>
+			<field name="smallth_height" type="text" label="COM_DJCLASSIFIEDS_CONFIG_SMALLTHHEIGHT" description="COM_DJCLASSIFIEDS_CONFIG_SMALLTHHEIGHT_DESC" size="5" default="32" menu="hide" />
+			<field name="middleth_width" type="text" label="COM_DJCLASSIFIEDS_CONFIG_MIDDLETHWIDTH" description="COM_DJCLASSIFIEDS_CONFIG_MIDDLETHWIDTH_DESC" size="5" default="150" menu="hide"/>
+			<field name="middleth_height" type="text" label="COM_DJCLASSIFIEDS_CONFIG_MIDDLETHHEIGHT" description="COM_DJCLASSIFIEDS_CONFIG_MIDDLETHHEIGHT_DESC" size="5" default="110" menu="hide"/>
+			<field name="bigth_width" type="text" label="COM_DJCLASSIFIEDS_CONFIG_POPUPTHWIDTH" description="COM_DJCLASSIFIEDS_CONFIG_POPUPTHWIDTH_DESC" size="5" default="600" menu="hide"/>
+			<field name="bigth_height" type="text" label="COM_DJCLASSIFIEDS_CONFIG_POPUPTHHEIGHT" description="COM_DJCLASSIFIEDS_CONFIG_POPUPTHHEIGHT_DESC" size="5" default="0" menu="hide" />
+			<field name="catth_width" type="text" label="COM_DJCLASSIFIEDS_CONFIG_CATTHWIDTH" description="COM_DJCLASSIFIEDS_CONFIG_CATTHWIDTH_DESC" size="5" default="68" menu="hide"/>
+			<field name="catth_height" type="text" label="COM_DJCLASSIFIEDS_CONFIG_CATTHHEIGHT" description="COM_DJCLASSIFIEDS_CONFIG_CATTHHEIGHT_DESC" size="5" default="50" menu="hide"/>
+			<field name="profth_width" type="text" label="COM_DJCLASSIFIEDS_CONFIG_PROFILE_TH_WIDTH" description="COM_DJCLASSIFIEDS_CONFIG_PROFILE_TH_WIDTH_DESC" size="5" default="120" menu="hide"/>
+			<field name="profth_height" type="text" label="COM_DJCLASSIFIEDS_CONFIG_PROFILE_TH_HEIGHT" description="COM_DJCLASSIFIEDS_CONFIG_PROFILE_TH_HEIGHT_DESC" size="5" default="120" menu="hide"/>
+			<field name="prof_smallth_width" type="text" label="COM_DJCLASSIFIEDS_CONFIG_PROFILE_SMALL_TH_WIDTH" description="COM_DJCLASSIFIEDS_CONFIG_PROFILE_SMALL_TH_WIDTH_DESC" size="5" default="50" menu="hide"/>
+			<field name="prof_smallth_height" type="text" label="COM_DJCLASSIFIEDS_CONFIG_PROFILE_SMALL_TH_HEIGHT" description="COM_DJCLASSIFIEDS_CONFIG_PROFILE_SMALL_TH_HEIGHT_DESC" size="5" default="50" menu="hide"/>
+			<field name="blank_img_path" type="text" label="COM_DJCLASSIFIEDS_CONFIG_BLANK_IMAGES_PATH" description="COM_DJCLASSIFIEDS_CONFIG_BLANK_IMAGES_PATH_DESC" size="5" default="/components/com_djclassifieds/assets/images/" menu="hide"/>
+		</fieldset>	
+		
+		<fieldset name="security" label="COM_DJCLASSIFIEDS_CONFIG_SECURITY_SETTINGS">
+			<field name="acl_redirect" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ACL_REDIRECTION" description="COM_DJCLASSIFIEDS_CONFIG_ACL_REDIRECTION_DESC" menu="hide">				
+				<option value="0">COM_DJCLASSIFIEDS_ACL_ALL_ADVERTS</option>
+				<option value="1">COM_DJCLASSIFIEDS_ACL_MAIN_PAGE</option>
+				<option value="2">COM_DJCLASSIFIEDS_ACL_CUSTOM_ARTICLE</option>
+			</field>
+			<field name="acl_red_article_id" type="text" label="COM_DJCLASSIFIEDS_CONFIG_ACL_REDIRECT_ARTICLE_ID" description="COM_DJCLASSIFIEDS_CONFIG_ACL_REDIRECT_ARTICLE_ID_DESC" size="5" default="0" menu="hide"/>
+			<field name="restriction_18_art" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_RESTRICTIONS_18_ARTICLE" description="COM_DJCLASSIFIEDS_CONFIG_RESTRICTIONS_18_ARTICLE_DESC" menu="hide">
+				<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				<option value="1">COM_DJCLASSIFIEDS_CONFIG_OPEN_IN_NEW_WINDOW</option>
+				<option value="2">COM_DJCLASSIFIEDS_CONFIG_OPEN_IN_POPUP</option>				
+			</field>
+			<field name="restriction_18_art_id" type="text" label="COM_DJCLASSIFIEDS_CONFIG_RESTRICTIONS_18_ARTICLE_ID" description="COM_DJCLASSIFIEDS_CONFIG_RESTRICTIONS_18_ARTICLE_ID_DESC" size="5" default="0" menu="hide"/>
+			<field name="restriction_18_allads" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_RESTRICTIONS_18_HIDE_ON_ALL_ADVERTS" description="COM_DJCLASSIFIEDS_CONFIG_RESTRICTIONS_18_HIDE_ON_ALL_ADVERTS_DESC" menu="hide">
+				<option value="1">COM_DJCLASSIFIEDS_YES</option>
+				<option value="0">COM_DJCLASSIFIEDS_NO</option>
+			</field>
+			<field name="ask_limit_one" type="text" label="COM_DJCLASSIFIEDS_CONFIG_ASKLIMITONE" description="COM_DJCLASSIFIEDS_CONFIG_ASKLIMITONE_DESC" size="5" default="5" menu="hide"/>
+			<field name="ask_limit_hour" type="text" label="COM_DJCLASSIFIEDS_CONFIG_ASKLIMITHOUR" description="COM_DJCLASSIFIEDS_CONFIG_ASKLIMITHOUR_DESC" size="5" default="15" menu="hide"/>			
+			<field name="captcha" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_CAPTCHA" description="COM_DJCLASSIFIEDS_CONFIG_CAPTCHA_DESC" menu="hide">
+				<option value="1">COM_DJCLASSIFIEDS_YES</option>
+				<option value="0">COM_DJCLASSIFIEDS_NO</option>
+			</field>
+			<field name="captcha_type" type="list" default="reCaptcha" label="COM_DJCLASSIFIEDS_CONFIG_CAPTCHA_TYPE" description="COM_DJCLASSIFIEDS_CONFIG_CAPTCHA_TYPE_DESC" menu="hide">
+				<option value="recaptcha">reCaptcha</option>
+				<option value="nocaptcha">noCaptcha</option>
+			</field>
+			<field name="captcha_theme" type="list" default="red" label="COM_DJCLASSIFIEDS_CONFIG_CAPTCHA_THEME" description="COM_DJCLASSIFIEDS_CONFIG_CAPTCHA_THEME_DESC" menu="hide">
+				<option value="red">COM_DJCLASSIFIEDS_CAPTCHA_RED_DEFAULT</option>
+				<option value="white">COM_DJCLASSIFIEDS_CAPTCHA_WHITE</option>
+				<option value="blackglass">COM_DJCLASSIFIEDS_CAPTCHA_BLACKGLASS</option>
+				<option value="clean">COM_DJCLASSIFIEDS_CAPTCHA_CLEAN</option>
+			</field>
+			<field name="captcha_publickey" type="text" label="COM_DJCLASSIFIEDS_CONFIG_CAPTCHA_PUBLICKEY" description="COM_DJCLASSIFIEDS_CONFIG_CAPTCHA_PUBLICKEY_DESC" size="60" default="6LfzhgkAAAAAAL9RlsE0x-hR2H43IgOFfrt0BxI0" menu="hide"/>
+			<field name="captcha_privatekey" type="text" label="COM_DJCLASSIFIEDS_CONFIG_CAPTCHA_PRIVATEKEY" description="COM_DJCLASSIFIEDS_CONFIG_CAPTCHA_PRIVATEKEY_DESC" size="60" default="6LfzhgkAAAAAAOJNzAjPz3vXlX-Bw0l-sqDgipgs" menu="hide"/>
+			<field name="terms" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_TERMS" description="COM_DJCLASSIFIEDS_CONFIG_TERMS_DESC" menu="hide">
+				<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				<option value="1">COM_DJCLASSIFIEDS_CONFIG_OPEN_IN_NEW_WINDOW</option>
+				<option value="2">COM_DJCLASSIFIEDS_CONFIG_OPEN_IN_POPUP</option>				
+			</field>
+			<field name="terms_article_id" type="text" label="COM_DJCLASSIFIEDS_CONFIG_TERMS_ARTICLE_ID" description="COM_DJCLASSIFIEDS_CONFIG_TERMS_ARTICLE_ID_DESC" size="5" default="0" menu="hide"/>
+		</fieldset>
+		
+		<fieldset name="seo" label="COM_DJCLASSIFIEDS_CONFIG_SEO_SETTINGS">
+			<field name="seo_item_metadesc" type="list" default="0" label="COM_DJCLASSIFIEDS_ITEM_METADESC_MISSING" description="COM_DJCLASSIFIEDS_ITEM_METADESC_MISSING_DESC" menu="hide">
+				<option value="0">COM_DJCLASSIFIEDS_CONFIG_ITEM_INTRO_DESC</option>
+				<option value="1">COM_DJCLASSIFIEDS_CONFIG_CATEGORY_METADESC</option>				
+			</field>
+			<field name="seo_metadesc_char_limit" type="text" default="160" label="COM_DJCLASSIFIEDS_CONFIG_METADESC_CHAR_LIMIT" description="COM_DJCLASSIFIEDS_CONFIG_METADESC_CHAR_LIMIT_DESC" size="5" menu="hide"/>
+			<field name="seo_metadesc_user_edit" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ALLOW_USER_TO_EDIT_METADESC" description="COM_DJCLASSIFIEDS_CONFIG_ALLOW_USER_TO_EDIT_METADESC_DESC" menu="hide">
+				<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				<option value="1">COM_DJCLASSIFIEDS_YES</option>			
+			</field>
+			<field name="seo_keywords_user_edit" type="list" default="0" label="COM_DJCLASSIFIEDS_CONFIG_ALLOW_USER_TO_EDIT_KEYWORDS" description="COM_DJCLASSIFIEDS_CONFIG_ALLOW_USER_TO_EDIT_KEYWORDS_DESC" menu="hide">
+				<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				<option value="1">COM_DJCLASSIFIEDS_YES</option>			
+			</field>
+			<field name="seo_title_separator" type="text" label="COM_DJCLASSIFIEDS_CONFIG_BROWSE_TITLE_SEPERATOR" description="COM_DJCLASSIFIEDS_CONFIG_BROWSE_TITLE_SEPERATOR_DESC" size="5" default=" - " menu="hide"/>
+			<field name="seo_title_item" filter="raw" type="text" label="COM_DJCLASSIFIEDS_CONFIG_BROWSE_TITLE_ITEM" description="COM_DJCLASSIFIEDS_CONFIG_BROWSE_TITLE_ITEM_DESC" size="100" default="&lt;item_name&gt;|&lt;category_name&gt;|&lt;region_name&gt;|&lt;default_title&gt;" menu="hide" />
+			<field name="seo_title_items" filter="raw" type="text" label="COM_DJCLASSIFIEDS_CONFIG_BROWSE_TITLE_ITEMS" description="COM_DJCLASSIFIEDS_CONFIG_BROWSE_TITLE_ITEMS_DESC" size="100" default="&lt;category_path&gt;|&lt;default_title&gt;" menu="hide" />
+			<field name="seo_link_separator" type="list" default="," label="COM_DJCLASSIFIEDS_CONFIG_LINK_SEPARATOR" description="COM_DJCLASSIFIEDS_CONFIG_LINK_SEPARATOR_DESC" menu="hide">
+				<option value=",">,</option>
+				<option value="-">-</option>				
+			</field>
+			<field name="seo_id_position" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_ID_POSITION" description="COM_DJCLASSIFIEDS_CONFIG_ID_POSITION_DESC" menu="hide">
+				<option value="0">COM_DJCLASSIFIEDS_BEFORE_TITLE</option>
+				<option value="1">COM_DJCLASSIFIEDS_AFTER_TITLE</option>				
+			</field>
+			<field name="seo_alias_urlsafe" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_URL_SAFE_IN_ALIAS" description="COM_DJCLASSIFIEDS_CONFIG_URL_SAFE_IN_ALIAS_DESC" menu="hide">
+				<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				<option value="1">COM_DJCLASSIFIEDS_YES</option>				
+			</field>
+			<field name="seo_alias_in_url" type="list" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_ALIAS_IN_URL" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_ALIAS_IN_URL_DESC" menu="hide">
+				<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				<option value="1">COM_DJCLASSIFIEDS_YES</option>				
+			</field>
+			<field name="seo_view_item" type="text" label="COM_DJCLASSIFIEDS_CONFIG_VIEW_ITEM_NAME" description="COM_DJCLASSIFIEDS_CONFIG_VIEW_ITEM_NAME_DESC" size="20" default="ad" menu="hide"/>			
+			<field name="seo_view_additem" type="text" label="COM_DJCLASSIFIEDS_CONFIG_VIEW_ADDITEM_NAME" description="COM_DJCLASSIFIEDS_CONFIG_VIEW_ADDITEM_NAME_DESC" size="20" default="additem" menu="hide"/>
+			<field name="seo_view_edititem" type="text" label="COM_DJCLASSIFIEDS_CONFIG_VIEW_EDITITEM_NAME" description="COM_DJCLASSIFIEDS_CONFIG_VIEW_EDITITEM_NAME_DESC" size="20" default="edititem" menu="hide"/>
+			<field name="seo_view_categories" type="text" label="COM_DJCLASSIFIEDS_CONFIG_VIEW_CATEGORIES_NAME" description="COM_DJCLASSIFIEDS_CONFIG_VIEW_CATEGORIES_NAME_DESC" size="20" default="categories" menu="hide"/>
+			<field name="seo_view_useritems" type="text" label="COM_DJCLASSIFIEDS_CONFIG_VIEW_USERITEMS_NAME" description="COM_DJCLASSIFIEDS_CONFIG_VIEW_USERITEMS_NAME_DESC" size="20" default="useritems" menu="hide"/>
+			<field name="seo_view_items" type="text" label="COM_DJCLASSIFIEDS_CONFIG_VIEW_ITEMS_NAME" description="COM_DJCLASSIFIEDS_CONFIG_VIEW_ITEMS_NAME_DESC" size="20" default="ads" menu="hide"/>
+			<field name="seo_view_profile" type="text" label="COM_DJCLASSIFIEDS_CONFIG_VIEW_PROFILE_NAME" description="COM_DJCLASSIFIEDS_CONFIG_VIEW_PROFILEEDIT_NAME_DESC" size="20" default="profile" menu="hide"/>
+			<field name="seo_view_profileedit" type="text" label="COM_DJCLASSIFIEDS_CONFIG_VIEW_PROFILEEDIT_NAME" description="COM_DJCLASSIFIEDS_CONFIG_VIEW_PROFILEEDIT_NAME_DESC" size="20" default="profileedit" menu="hide"/>
+		</fieldset>
+				
+		<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+			<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" validate="rules" filter="rules" component="com_djclassifieds" section="component" />
+		</fieldset>
+	</config>

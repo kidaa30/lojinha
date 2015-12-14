@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_DJCLASSIFIEDS_CATEGORY_BLOG_LAYOUT">
+		<message></message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_djclassifieds/models/fields" >
+			<field name="cid" type="djcfcategorysingle" default="0" default_name="COM_DJCLASSIFIEDS_CATID" label="COM_DJCLASSIFIEDS_CATEGORY" />
+		</fieldset>
+	</fields>	
+	<fields name="params">
+		<fieldset  name="global" label="COM_DJCLASSIFIEDS_CONFIG_GLOBAL_SETTINGS_LABEL" addfieldpath="/administrator/components/com_djclassifieds/models/fields">
+			
+				<field name="blog_columns_number" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_COLUMNS_NUMBER" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_COLUMNS_NUMBER_DESC" default="" menu="hide" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="blog_desc_position" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_DESC_POSITION" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_DESC_POSITION_DESC" default="" menu="hide" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="right">COM_DJCLASSIFIEDS_RIGHT</option>
+					<option value="bottom">COM_DJCLASSIFIEDS_BOTTOM</option>
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_DISABLED</option>
+				</field>
+				<field name="blog_image" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_IMAGE" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_IMAGE_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_ADVERT_IMAGE</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ADVERT_IMAGE_AND_DEFAULT_IMAGE</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+				<field name="blog_category" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_CATEGORY" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_CATEGORY_DESC" default="" menu="hide" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_PLAN_TEXT</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_LINK</option>
+				</field>
+				<field name="blog_location" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_LOCATION" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_LOCATION_DESC" default="" menu="hide" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="blog_price" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_PRICE" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_PRICE_DESC" default="" menu="hide" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="blog_readmore" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_SEEDETAILS" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_SEEDETAILS_DESC" default="" menu="hide" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="blog_sorting" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_SORTING" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_SHOW_SORTING_DESC" default="" menu="hide" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="blog_sorting_fields" type="list" label="COM_DJCLASSIFIEDS_CONFIG_BLOG_ALLOWED_SORTING_VALUES" description="COM_DJCLASSIFIEDS_CONFIG_BLOG_ALLOWED_SORTING_VALUES_DESC" default="" menu="hide" multiple="true" size="5" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="title">COM_DJCLASSIFIEDS_NAME</option>
+					<option value="cat">COM_DJCLASSIFIEDS_CATEGORY</option>
+					<option value="loc">COM_DJCLASSIFIEDS_LOCALIZATION</option>
+					<option value="price">COM_DJCLASSIFIEDS_PRICE</option>
+					<option value="display">COM_DJCLASSIFIEDS_DISPLAY</option>
+					<option value="date_a">COM_DJCLASSIFIEDS_ADD_DATE</option>
+					<option value="date_sort">COM_DJCLASSIFIEDS_EXPIRATION_DATE</option>
+					<option value="distance">COM_DJCLASSIFIEDS_DISTANCE</option>
+				</field>
+			
+			
+			
+			
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_CATEGORIES_VIEW_LABEL" />
+				<field name="show_adsn_cat" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_NUMBEROFADSINCATEGORY" description="COM_DJCLASSIFIEDS_CONFIG_NUMBEROFADSINCATEGORY_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+				<field name="show_subcats" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_ON_ITEMS" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_ON_ITEMS_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>					
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="2">COM_DJCLASSIFIEDS_ONLY_ON_MAIN_CATEGORY</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="subcats_dir" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_DIRECTION" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_DIRECTION_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_HORIZONTAL</option>
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_VERTICAL</option>
+				</field>
+				<field name="subcats_ordering" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_ORDERING" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_ORDERING_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>				
+					<option value="ord">COM_DJCLASSIFIEDS_ORDERING</option>
+					<option value="name">COM_DJCLASSIFIEDS_NAME</option>
+				</field>
+				<field name="subcats_hide_empty" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_HIDE_EMPTY" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_HIDE_EMPTY_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="subcats_columns" type="list" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_COLUMNS_NUMBER" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_COLUMNS_NUMBER_DESC" default="" menu="hide" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="title_in_items" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_ITEMS_HIDE_HEADER" description="COM_DJCLASSIFIEDS_CONFIG_ITEMS_HIDE_HEADER_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="main_cat_desc" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_ITEMS_HEADER_CATEGORY_DESCRIPTION" description="COM_DJCLASSIFIEDS_CONFIG_ITEMS_HEADER_CATEGORY_DESCRIPTION_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="sub_cat_desc" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_ITEMS_CATEGORIES_DESCRIPTION" description="COM_DJCLASSIFIEDS_CONFIG_ITEMS_CATEGORIES_DESCRIPTION_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="items_in_main_cat" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_HIDE_ITEMS_ON_MAIN_CAT" description="COM_DJCLASSIFIEDS_CONFIG_HIDE_ITEMS_ON_MAIN_CAT_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="category_jump" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_JUMPTOCATEGORY" description="COM_DJCLASSIFIEDS_CONFIG_JUMPTOCATEGORY_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+			
+		</fieldset>	
+	</fields>	
+</metadata>

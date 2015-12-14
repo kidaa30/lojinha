@@ -1,0 +1,49 @@
+#jm-allpage .dj-megamenu {
+  text-align: right;
+}
+#jm-allpage .dj-megamenu li.dj-up {
+  float: right;
+}
+#jm-allpage .dj-megamenu li.dj-up a.dj-up_a span.dj-drop {
+  padding: 0 0 0 25px !important;
+}
+#jm-allpage .dj-megamenu li.dj-up a.dj-up_a span.dj-drop:after {
+  right: auto;
+  left: 5px;
+}
+#jm-allpage .dj-megamenu li.dj-up + li.dj-up {
+  border-left: none;
+  border-right: 1px solid #c9c9c9;
+}
+#jm-allpage .dj-megamenu li:hover div.dj-subwrap,
+#jm-allpage .dj-megamenu li.hover div.dj-subwrap {
+  left: auto;
+  right: -1px;
+}
+#jm-allpage .dj-megamenu li:hover div.dj-subwrap div.dj-subwrap,
+#jm-allpage .dj-megamenu li.hover div.dj-subwrap div.dj-subwrap {
+  left: auto;
+  right: 100%;
+}
+#jm-allpage .dj-megamenu .dj-submenu > li.parent > a {
+  padding-right: 0;
+  padding-left: 20px;
+}
+#jm-allpage .dj-megamenu .dj-submenu > li.parent > a:after {
+  right: auto;
+  left: 5px;
+}
+#jm-allpage .dj-megamenu .dj-subtree > li {
+  padding: 0 10px 0 0;
+}
+#jm-allpage .dj-megamenu .dj-subtree > li > a {
+  background-position: right 10px;
+  background-image: url('../images/scheme3/li_RTL.png');
+}
+#jm-allpage .dj-megamenu li.dj-up a span.image-title {
+  margin: 0 15px 0 0;
+}
+#jm-allpage .dj-megamenu .modules-wrap .moduletable:after {
+  left: auto;
+  right: 10%;
+}

@@ -1,0 +1,191 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";  
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+  
+@import "override/ltr/mixins.less";
+@import "template_mixins.less";
+
+// RESPONSIVE
+//---------------------------------------------------------------
+
+@media (max-width: 979px) {
+  
+  // global
+  // --------------------------
+  
+  //module height
+  
+  .jm-module-in {
+    height: auto !important;
+  }
+  
+  //responsive images
+  
+  img {
+    .box-sizing(border-box);
+  }
+  
+  //fix on displaying buttons on webkit browsers
+  .btn {
+    -webkit-appearance: none;
+  }
+
+  //reset the module height suffix
+  .jm-module-in {
+    height: auto !important;
+  }
+
+  // layout
+  // --------------------------
+  
+  #jm-djmenu {
+    text-align: center;
+  }
+  
+  #jm-back-top span {
+    width: 40px;
+    height: 40px;
+  }
+
+  
+}
+ 
+@media (max-width: 767px) {
+  
+  // global
+  // --------------------------
+  
+  //responsive inputs
+  input, select, textarea {
+    max-width: 100%;
+  }
+  
+  // joomla
+  // --------------------------
+
+  //article items
+  .items-row {
+    margin-bottom: @JMbaseSpace;
+  }
+  
+  .items-row .item {
+    margin-bottom: @JMbaseSpace;
+  }
+  
+  // layout
+  // --------------------------
+
+	#jm-top-mod .jm-module-raw {
+		float: none;
+		width: 100%;
+		margin: 0 0 10px;
+		&:first-child {
+			margin: 0;
+		}
+	}
+
+  #jm-top-mod1 {
+    &:after {
+      display: none;
+    }
+  }
+  
+  #jm-top-mod1-in,
+  #jm-top-mod2-in {
+    padding: 0;
+  }
+
+  #jm-footer-left {
+    padding-bottom: 10px;
+  }
+  
+  #jm-footer-left,
+  #jm-footer-right {
+    text-align: center;
+  }
+  
+  // modules
+  // --------------------------
+  
+  .jm-custom-title,
+  .jm-social-title {
+    font-size: 30px;
+	}
+	
+	//classifieds
+	#jm-allpage .search-ms { 
+	  .dj_cf_search_horizontal form > .search-wrapper {
+	  	> div {
+	  		width: 100%;
+	  		margin-left: 0;
+	  		margin-right: 0;
+	  	}
+	  }
+  }
+  
+	//classifieds
+	#jm-allpage .search-ms.category-ms .dj_cf_search form {
+		.search_cats {
+			position: static;
+			width: auto !important;
+			margin: 10px 0 !important;
+			select {
+				display: block !important;
+				margin: 0;
+				border: 1px solid @JMborder;
+			}
+			.chzn-container {
+				display: none !important;
+			}
+		}
+		.inputbox.first_input,
+		.inputbox.search-query {
+			padding-left: 45px;
+			padding-right: 45px;
+		}
+	}
+	
+  .jm-icons a span.ttip {
+		display: none;
+	}
+  
+}
+
+@media (max-width: 480px) {
+	
+	.sticky-bar #jm-allpage {
+		padding: 0 !important;
+	}
+	
+	.sticky-bar #jm-top-bar {
+		position: static;
+	}
+	
+	#jm-logo-sitedesc {
+		max-width: 180px;
+		#jm-logo,
+		#jm-sitedesc {
+			float: none;
+			padding: 0 0 10px;
+			line-height: 1;
+		}
+	}
+
+}
+
+// EXTENSIONS import
+//---------------------------------------------------------------
+  
+@import "djmediatools_responsive.less";

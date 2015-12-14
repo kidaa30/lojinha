@@ -1,0 +1,304 @@
+//
+// Buttons
+// --------------------------------------------------
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core
+.btn {
+  display: inline-block;
+  .ie7-inline-block();
+  margin-bottom: 0; // For input.btn
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  line-height: @baseLineHeight;
+  text-decoration: none!important;
+  *border: 0; // Remove the border to prevent IE7's black border on input:focus
+  .border-radius(@baseBorderRadius);
+  .ie7-restore-left-whitespace(); // Give IE7 some love
+ 
+  //JM added
+  font-size: @JMbuttonFontSize;
+  font-family: inherit;
+  font-weight: 700;
+  color: @JMbuttonFontColor!important;
+  padding: @JMbuttonPadding;
+  border: none!important;
+  color: @JMbuttonFontColor!important;
+  #gradient .vertical(@JMstyleButtonBackground, @JMstyleButtonActiveBackground);
+  text-shadow: 0px -1px 1px @JMstyleButtonTextShadow;
+  .box-shadow(inset 0px -1px 1px 0px @JMstyleButtonBorderColor);
+  // Hover/focus state
+  &:hover,
+  &:focus {  
+    .transition(none);
+    background: @JMstyleButtonActiveBackground;
+  }
+
+  // Focus state for keyboard and accessibility
+  &:focus {
+    .tab-focus();
+  }
+
+  // Active state
+  &.active,
+  &:active {
+    outline: 0;
+  }
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    cursor: default;
+    .opacity(65);
+  }
+  
+  //JM added
+  .caret {
+    border-top: 4px solid @JMbuttonFontColor; 
+  }
+  
+}
+
+a.button,
+input.button,
+button.button,
+.jm-module.white-ms .btn,
+.jm-module.white-ms a.button,
+.jm-module.white-ms input.button,
+.jm-module.white-ms button.button {
+	.btn();
+}
+
+.jm-bottom {
+  .btn,
+  a.button,
+  input.button,
+  button.button {
+    text-shadow: none;
+    #gradient .vertical(@JMbuttonInnerBackground, @JMbuttonInnerActiveBackground);
+    color: @JMstyleButtonInnerFontColor!important;
+    &:hover,
+    &:active {
+      background: @JMbuttonInnerActiveBackground;
+    }
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.btn-large,
+.button.btn-large {
+  padding: @paddingLarge;
+  font-size: @fontSizeLarge;
+  .border-radius(@borderRadiusLarge);
+}
+.btn-large [class^="icon-"],
+.btn-large [class*=" icon-"],
+.button.btn-large [class^="icon-"],
+.button.btn-large [class*=" icon-"] {
+  margin-top: 6px; //JM edited
+}
+
+// Small
+.btn-small,
+.button.btn-small {
+  padding: @paddingSmall;
+  font-size: @fontSizeSmall;
+  .border-radius(@borderRadiusSmall);
+}
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"],
+.button.btn-small [class^="icon-"],
+.button.btn-small [class*=" icon-"] {
+  margin-top: 2px; //JM edited
+}
+.btn-mini [class^="icon-"],
+.btn-mini [class*=" icon-"],
+.button.btn-mini [class^="icon-"],
+.button.btn-mini [class*=" icon-"] {
+  margin-top: 1px; //JM edited
+}
+
+// Mini
+.btn-mini,
+.button.btn-mini {
+  padding: @paddingMini;
+  font-size: @fontSizeMini;
+  .border-radius(@borderRadiusSmall);
+}
+
+
+// Block button
+// -------------------------
+
+.btn-block,
+.button.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  .box-sizing(border-box);
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block,
+.btn-block + .button.btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+// Provide *some* extra contrast for those who can get it
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active,
+.button.btn-primary.active,
+.button.btn-warning.active,
+.button.btn-danger.active,
+.button.btn-success.active,
+.button.btn-info.active,
+.button.btn-inverse.active {
+  color: rgba(255,255,255,.75);
+}
+
+// Set the backgrounds
+// -------------------------
+.btn-primary,
+.button.btn-primary {
+  //JM background: @JMbuttonBackground;
+}
+// Warning appears are orange
+.btn-warning,
+.button.btn-warning {
+  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
+}
+// Danger and error appear as red
+.btn-danger,
+.button.btn-danger {
+  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+}
+// Success appears as green
+.btn-success,
+.button.btn-success {
+  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+}
+// Info appears as a neutral blue
+.btn-info,
+.button.btn-info {
+  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
+}
+// Inverse appears as dark gray
+.btn-inverse,
+.button.btn-inverse {
+  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+}
+
+//reset
+.btn-primary,
+.button.btn-primary,
+.btn-warning,
+.button.btn-warning,
+.btn-danger,
+.button.btn-danger,
+.btn-success,
+.button.btn-success,
+.btn-info,
+.button.btn-info,
+.btn-inverse,
+.button.btn-inverse {
+  .box-shadow(none);
+}
+
+// Cross-browser Jank
+// --------------------------------------------------
+
+button.btn,
+input[type="submit"].btn,
+button.btn.button,
+input[type="submit"].btn.button {
+
+  // Firefox 3.6 only I believe
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  // IE7 has some default padding on button controls
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+
+  &.btn-large {
+    *padding-top: 7px;
+    *padding-bottom: 7px;
+  }
+  &.btn-small {
+    *padding-top: 3px;
+    *padding-bottom: 3px;
+  }
+  &.btn-mini {
+    *padding-top: 1px;
+    *padding-bottom: 1px;
+  }
+}
+
+
+// Link buttons
+// --------------------------------------------------
+
+// Make a button look and behave like a link
+.btn-link,
+.btn-link:active,
+.btn-link[disabled],
+.button.btn-link,
+.button.btn-link:active,
+.button.btn-link[disabled] {
+  background-color: transparent;
+  background-image: none;
+  .box-shadow(none);
+}
+.btn-link,
+.button.btn-link {
+  border-color: transparent;
+  cursor: pointer;
+  color: @linkColor;
+  .border-radius(0);
+}
+.btn-link:hover,
+.btn-link:focus,
+.button.btn-link:hover,
+.button.btn-link:focus {
+  color: @linkColorHover;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus,
+.button.btn-link[disabled]:hover,
+.button.btn-link[disabled]:focus {
+  color: @grayDark;
+  text-decoration: none;
+}

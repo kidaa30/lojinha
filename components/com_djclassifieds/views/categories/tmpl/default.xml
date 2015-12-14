@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_DJCLASSIFIEDS_CATEGORY_TREE">
+		<message></message>
+	</layout>
+	<state>
+		<name>COM_DJCLASSIFIEDS_CATEGORY_TREE</name>
+	</state>
+		<fields name="params">
+		<fieldset 
+		name="item-view" 
+		label="COM_CLASSFIEDS_CONFIG_CATTREE_VIEW_SETTINGS_LABEL">
+				<field name="cattree_cols" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_COLUMNS_IN_CATTREE" description="COM_DJCLASSIFIEDS_CONFIG_COLUMNS_IN_CATTREE_DESC" menu="hide">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</field>	
+			<field name="cattree_levels" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_LEVELS_IN_CATTREE" description="COM_DJCLASSIFIEDS_CONFIG_LEVELS_IN_CATTREE_DESC" menu="hide">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">ALL</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</field>	
+			<field name="cattree_ic" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_ITEMS_COUNT_IN_CATTREE" description="COM_DJCLASSIFIEDS_CONFIG_ITEMS_COUNT_IN_CATTREE" menu="hide">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">COM_DJCLASSIFIEDS_CONFIG_HIDE</option>
+				<option value="1">COM_DJCLASSIFIEDS_CONFIG_SHOW_ONLY_MAIN</option>
+				<option value="2">COM_DJCLASSIFIEDS_CONFIG_SHOW_ALL</option>
+			</field>			
+		</fieldset>
+	</fields>				
+</metadata>

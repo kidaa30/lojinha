@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" readonly="true" class="readonly" />
+		
+		<field name="name" type="text" class="inputbox" size="40" label="COM_DJREVIEWS_NAME" required="true" />
+		
+		<field name="description" type="editor" class="inputbox"
+			label="COM_DJREVIEWS_DESCRIPTION" description="COM_DJREVIEWS_GROUP_DESCRIPTION_DESC"
+			filter="JComponentHelper::filterText"
+			buttons="false" />
+		
+		<field name="created" type="calendar"
+			label="JGLOBAL_FIELD_CREATED_LABEL" description="JGLOBAL_FIELD_CREATED_DESC"
+			class="inputbox" size="22" format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc" />
+		
+		<field name="created_by" type="user"
+			label="JGLOBAL_FIELD_CREATED_BY_LABEL" description="JGLOBAL_FIELD_CREATED_BY_Desc" />
+		
+	</fieldset>
+	
+	<fields name="params">
+		<fieldset name="group_params" label="COM_DJREVIEWS_PARAMETERS">
+		    <field name="reviews" type="radio" default="" label="COM_DJREVIEWS_PARAM_REVIEWS" description="COM_DJREVIEWS_PARAM_REVIEWS_DESC" class="btn-group">
+		        <option value="">JGLOBAL_USE_GLOBAL</option>
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+		    </field>
+		    <field name="rating" type="radio" default="" label="COM_DJREVIEWS_PARAM_RATING" description="COM_DJREVIEWS_PARAM_RATING_DESC" class="btn-group">
+		        <option value="">JGLOBAL_USE_GLOBAL</option>
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+		    </field>
+		    <field name="title" type="radio" default="" label="COM_DJREVIEWS_PARAM_TITLE" description="COM_DJREVIEWS_PARAM_TITLE_DESC" class="btn-group">
+		        <option value="">JGLOBAL_USE_GLOBAL</option>
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+		        <option value="2">COM_DJREVIEWS_REQUIRED</option>
+		    </field>
+		    <field name="message" type="radio" default="" label="COM_DJREVIEWS_PARAM_MESSAGE" description="COM_DJREVIEWS_PARAM_MESSAGE_DESC" class="btn-group">
+		        <option value="">JGLOBAL_USE_GLOBAL</option>
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+		        <option value="2">COM_DJREVIEWS_REQUIRED</option>
+		    </field>
+		    <field name="followup" type="radio" default="" label="COM_DJREVIEWS_PARAM_FOLLOWUP" description="COM_DJREVIEWS_PARAM_FOLLOWUP_DESC" class="btn-group">
+		        <option value="">JGLOBAL_USE_GLOBAL</option>
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+		    </field>
+		</fieldset>
+	</fields>
+</form>

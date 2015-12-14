@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0"  method="upgrade">
+	<name>DJClassifieds Category Tree</name>
+	<creationDate>October 2014</creationDate>
+	<author>DJ-Extensions.com</author>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<copyright>dj-extensions.com</copyright>
+	<license>GPL</license>
+	<version>3.4</version>
+	<description>DJ Classifieds Category Tree module</description>
+	<files>
+		<filename module="mod_djclassifieds_cattree">mod_djclassifieds_cattree.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_djclassifieds/models/fields">
+				<field name="moduleclass_sfx" type="text" default="_menu" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />											
+				<field name="cattree_type" type="list" default="" label="MOD_DJCLASSIFIEDS_CATTREE_SORT_TYPE" description="MOD_DJCLASSIFIEDS_CATTREE_SORT_TYPE_DESC" menu="hide">
+					<option value="">MOD_DJCLASSIFIEDS_CATTREE_EQUAL_COLUMN</option>
+					<option value="cat">MOD_DJCLASSIFIEDS_CATTREE_MAINCAT_COLUMN</option>
+				</field>
+				<field name="cattree_cols" type="list" default="3" label="MOD_DJCLASSIFIEDS_CATTREE_COLUMNS_IN_CATTREE" description="MOD_DJCLASSIFIEDS_CATTREE_COLUMNS_IN_CATTREE_DESC" menu="hide">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>	
+				<field name="cattree_levels" type="list" default="0" label="MOD_DJCLASSIFIEDS_CATTREE_LEVELS_IN_CATTREE" description="MOD_DJCLASSIFIEDS_CATTREE_LEVELS_IN_CATTREE_DESC" menu="hide">
+					<option value="0">MOD_DJCLASSIFIEDS_CATTREE_ALL</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>		
+				<field name="cattree_ic" type="list" default="1" label="MOD_DJCLASSIFIEDS_CATTREE_ITEMS_COUNT_IN_CATTREE" description="MOD_DJCLASSIFIEDS_CATTREE_ITEMS_COUNT_IN_CATTREE_DESC" menu="hide">
+					<option value="0">MOD_DJCLASSIFIEDS_CATTREE_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_CATTREE_SHOW_ONLY_MAIN</option>
+					<option value="2">MOD_DJCLASSIFIEDS_CATTREE_SHOW_ALL</option>
+				</field>
+				<field name="cattree_img" type="list" default="0" label="MOD_DJCLASSIFIEDS_CATTREE_IMG_IN_CATTREE" description="MOD_DJCLASSIFIEDS_CATTREE_IMG_IN_CATTREE_DESC" menu="hide">
+					<option value="0">MOD_DJCLASSIFIEDS_CATTREE_DISABLED</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>
+				<field name="cattree_first_level_type" type="list" default="0" label="MOD_DJCLASSIFIEDS_CATTREE_FIRST_CATTREE_LEVEL_TYPE" description="MOD_DJCLASSIFIEDS_CATTREE_FIRST_CATTREE_LEVEL_TYPE_DESC" menu="hide">
+					<option value="0">MOD_DJCLASSIFIEDS_CATTREE_LINK</option>
+					<option value="1">MOD_DJCLASSIFIEDS_CATTREE_CATEGORY_WITH_DESCRIPTION</option>					
+				</field>
+				<field name="cattree_last_level_type" type="list" default="0" label="MOD_DJCLASSIFIEDS_CATTREE_LAST_CATTREE_LEVEL_TYPE" description="MOD_DJCLASSIFIEDS_CATTREE_LAST_CATTREE_LEVEL_TYPE_DESC" menu="hide">
+					<option value="0">MOD_DJCLASSIFIEDS_CATTREE_VERTICAL_LIST</option>
+					<option value="1">MOD_DJCLASSIFIEDS_CATTREE_FLAT_LIST</option>					
+				</field>		
+				<field name="cat_id" type="djcfcategorysingle" default="0" parent="false" label="MOD_DJCLASSIFIEDS_CATTREE_DEFAULT_CATEGORY" description="MOD_DJCLASSIFIEDS_CATTREE_CATEGORIES_DESC" />				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

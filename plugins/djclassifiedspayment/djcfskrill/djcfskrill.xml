@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="djclassifiedspayment"  method="upgrade">
+	<name>plg_djclassifiedspayment_djcfskrill</name>
+	<author>DJ-Extensions.com</author>
+	<creationDate>March 2013</creationDate>
+	<copyright>Copyright (C) 2010 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>contact@design-jooma.eu</authorEmail>
+	<authorUrl>http://design-joomla.eu</authorUrl>
+	<version>3.0</version>
+	<description>PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_DESC</description>
+	<files>
+		<filename plugin="djcfskrill">djcfskrill.php</filename>
+		<filename>index.html</filename>
+		<folder>djcfskrill</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+		        <!--<field name="test" type="radio" default="1" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_TEST_MODE" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_TEST_MODE_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			</field>-->
+				<field name="debug" type="radio" default="0" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_DEBUG" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_DEBUG_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="merchant_id" required="true" type="text" default="" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_MERCHANT_ID" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_MERCHANT_ID_DESC" />
+				<field name="secret_word" required="true" type="text" default="" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_SECRET_WORD" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_SECRET_WORD_DESC" />
+				<field name="pay_to_email" required="true" type="text" default="" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_PAY_TO_EMAIL" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_PAY_TO_EMAIL_DESC" />
+				<field name="currency_code" required="true" type="text"  default="USD" label="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_CURRENCY_CODE" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_CURRENCY_CODE_DESC"/>
+				
+				<!--<field name="notify_url_label" type="text" size="80" readonly="true"  label="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_NOTIFY_URL_LABEL" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_NOTIFY_URL_LABEL_DESC" default="http://domain.com/index.php?option=com_djclassifieds&amp;task=processPayment&amp;ptype=djcfskrill&amp;pactiontype=notify"/>
+				<field name="return_url_label" type="text" size="80" readonly="true"  label="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_RETURN_URL_LABEL" description="PLG_DJCLASSIFIEDSPAYMENT_DJCFSKRILL_RETURN_URL_LABEL_DESC" default="http://domain.com/index.php?option=com_djclassifieds&amp;task=paymentReturn&amp;r=ok"/>-->
+			</fieldset>
+		</fields>
+	</config>
+</extension>

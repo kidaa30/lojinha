@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" readonly="true" class="readonly" />		
+		<field name="name" type="text" class="inputbox required" required="true" size="40" label="COM_DJCLASSIFIEDS_NAME" description="COM_DJCLASSIFIEDS_NAME"  />		
+		<field name="price" filter="float" type="text" class="inputbox validate-price" size="40" label="COM_DJCLASSIFIEDS_PRICE" description="COM_DJCLASSIFIEDS_PRICE"  />
+		<field name="points" type="text" class="inputbox validate-numeric" size="40" label="COM_DJCLASSIFIEDS_POINTS"   />
+		<field name="groups_assignment" size="1" multiple="false" type="usergroup" label="COM_DJCLASSIFIEDS_GROUPS_ASSIGNMENT"  description="COM_DJCLASSIFIEDS_GROUPS_ASSIGNMENT_DESC" />
+		<field name="groups_restriction" size="12" multiple="true" type="usergroup" label="COM_DJCLASSIFIEDS_POINT_GROUPS"  description="COM_DJCLASSIFIEDS_POINT_GROUPS_DESC" />		
+		<field name="published" type="list" label="COM_DJCLASSIFIEDS_PUBLISHED" description="COM_DJCLASSIFIEDS_PUBLISHED"	class="inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field> 
+		<field name="description" type="editor" class="inputbox" label="COM_DJCLASSIFIEDS_DESCRIPTION" description="COM_DJCLASSIFIEDS_DESCRIPTION" required="false" />				
+	</fieldset>
+	<fields name="params">
+		<fieldset name="global"  label="COM_DJCLASSIFIEDS_CONFIG_GLOBAL_SETTINGS_LABEL" addfieldpath="/administrator/components/com_djclassifieds/models/fields">
+			<field name="ad_limit" type="text" class="inputbox validate-numeric" default="5" label="COM_DJCLASSIFIEDS_ADVERTS_LIMIT_IN_PLAN"  />
+			<field name="days_limit" type="text" class="inputbox validate-numeric" default="5" label="COM_DJCLASSIFIEDS_PLAN_EXPIRATION_TIME" description="COM_DJCLASSIFIEDS_PLAN_EXPIRATION_TIME_DESC"  />
+			<field name="img_limit" type="text" class="inputbox validate-numeric" default="3" label="COM_DJCLASSIFIEDS_CONFIG_IMGLIMIT" description="COM_DJCLASSIFIEDS_CONFIG_IMGLIMIT_DESC" />
+			<field name="chars_limit" type="text" class="inputbox validate-numeric" default="0" label="COM_DJCLASSIFIEDS_CONFIG_PAYED_DESC_CHARS_LIMIT" description="COM_DJCLASSIFIEDS_CONFIG_PAYED_DESC_CHARS_LIMIT_DESC" />
+			<field name="duration" type="djcfduration" class="inputbox" default="5" label="COM_DJCLASSIFIEDS_DURATION"  />
+			<field name="promotions" type="djcfpromotion" class="inputbox" default="" label="COM_DJCLASSIFIEDS_PROMOTIONS"  />				
+			<field name="video" type="list" class="inputbox" size="1" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_VIDEO" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_VIDEO_DESC"	>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>	
+			<field name="website" type="list" class="inputbox" size="1" default="1" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_WEBSITE" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_WEBSITE_DESC"	>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>				
+			<field name="buynow" type="list" class="inputbox" size="1" default="1" label="COM_DJCLASSIFIEDS_CONFIG_BUYNOW" description="COM_DJCLASSIFIEDS_CONFIG_BUYNOW_DESC"	>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>				
+			<field name="auction" type="list" class="inputbox" size="1" default="1" label="COM_DJCLASSIFIEDS_CONFIG_AUCTIONS" description="COM_DJCLASSIFIEDS_CONFIG_AUCTIONS_DESC"	>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>				
+			<field name="pay_categories" type="list" class="inputbox" size="1" default="1" label="COM_DJCLASSIFIEDS_PAY_CATEGORIES" description="COM_DJCLASSIFIEDS_PAY_CATEGORIES_DESC"	>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>	
+			
+			<field name="user_profile_ad" type="list" class="inputbox" size="1" default="1" label="COM_DJCLASSIFIEDS_USER_PROFILE_IN_ADVERT" description="COM_DJCLASSIFIEDS_USER_PROFILE_IN_ADVERT_DESC"	>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>	
+			
+						
+		</fieldset>
+	</fields>
+	
+</form>

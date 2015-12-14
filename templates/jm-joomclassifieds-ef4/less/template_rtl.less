@@ -1,0 +1,543 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+   
+@import "template_variables.less";
+@import "bootstrap_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+  
+@import "override/rtl/mixins.less";
+@import "../../../plugins/system/ef4_jmframework/includes/assets/template/bootstrap/less-ext/mixins-ext.less"; //JM extended mixins
+@import "template_mixins.less";
+
+// TEMPLATE RTL
+//---------------------------------------------------------------
+
+// layout.less
+// --------------------------  
+
+// topbar
+// --------------------------
+
+//sticky styles for top-bar
+.sticky-bar #jm-top-bar {
+  left: auto;
+  right: 0;
+}
+
+//top-bar modules
+#jm-top-bar-mod {
+  text-align: left;
+}
+
+#jm-logo-sitedesc {
+ //description
+  #jm-sitedesc {
+    padding: 0 10px 0 0;
+  }
+}
+
+// top-mod
+// --------------------------
+
+#jm-top-mod1-in {
+  padding-right: 0;
+  padding-left: (@JMbaseSpace/2);
+}
+
+#jm-top-mod2-in {
+  padding-left: 0;
+  padding-right: (@JMbaseSpace/2);
+}
+
+// breadcrumbs
+// --------------------------
+
+#jm-font-switcher {
+  text-align: left;
+}
+
+// footer
+// --------------------------
+
+// JM copyright align
+#jm-footer-right {
+  text-align: left;
+}
+
+#jm-back-top {
+  right: auto;
+  left: 20px;
+}  
+
+// joomla.less
+// --------------------------  
+// BOOTSTRAP
+//---------------------------------------------------------------
+  
+//chosen
+#jm-allpage .chzn-container .chzn-drop,
+#jm-allpage .chzn-container-single.chzn-container-single-nosearch .chzn-search {
+  left: auto;
+  right: -9999px;
+}
+
+#jm-allpage .chzn-container.chzn-with-drop .chzn-drop {
+  left: auto;
+  right: 0;
+}
+
+//chzn
+#jm-allpage {
+  .chzn-container-multi .chzn-choices li {
+    float: right;
+  }
+  .chzn-container-single .chzn-single span {
+    margin-right: 0;
+    margin-left: 26px;
+  }
+  .chzn-container-single .chzn-single div {
+    right: auto;
+    left: 8px;
+  }
+}
+
+// JOOMLA COMPONENT
+//---------------------------------------------------------------
+
+//page headings
+h1.componentheading, //extension headings support
+.tag-category > h1, //tag category
+.page-header > h1, //global
+.content-category > h1, //category-list
+.categories-list > h1, //categories-list
+.blog-featured > h1, //featured contacts
+.contact-category > h1, //contact category
+.contact > h1, //single contact
+.newsfeed-category > h1, //newsfeed category
+h1.page-title, //search form
+.finder > h1, //smart search
+.weblink-category > h1, //weblink category
+.edit > h1, //submit weblink 
+.blog > h2 //blog category
+{
+  &:after {
+    left: auto;
+    right: 0;
+  } 
+} 
+
+//all articles
+.article-info a {
+  display: inline-block;
+}
+
+//rating and voting
+.content_vote label {
+  margin: 0 0 0 5px;
+}
+
+//article categories
+.categories-list .collapse {
+  padding: 0 @JMbaseSpace 0 0;
+}
+
+//category blog
+//article separator
+.pull-left.item-image {
+  margin-right: 0;
+  margin-left: @JMbaseSpace;
+}
+
+.pull-right.item-image {
+  margin-left: 0;
+  margin-right: @JMbaseSpace;
+}
+  
+//readmore
+.readmore,
+.mod-articles-category-readmore a {
+  &::before {
+    margin-right: 0;
+    margin-left: 5px;
+    content: '[';
+    .translateX(-20px);
+  }
+  &::after {
+    margin-left: 0;
+    margin-right: 5px;
+    content: ']';
+    .translateX(20px);
+  }
+}
+
+.blog p.readmore {
+  text-align: left;
+}
+
+//weblinks single category
+.weblink-count {
+  dt,
+  dd {
+    float: right;
+  }
+}
+
+//tag-category
+.tag-category {
+  .form-inline label {
+    margin-right: 0;
+    margin-left: 10px;
+  } 
+}
+
+//search component
+.phrases-box,
+fieldset.only {
+  label {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+
+//article index
+.article-index {
+  margin-left: 0;
+  margin-right: @JMbaseSpace;
+}
+
+// JOOMLA MODULES
+//---------------------------------------------------------------
+
+//article categories
+.categories-module li  {
+  .mod-articles-category-category a {
+    display: inline-block;
+  }
+}
+
+//article category
+.category-module li {
+  .mod-articles-category-category a {
+    display: inline-block;
+  }
+}
+
+//search module
+.form-search {
+  label.finder {
+    padding: 0 0 0 10px;
+  }
+}
+
+//popular tags
+.tagspopular.tagscloud {
+  .tag {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+} 
+
+// menus.less
+// --------------------------  
+
+.nav.menu {
+  li a,
+  li span.separator {
+    padding: 10px 0;
+  }
+  > li.parent {
+    position: relative;
+    padding-right: 0;
+    padding-left: 20px;
+  }
+  > li.parent:after {
+    right: auto;
+    left: 5px;
+    border-width: 4.5px 5px 4.5px 0;
+    border-color: transparent @JMmenuArrowColor transparent transparent;
+  }
+  ul {
+    padding: 0 20px 0 0;
+  }
+}
+
+// white-ms
+#jm-allpage .jm-module.white-ms .nav.menu {
+  > li.parent:after {
+    border-color: transparent @JMmenuArrowColor transparent transparent;
+  }
+}
+
+// bottom3
+#jm-bottom3 .nav.menu {
+  > li.parent:after {
+    border-color: transparent @JMstyleInnerMenuArrowColor transparent transparent;
+  }
+}
+
+// top-bar
+#jm-top-bar-mod .nav.menu {
+  li ul {
+    left: auto;
+    right: 0;
+    text-align: right;
+  }
+  li li ul {
+    left: auto;
+    right: 100%;
+  }
+}
+
+// tags
+.tagspopular ul,
+.tagssimilar ul,
+.nav.menu.tags-ms,
+.tags-ms .nav.menu {
+  > li {
+    margin: 0 0 10px 10px;
+  }
+}
+
+.tagspopular ul,
+.tagssimilar ul {
+  > li {
+    margin: 0 0 10px 6px;
+  }
+}
+
+#jm-allpage .tags-ms {
+  > span {
+    margin: 0 0 10px 1px;
+  }
+}
+
+// modules.less
+// --------------------------  
+
+.span50 {
+  float: right !important;
+}  
+
+// title-border1-ms
+.jm-module.title-border1-ms .jm-title {
+  &:after {
+    left: auto;
+    right: 0;
+  }
+}
+
+// search
+#jm-allpage .search-ms {
+	//horizontal
+  .dj_cf_search_horizontal form > .search-wrapper {
+  	> div {
+  		float: right;
+  	}
+  }
+  .inputbox.first_input,
+  .inputbox.search-query {
+    text-align: right;
+    padding: 0 20px 0 45px;
+  }
+  button.button,
+  input.button {
+    right: auto;
+    left: 20px;
+  }
+}
+
+.jm-advanced {
+	p {
+	  text-align: left;
+	}
+}
+
+#jm-allpage .search-ms.category-ms .dj_cf_search {
+  form .inputbox.first_input,
+  form .inputbox.search-query {
+    padding-left: 45px;
+    padding-right: (@JMsearchCategoryInputWidth + 35);
+  }
+  form .search_cats {
+    left: auto;
+    right: 25px;
+    .chzn-container.chzn-container-single .chzn-single {
+      border: none;
+      border-left: 1px solid @JMborder;
+    }
+  }
+}
+
+// modules in top-mod
+#jm-top-mod1.span7:after {
+		border-left: none;
+    border-right: 1px dotted @JMtopmodBorderColor;
+    left: auto;
+    right: 100%;
+}
+
+#jm-top-mod {
+  .jm-module-in:after {
+    left: auto;
+    right: 5%;
+  }
+}
+
+// logout topbar
+#jm-top-bar-mod {
+  .logout-button .btn {
+    margin-left: 0!important;
+    margin-right: 10px!important;
+  }
+}
+
+// jmmoduleraw
+.jm-module-raw {
+  float: right;
+  margin-left: 0;
+  margin-right: 10px;
+	&:first-child {
+	  margin-right: 0;
+	}
+}
+
+#jm-top-bar .jm-module-raw {
+  float: left;
+  margin-left: 10px;
+  margin-right: 0;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.jm-special .td1 {
+  float: right;
+}
+
+.jm-special .td2 {
+  float: right;
+  padding: 0 @JMbaseSpace 0 0;
+}
+
+//---------------------------------------------------------------
+// DJ-Revievs
+//---------------------------------------------------------------
+
+//CF item and user profile
+#dj-classifieds .dj-item,
+#dj-classifieds .djcf_after_profile {
+	.djrv_rating_full .djrv_rating {
+		margin-left: 0;
+		margin-right: (@JMbaseSpace / 2);
+	}
+	.djrv_single_review {
+		margin: 0 @JMbaseSpace 0 0;
+	}
+  .djrv_rating_full h3,
+  .djrv_reviews_list h3 {   
+    padding: 0 @JMbaseSpace 10px 0;
+  }
+  .djrv_rating_full h3 {
+  	background: url("../images/@{JMimgDir}/desc.png") no-repeat right top;
+  }
+  .djrv_reviews_list h3 {
+  	background: url("../images/@{JMimgDir}/created.png") no-repeat right top;
+  }
+}
+
+//default theme RTL
+#jm-allpage {
+	.djrv_rating .djrv_star {
+		float: right;
+	}
+	.djrv_rating .djrv_avg {
+		padding-left: 0 !important;
+		padding-right: 10px !important;
+	}
+	form.djrv_review_form .djrv_rating_fields .djrv_field_rating div {
+		float: right;
+	}
+	form.djrv_review_form .djrv_rating_fields .djrv_field_rating label {
+		left: auto;
+		right: 0;
+	}
+	.djrv_single_review .djrv_user_rating {
+		float: left;
+	}
+	.djrv_review_toolbar {
+		text-align: left;
+	}
+}
+
+// editor.less
+// --------------------------  
+
+// numered blocks
+.jm-block {
+  padding: 0 60px 0 0;
+  span {
+    left: auto;
+    right: 0;
+  }
+}
+
+//colored blocks
+p.blue {
+	border-left: none;
+  border-right: 3px solid #BCE8F1;
+  padding: 0 10px 0 0;
+}
+
+p.green {
+	border-left: none;
+  border-right: 3px solid #D6E9C6;
+  padding: 0 10px 0 0;
+}
+
+p.red {
+	border-left: none;
+  border-right: 3px solid #EED3D7;
+  padding: 0 10px 0 0;
+}
+
+// icon blocks
+p,
+span {
+	&.jmbadge,
+	&.jmcalendar,
+	&.jmchat,
+	&.jmcheck,
+	&.jmcloud,
+	&.jmdirection,
+	&.jmdivide,
+	&.jmerror,
+	&.jmfire,
+	&.jmflag,
+	&.jmheart,
+	&.jmhome,
+	&.jminfo,
+	&.jmlist,
+	&.jmmail,
+	&.jmpeople,
+	&.jmstar,
+	&.jmstat {
+	  padding-left: 0;
+	  padding-right: 60px;
+	  background-position: right top;
+	}
+}
+
+// EXTENSIONS import
+//---------------------------------------------------------------
+
+//import extended DJ-Mediatools styles
+@import "djmediatools_rtl.less";

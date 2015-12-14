@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="djclassifiedspayment"  method="upgrade">
+	<name>plg_djclassifiedspayment_djcf2co</name>
+	<author>DJ-Extensions.com</author>
+	<creationDate>March 2013</creationDate>
+	<copyright>Copyright (C) 2010 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>contact@design-jooma.eu</authorEmail>
+	<authorUrl>http://design-joomla.eu</authorUrl>
+	<version>3.1</version>
+	<description>PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_DESC</description>
+	<files>
+		<filename plugin="djcf2co">djcf2co.php</filename>
+		<filename>index.html</filename>
+		<folder>djcf2co</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+		        <field name="test" type="radio" default="1" label="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_TEST_MODE" description="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_TEST_MODE_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="debug" type="radio" default="0" label="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_DEBUG" description="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_DEBUG_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="currency_code" required="true" type="text"  default="USD" label="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_CURRENCY_CODE" description="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_CURRENCY_CODE_DESC"/>
+				<field name="sid" required="true" type="text" default="" label="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_SID" description="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_SID_DESC" />
+				<field name="secret_word" required="true" type="text" default="" label="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_SECRET_WORD" description="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_SECRET_WORD_DESC" />
+				<field name="notify_url_label" type="text" size="80" readonly="true"  label="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_NOTIFY_URL_LABEL" description="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_NOTIFY_URL_LABEL_DESC" default="http://domain.com/index.php?option=com_djclassifieds&amp;task=processPayment&amp;ptype=djcf2co&amp;pactiontype=notify"/>
+				<field name="return_url_label" type="text" size="80" readonly="true"  label="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_RETURN_URL_LABEL" description="PLG_DJCLASSIFIEDSPAYMENT_DJCF2CO_RETURN_URL_LABEL_DESC" default="http://domain.com/index.php?option=com_djclassifieds&amp;task=paymentReturn&amp;r=ok"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

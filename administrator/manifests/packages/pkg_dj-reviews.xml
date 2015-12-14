@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5" method="upgrade">
+<name>DJ-Reviews Package</name>
+<packagename>dj-reviews</packagename>
+<creationDate>February 2015</creationDate>
+<author>DJ-Extensions.com LTD</author>
+<copyright>Copyright (C) 2010-2014 DJ-Extensions.com LTD, All rights reserved.</copyright>
+<license> http://www.gnu.org/licenses GNU/GPL</license>
+<authorEmail>contact@dj-extensions.com</authorEmail>
+<authorUrl>http://dj-extensions.com</authorUrl>
+<version>1.1</version>
+<url>http://dj-extensions.com</url>
+<packager></packager>
+<packagerurl></packagerurl>
+<description>DJ-Reviews All-in-one Package</description>
+<files>
+	<file type="component" client="admin" id="com_djreviews">com_djreviews.zip</file>
+	<file type="plugin" client="site" id="content" group="djreviews">plg_djreviews_content.zip</file>
+	<file type="plugin" client="site" id="djcatalog2" group="djreviews">plg_djreviews_djcatalog2.zip</file>
+	<file type="plugin" client="site" id="djclassifieds" group="djreviews">plg_djreviews_djclassifieds.zip</file>
+	<file type="plugin" client="site" id="djreviews" group="content">plg_content_djreviews.zip</file>
+	<file type="plugin" client="site" id="djreviews" group="djcatalog2">plg_djcatalog2_djreviews.zip</file>
+	<file type="plugin" client="site" id="djreviews" group="djclassifieds">plg_djclassifieds_djreviews.zip</file>
+</files>
+</extension>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.5" type="plugin" group="djmediatools" method="upgrade">
+	<name>plg_djmediatools_content</name>
+	<creationDate>September 2012</creationDate>
+    <author>DJ-Extensions.com</author>
+	<copyright>Copyright (C) 2012 DJ-Extensions.com, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.4.1</version>
+	<description>PLG_DJMEDIATOOLS_CONTENT_DESCRIPTION</description>
+	<files>
+		<filename plugin="content">content.php</filename>
+		<filename>index.html</filename>
+		<filename>icon.png</filename>
+		<folder>language</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+
+			<fieldset name="source_settings">
+				<field name="plg_content_type" type="list" default="featured" label="PLG_DJMEDIATOOLS_CONTENT_TYPE" description="PLG_DJMEDIATOOLS_CONTENT_TYPE_DESC">
+					<option value="articles">PLG_DJMEDIATOOLS_ARTICLES</option>
+					<option value="featured">PLG_DJMEDIATOOLS_FEATURED</option>
+				</field>
+				<field name="plg_content_id" type="category" extension="com_content" label="PLG_DJMEDIATOOLS_CONTENT_CATEGORY" description="PLG_DJMEDIATOOLS_CONTENT_CATEGORY_DESC" show_root="true" />
+				<field name="plg_content_maxlevel" type="list"
+					default="0"
+					description="JGLOBAL_SHOW_SUBCATEGORY_CONTENT_DESC"
+					label="JGLOBAL_SHOW_SUBCATEGORY_CONTENT_LABEL">
+					<option value="0">JNONE</option>
+					<option value="-1">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+				</field>
+				<field name="plg_content_order" type="list" default="a.ordering" label="PLG_DJMEDIATOOLS_CONTENT_ORDER">
+					<option value="a.ordering">PLG_DJMEDIATOOLS_CONTENT_ORDERING</option>
+					<option value="fp.ordering">PLG_DJMEDIATOOLS_CONTENT_ORDERINGFEATURED</option>
+					<option value="a.hits">PLG_DJMEDIATOOLS_CONTENT_HITS</option>
+					<option value="a.title">JGLOBAL_TITLE</option>
+					<option value="a.created">PLG_DJMEDIATOOLS_CONTENT_CREATED</option>
+					<option value="modified">PLG_DJMEDIATOOLS_CONTENT_MODIFIED</option>
+					<option value="publish_up">PLG_DJMEDIATOOLS_CONTENT_STARTPUBLISHING</option>
+					<option value="a.publish_down">PLG_DJMEDIATOOLS_CONTENT_FINISHPUBLISHING</option>
+				</field>
+				<field name="plg_content_order_dir" type="list" default="ASC" label="PLG_DJMEDIATOOLS_CONTENT_ORDER_DIR">
+					<option value="DESC">PLG_DJMEDIATOOLS_CONTENT_DESCENDING</option>
+					<option value="ASC">PLG_DJMEDIATOOLS_CONTENT_ASCENDING</option>
+				</field>
+				<field name="plg_content_image"	type="media" label="PLG_DJMEDIATOOLS_CONTENT_DEFAULT_IMAGE" description="PLG_DJMEDIATOOLS_CONTENT_DEFAULT_IMAGE_DESC" />
+			</fieldset>
+
+		</fields>
+	</config>
+	
+</extension>

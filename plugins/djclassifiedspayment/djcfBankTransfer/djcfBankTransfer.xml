@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="djclassifiedspayment"  method="upgrade">
+	<name>DJ Classifieds Bank Transfer payment</name>
+	<author>DJ-Extensions.com</author>
+	<creationDate>September 2011</creationDate>
+	<copyright>Copyright (C) 2010 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>contact@design-jooma.eu</authorEmail>
+	<authorUrl>http://design-joomla.eu</authorUrl>
+	<version>3.4.1</version>
+	<description><![CDATA[
+		DJ Classifieds Bank Transfer Payment		
+		]]></description>
+	<files>
+		<filename plugin="djcfBankTransfer">djcfBankTransfer.php</filename>
+		<folder>djcfBankTransfer</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_djclassifiedspayment_djcfBankTransfer.ini</language>
+		<language tag="pl-PL">pl-PL.plg_djclassifiedspayment_djcfBankTransfer.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="pay_info" type="editor"  filter="safehtml"  default="" label="PLG_DJCFBANKTRANSFER_PAYMENT_INFORMATION" description="PLG_DJCFBANKTRANSFER_PAYMENT_INFORMATION_DESC"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

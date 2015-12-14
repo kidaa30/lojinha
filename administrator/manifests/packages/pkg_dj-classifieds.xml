@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.7" method="upgrade">
+<name>DJ-Classifieds Package</name>
+<packagename>dj-classifieds</packagename>
+<creationDate>November 2011</creationDate>
+<author>DJ-Extensions.com</author>
+<copyright>Copyright (C) 2010 DJ-Extensions.com LTD, All rights reserved.</copyright>
+<license> http://www.gnu.org/licenses GNU/GPL</license>
+<authorEmail>contact@design-joomla.eu</authorEmail>
+<authorUrl>http://dj-extensions.com</authorUrl>
+<version>3.4.1.1</version>
+<url>http://dj-extensions.com</url>
+<packager></packager>
+<packagerurl></packagerurl>
+<description>
+	<![CDATA[
+	<style>
+		#box-install{width:500px;margin:40px 0 0 40px;background: url("components/com_djclassifieds/assets/images/install_logo.png") left top no-repeat;height:50px;}	
+		#box-info,#box-new {font-family: Arial, Helvetica, sans-serif;font-size: 11px;width: 470px;color:#777777;float:left;margin: 23px 0 40px 40px;font-weight:normal;}
+		#box-info h2,#box-new h2{background: #ea9c72 url("components/com_djclassifieds/assets/images/install_i.gif") left center no-repeat;font-size: 16px;font-weight: bold;color:#fff;	margin: 0px;padding: 0 0 0 61px;line-height: 40px;height: 40px;}
+		#box-new h2{background: #1ca976 url("components/com_djclassifieds/assets/images/install_star.gif") left center no-repeat;}
+		#box-info #box-info-content,#box-new #box-new-content{padding:15px;background: #f4f4f4;}
+		#box-info p{margin: 0 0 10px 0;}
+		#box-new p{margin: 0 0 10px 0;}
+		#box-new p.box-new-li{padding-left: 15px;background: url("components/com_djclassifieds/assets/images/install_plus.gif") left 4px no-repeat;}
+		#box-info a,#box-new a{text-decoration: underline;color:#777777;font-weight: bold;}	
+	</style>
+	<div id="box-install"></div>	
+	<div id="box-new">
+		<h2>What's new?</h2>				
+		<div id="box-new-content">
+			<p class="box-new-li">BuyNow feature for adverts</p>			
+			<p class="box-new-li">Adverts archive</p>				
+			<p class="box-new-li">Better RWD support in tables</p>
+			<p class="box-new-li">Dates based on Joomla time not database.</p>
+			<p class="box-new-li">New Statistic module</p>
+			<p class="box-new-li">Community Builder integration</p>
+			<p class="box-new-li">New custom field type - show on click</p>
+			<p class="box-new-li">Save as copy for adverts in administrator panel</p>
+			<p class="box-new-li">Facebook comments - administrator can manage the comments</p>			
+			<p class="box-new-li">many more</p>
+			<p><a href="https://dj-extensions.com/changelog/dj-classifieds/ver-3-4" target="_blank">Check the whole changelog - about 100 new features and fixes!</p>
+		</div> 
+	</div>	
+	<div style="clear:both"></div>
+	]]>	
+</description>
+<files> 
+		<file type="module" client="site" id="mod_djclassifieds_cattree">mod_djclassifieds_cattree.zip</file>       
+        <file type="module" client="site" id="mod_djclassifieds_items">mod_djclassifieds_items.zip</file>
+        <file type="module" client="site" id="mod_djclassifieds_maps">mod_djclassifieds_maps.zip</file>
+        <file type="module" client="site" id="mod_djclassifieds_menu">mod_djclassifieds_menu.zip</file>
+        <file type="module" client="site" id="mod_djclassifieds_regions">mod_djclassifieds_regions.zip</file>
+        <file type="module" client="site" id="mod_djclassifieds_search">mod_djclassifieds_search.zip</file>
+        <file type="module" client="site" id="mod_djclassifieds_user_menu">mod_djclassifieds_user_menu.zip</file>
+        <file type="module" client="site" id="mod_djclassifieds_user_points">mod_djclassifieds_user_points.zip</file>
+        <file type="module" client="site" id="mod_djclassifieds_stats">mod_djclassifieds_stats.zip</file>                    
+        <file type="plugin" client="site" id="djcfAuthorizeNET" group="djclassifiedspayment">djcfAuthorizeNET.zip</file>
+        <file type="plugin" client="site" id="djcfBankTransfer" group="djclassifiedspayment">djcfBankTransfer.zip</file>
+        <file type="plugin" client="site" id="djcfPaypal" group="djclassifiedspayment">djcfPaypal.zip</file>
+        <file type="plugin" client="site" id="djcfPayU" group="djclassifiedspayment">djcfPayU.zip</file>
+        <file type="plugin" client="site" id="djcfPrzelewy24" group="djclassifiedspayment">djcfPrzelewy24.zip</file>
+        <file type="plugin" client="site" id="pagebreak" group="djclassifieds">plg_djclassifieds_pagebreak.zip</file>
+        <file type="plugin" client="admin" id="djcfquickicon" group="quickicon">djcfquickicon.zip</file>        
+        <file type="component" client="admin" id="com_djclassifieds">com_djclassifieds.zip</file>        
+</files>
+</extension>

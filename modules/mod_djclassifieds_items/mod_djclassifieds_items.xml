@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0"  method="upgrade">
+	<name>DJClassifieds Items</name>
+	<creationDate>January 2013</creationDate>
+	<author>DJ-Extensions.com</author>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<copyright>dj-extensions.com</copyright>
+	<license>GPL</license>
+	<version>3.4</version>
+	<description>DJ Classifieds Items module</description>
+	<files>
+		<filename module="mod_djclassifieds_items">mod_djclassifieds_items.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_djclassifieds/models/fields">
+				<field name="items_nr" type="text" default="7" label="MOD_DJCLASSIFIEDS_ITEMS_NUMBER_OF_ITEMS" />
+				<field name="columns_nr" type="list" default="1" label="MOD_DJCLASSIFIEDS_ITEMS_NUMBER_OF_COLUMNS">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="items_ord" type="list" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_ORDERING">
+					<option value="0">MOD_DJCLASSIFIEDS_ITEMS_MOST_RECENT</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ITEMS_POPULAR</option>
+					<option value="3">MOD_DJCLASSIFIEDS_ITEMS_NAME</option>
+					<option value="2">MOD_DJCLASSIFIEDS_ITEMS_RANDOM</option>					
+				</field>
+				<field name="items_source" type="list" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_SOURCE" desc="MOD_DJCLASSIFIEDS_ITEMS_SOURCE_DESC">
+					<option value="0">MOD_DJCLASSIFIEDS_ITEMS_ALL_ADVERTS</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ITEMS_USER_ADVERTS</option>
+					<option value="2">MOD_DJCLASSIFIEDS_ITEMS_FAVOURITE_ADVERTS</option>				
+				</field>
+				<field name="cat_id" type="djcfcategory" default="0" parent="false" label="MOD_DJCLASSIFIEDS_ITEMS_CATEGORIES" description="MOD_DJCLASSIFIEDS_ITEMS_CATEGORIES_DESC"  multiple="true" size="10"/>
+				<field name="region_id" type="djcfregion" default="0" parent="false" label="MOD_DJCLASSIFIEDS_ITEMS_REGIONS" description="MOD_DJCLASSIFIEDS_ITEMS_REGIONS_DESC"  multiple="true" size="10"/>
+				<field name="type_id" type="sql" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_TYPES" description="MOD_DJCLASSIFIEDS_ITEMS_TYPES_DESC" query="SELECT id, CONCAT(name,' (id ',id,') ') as title FROM #__djcf_types ORDER BY name" key_field="id" value_field="title" multiple="true" size="10"  />
+				<field name="fallow_category" type="list" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_FALLOW_CATEGORY" description="MOD_DJCLASSIFIEDS_ITEMS_FALLOW_CATEGORY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="fallow_region" type="list" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_FALLOW_REGION" description="MOD_DJCLASSIFIEDS_ITEMS_FALLOW_REGION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="items_ids" type="text" default="" label="MOD_DJCLASSIFIEDS_ITEMS_IDS" description="MOD_DJCLASSIFIEDS_ITEMS_IDS_DESC"  size="50" />
+				<field name="users_ids" type="text" default="" label="MOD_DJCLASSIFIEDS_ITEMS_USERS_IDS" description="MOD_DJCLASSIFIEDS_ITEMS_USERS_IDS_DESC"  size="50" />
+				<field name="show_img" type="list" default="1" label="MOD_DJCLASSIFIEDS_ITEMS_SHOW_ICON">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_default_img" type="list" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_SHOW_DEFAULT_ICON" description="MOD_DJCLASSIFIEDS_ITEMS_SHOW_DEFAULT_ICON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ITEMS_DEFAULT_IMAGE_FOR_ADVERTS</option>
+					<option value="2">MOD_DJCLASSIFIEDS_ITEMS_IMAGE_FROM_CATEGORY</option>
+				</field>
+				<field name="only_with_img" type="list" default="0" label="MOD_DJCLASSIFIEDS_SHOW_ONLY_ADS_WITH_IMG">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="img_type" type="list" default="ths" label="MOD_DJCLASSIFIEDS_ITEMS_IMAGE_THUMB_TYPE">
+					<option value="ths">MOD_DJCLASSIFIEDS_ITEMS_SMALL_THUMB</option>
+					<option value="thm">MOD_DJCLASSIFIEDS_ITEMS_MEDIUM_THUMB</option>
+					<option value="thb">MOD_DJCLASSIFIEDS_ITEMS_BIG_THUMB</option>
+				</field>
+				<field name="img_width" type="text" default="" label="MOD_DJCLASSIFIEDS_ITEMS_IMAGE_WIDTH" description="MOD_DJCLASSIFIEDS_ITEMS_IMAGE_WIDTH_DESC"  />				
+				<field name="img_height" type="text" default="" label="MOD_DJCLASSIFIEDS_ITEMS_IMAGE_HEIGHT" description="MOD_DJCLASSIFIEDS_ITEMS_IMAGE_HEIGHT_DESC"  />
+				<field name="show_title" type="list" default="1" label="MOD_DJCLASSIFIEDS_ITEMS_SHOW_TITLE">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="char_title_nr" type="text" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_CHARS_IN_TITLE" description="MOD_DJCLASSIFIEDS_ITEMS_CHARS_IN_TITLE_DESC" />	
+				<field name="show_date" type="list" default="1" label="MOD_DJCLASSIFIEDS_ITEMS_SHOW_DATE">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>		
+				<field name="show_cat" type="list" default="1" label="MOD_DJCLASSIFIEDS_ITEMS_SHOW_CATEGORY">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>		
+				<field name="cat_link" type="list" default="1" label="MOD_DJCLASSIFIEDS_ITEMS_CATEGORY_LINKED">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="show_type" type="list" default="1" label="MOD_DJCLASSIFIEDS_ITEMS_SHOW_TYPE">
+					<option value="0">JNO</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ITEMS_LABEL</option>
+					<option value="2">MOD_DJCLASSIFIEDS_ITEMS_BUTTON</option>
+				</field>		
+				<field name="show_region" type="list" default="1" label="MOD_DJCLASSIFIEDS_ITEMS_SHOW_REGION">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="show_price" type="list" default="1" label="MOD_DJCLASSIFIEDS_ITEMS_SHOW_PRICE">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_description" type="list" default="1" label="MOD_DJCLASSIFIEDS_ITEMS_SHOW_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="desc_source" type="list" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_DESC_SOURCE_DESC">
+					<option value="0">MOD_DJCLASSIFIEDS_ITEMS_INTRO_DESC</option>
+					<option value="1">MOD_DJCLASSIFIEDS_ITEMS_FULL_DESC</option>
+				</field>
+				<field name="desc_link" type="list" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_DESC_LINKED">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>	
+				<field name="char_desc_nr" type="text" default="50" label="MOD_DJCLASSIFIEDS_ITEMS_CHARS_IN_DESC" description="MOD_DJCLASSIFIEDS_ITEMS_CHARS_IN_DESC_DESC" />						<field name="only_p_special" type="list" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_ONLY_PROMOTED_SPECIAL" description="MOD_DJCLASSIFIEDS_ITEMS_ONLY_PROMOTED_SPECIAL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="only_p_first" type="list" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_ONLY_PROMOTED_FIRST" description="MOD_DJCLASSIFIEDS_ITEMS_ONLY_PROMOTED_FIRST_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="only_p_bold" type="list" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_ONLY_PROMOTED_BOLD" description="MOD_DJCLASSIFIEDS_ITEMS_ONLY_PROMOTED_BOLD_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="only_p_border" type="list" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_ONLY_PROMOTED_BORDER" description="MOD_DJCLASSIFIEDS_ITEMS_ONLY_PROMOTED_BORDER_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="only_p_bg" type="list" default="0" label="MOD_DJCLASSIFIEDS_ITEMS_ONLY_PROMOTED_BG" description="MOD_DJCLASSIFIEDS_ITEMS_ONLY_PROMOTED_BG_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+				<fieldset name="advanced">
+					<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+					<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+					<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+						<option value="1">JGLOBAL_USE_GLOBAL</option>
+						<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+					</field>
+					<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+					<field name="cachemode" type="hidden" default="static">
+						<option value="static"></option>
+					</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,84 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+  
+@import "template_variables.less";
+@import "bootstrap_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+  
+@import "override/ltr/mixins.less";
+@import "template_mixins.less";
+
+// COMING SOON
+//---------------------------------------------------------------
+
+#jm-coming-soon {
+	text-align: center;
+}
+  
+#jm-coming-soon #jm-logo {
+  padding: @JMtopbarLogoPadding 0;
+  //logo
+  line-height: (@JMtopbarHeight - (@JMtopbarLogoPadding * 2));
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin: 0;
+  a {
+    color: @JMlogoFontColor;
+    display: block;
+    img {
+      vertical-align: top;
+      border: none;
+    }
+  }
+  margin: 0 0 100px;
+  background: @JMtopbarBackground;
+}
+
+#jm-coming-soon #jm-coming-module {
+  text-align: center;
+  margin: 0 0 50px;
+}
+
+#countdown {
+	padding: 0 0 100px;
+  p {
+    display: inline-block;
+    margin: 0 20px 20px;
+    vertical-align: middle;
+  }
+  span.days,
+  span.hours,
+  span.minutes,
+  span.seconds {
+  	height: 150px;
+  	width: 180px;
+  	display: block;
+  	font-size: 50px;
+    font-weight: 700;
+    line-height: 144px;
+    color: @JMmoduleTitleColor;
+    border: 5px solid @JMborder;
+    .border-radius(@baseBorderRadius);
+  }
+  span.timeRefDays,
+  span.timeRefHours,
+  span.timeRefMinutes,
+  span.timeRefSeconds {
+  	display: block;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 600;
+    color: jmlighten(@JMmoduleTitleColor, 10%);
+    padding: 15px 0 0;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0"  method="upgrade">
+	<name>DJClassifieds Menu</name>
+	<creationDate>January 2013</creationDate>
+	<author>DJ-Extensions.com</author>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<copyright>dj-extensions.com</copyright>
+	<license>GPL</license>
+	<version>3.4.1</version>
+	<description>DJ Classifieds Menu module</description>
+	<files>
+		<filename module="mod_djclassifieds_menu">mod_djclassifieds_menu.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="_menu" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="max_level" type="list" default="0" label="MOD_DJCLASSIFIEDS_MENU_MAX_LEVEL">
+					<option value="0">MOD_DJCLASSIFIEDS_MENU_ALL</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="new_ad_link" type="list" default="2" label="MOD_DJCLASSIFIEDS_MENU_LINK_NEW_AD">
+					<option value="0">JNO</option>
+					<option value="1">MOD_DJCLASSIFIEDS_MENU_TOP</option>
+					<option value="2">MOD_DJCLASSIFIEDS_MENU_BOTTOM</option>
+				</field>
+				<field name="cat_ordering" type="list" default="ord" label="MOD_DJCLASSIFIEDS_MENU_ORDERING" description="MOD_DJCLASSIFIEDS_MENU_ORDERING_DESC">
+					<option value="ord">MOD_DJCLASSIFIEDS_MENU_CATEGORY_ORDERING</option>
+					<option value="name">MOD_DJCLASSIFIEDS_MENU_CATEGORY_NAME</option>
+				</field>
+				<field name="hide_empty" type="list" default="0" label="MOD_DJCLASSIFIEDS_MENU_HIDE_EMPTY" description="MOD_DJCLASSIFIEDS_MENU_HIDE_EMPTY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="only_current_level" type="list" default="0" label="MOD_DJCLASSIFIEDS_MENU_SHOW_ONLY_CURRENT_LEVEL" description="MOD_DJCLASSIFIEDS_MENU_SHOW_ONLY_CURRENT_LEVEL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="expand_type" type="list" default="0" label="MOD_DJCLASSIFIEDS_MENU_EXPAND_TYPE" desc="MOD_DJCLASSIFIEDS_MENU_EXPAND_TYPE_DESC">
+					<option value="0">MOD_DJCLASSIFIEDS_MENU_CURRENT_PATH</option>
+					<option value="1">MOD_DJCLASSIFIEDS_MENU_ALL_CATEGORIES</option>
+				</field>				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

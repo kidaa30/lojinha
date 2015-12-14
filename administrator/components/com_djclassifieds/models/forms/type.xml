@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" readonly="true" class="readonly" />		
+		<field name="name" type="text" class="inputbox" size="40" label="COM_DJCLASSIFIEDS_NAME" description="COM_DJCLASSIFIEDS_NAME" required="true" />		
+		<field name="published" type="list" label="COM_DJCLASSIFIEDS_PUBLISHED" description="COM_DJCLASSIFIEDS_PUBLISHED"	class="inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>				
+	</fieldset>
+	<fields name="params">
+		<fieldset  name="global"  label="COM_DJCLASSIFIEDS_CONFIG_GLOBAL_SETTINGS_LABEL" addfieldpath="/administrator/components/com_djclassifieds/models/fields">
+			<field name="bt_class" type="text" default="" label="COM_DJCLASSIFIEDS_TYPE_LABEL_CLASS" description="COM_DJCLASSIFIEDS_TYPE_LABEL_CLASS" />
+			<field name="bt_use_styles" type="list" label="COM_DJCLASSIFIEDS_USE_STYLES_IN_LABELS" description="COM_DJCLASSIFIEDS_USE_STYLES_IN_LABELS_DESC"	class="inputbox" size="1" default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>	
+			<field name="bt_color" type="cfcolor" default="#000000" label="COM_DJCLASSIFIEDS_TYPE_LABEL_COLOR" description="COM_DJCLASSIFIEDS_TYPE_LABEL_COLOR_DESC" />
+			<field name="bt_bg" type="cfcolor" default="#cccccc" label="COM_DJCLASSIFIEDS_TYPE_LABEL_BG" description="COM_DJCLASSIFIEDS_TYPE_LABEL_BG_DESC" />
+			<field name="bt_border_color" type="cfcolor" default="#dedede" label="COM_DJCLASSIFIEDS_TYPE_LABEL_BORDER" description="COM_DJCLASSIFIEDS_TYPE_LABEL_BORDER_DESC" />
+			<field name="bt_border_size" type="text" size="5" default="1" label="COM_DJCLASSIFIEDS_TYPE_LABEL_BORDER_SIZE" description="COM_DJCLASSIFIEDS_TYPE_LABEL_BORDER_SIZE_DESC" />
+			<field name="bt_style" type="text" size="100" default="border-radius:2px;padding:2px 4x;margin:3px 5px;" label="COM_DJCLASSIFIEDS_TYPE_LABEL_STYLES" description="COM_DJCLASSIFIEDS_TYPE_LABEL_STYLES_DESC" />			
+		</fieldset>
+	</fields>
+	
+</form>

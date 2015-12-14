@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" 
+				readonly="true" class="readonly" />
+		
+		<field name="name" type="text" class="inputbox"
+				size="40" label="COM_DJCLASSIFIEDS_NAME"
+				description="COM_DJCLASSIFIEDS_NAME" required="true" />
+		
+		<field name="plugin" type="plugins" class="inputbox" required="true"
+			size="40" label="COM_DJCLASSIFIEDS_PLUGIN"
+			description="COM_DJCLASSIFIEDS_PLUGIN" folder="djclassifiedsshipping"/>
+		
+		<field name="price" type="text" class="inputbox validate-price"
+			size="40" label="COM_DJCLASSIFIEDS_PRICE"
+			description="COM_DJCLASSIFIEDS_PRICE"  
+		/>
+				
+		<field
+			name="published"
+			type="list"
+			label="COM_DJCLASSIFIEDS_PUBLISHED"
+			description="COM_DJCLASSIFIEDS_PUBLISHED"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option
+				value="1">JPUBLISHED</option>
+			<option
+				value="0">JUNPUBLISHED</option>
+		</field>
+		
+		<field
+			name="shipping_details"
+			type="list"
+			label="COM_DJCLASSIFIEDS_SHIPPING_DETAILS"
+			description="COM_DJCLASSIFIEDS_SHIPPING_DETAILS_DESC"
+			class="inputbox" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="description" type="editor" class="inputbox"
+			label="COM_DJCLASSIFIEDS_DESCRIPTION" description="COM_DJCLASSIFIEDS_DESCRIPTION"
+			filter="JComponentHelper::filterText"
+			buttons="false" />
+	</fieldset>
+	<fields name="params"></fields>
+</form>

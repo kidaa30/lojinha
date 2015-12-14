@@ -1,0 +1,304 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// ANIMATED BUTTONS
+//---------------------------------------------------------------
+
+.ch-item.ch-first .ch-info,
+.ch-item.ch-second .ch-info .ch-info-back,
+.ch-item.ch-third .ch-info .ch-info-back {
+  background: @JMstyle;
+}
+
+// video module
+.view {
+  cursor: default;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  .mask,
+  .content {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .mask span.space {
+    height: 50%;
+    display: block;
+  }
+  .readmore {
+    display: table;
+    margin: -10px auto 0;
+    -webkit-backface-visibility:hidden;
+  }
+}
+
+.view-video {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .box-shadow(0 0 0 10px rgba(255, 255, 255, 0.3) inset);
+    z-index: 2;
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    background: url('../images/video-play.png') no-repeat;
+    .transition(all 0.5s ease-out 0s);
+    .opacity(100);
+    z-index: 1;
+  }
+  &:hover:after {
+    .opacity(0);
+  }
+  img {
+    .opacity(100);
+    .transition(all 0.5s ease-out 0s);
+    position: relative;
+    display: inline-block;
+  }
+  .mask {
+    .opacity(0);
+    -webkit-transform: rotate(0deg) scale(1);
+    -moz-transform: rotate(0deg) scale(1);
+    -o-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    .transition(all 0.3s ease-out 0s);
+    z-index: 10;
+    .box-shadow(0 0 0 10px rgba(255, 255, 255, 0.3) inset);
+  }
+}
+
+.view-video:hover {
+  img {
+    .opacity(0);
+    -webkit-transform: rotate(720deg) scale(0);
+    -moz-transform: rotate(720deg) scale(0);
+    -o-transform: rotate(720deg) scale(0);
+    -ms-transform: rotate(720deg) scale(0);
+    transform: rotate(720deg) scale(0);
+  }
+  .mask {
+    .opacity(100);
+    -webkit-transform: translateY(0px) rotate(0deg);
+    -moz-transform: translateY(0px) rotate(0deg);
+    -o-transform: translateY(0px) rotate(0deg);
+    -ms-transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px) rotate(0deg);  
+    transition-delay: 0.4s;
+  }
+}
+
+.view .mask {
+    background: #eee;
+}
+
+// image hovers
+.ch-item.ch-first {
+  .box-shadow(0 0 0 10px rgba(255, 255, 255, 0.3) inset);
+}   
+    
+.ch-item.ch-third .ch-info-front {
+  .box-shadow(0 0 0 10px rgba(255, 255, 255, 0.3) inset);
+}
+
+.ch-item {
+  position: relative;
+  width: @JManimatedButtonsWidth;
+  height: @JManimatedButtonsHeight;
+}
+
+x:-o-prefocus,
+.ch-item {
+  border: none; // opera fix
+}
+
+.ch-item {
+  .ch-info .ch-container {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  .ch-info .ch-outer {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .ch-info p {
+    padding: 20px 5px 0;
+    margin: 0;
+    text-align: center;
+    .box-sizing(border-box);
+    font-size: 18px !important;
+    line-height: 30px;
+    background: url("../images/badge_sep.png") no-repeat top center;
+  }
+  .ch-info p a {
+    color: @white;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .ch-info p a:hover {
+    text-decoration: underline;
+  }
+  .ch-info p span.smaller {
+    font-size: 16px !important;
+    line-height: 22px;
+    font-weight: normal;
+  }
+}
+
+// first
+.ch-item.ch-first {
+  position: relative;
+  cursor: default;
+  .transition(all 0.4s ease-in-out);
+  .ch-info {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    top: 10px;
+    .opacity(0);
+    .transition(all 0.4s ease-in-out);
+    .scale(0);
+    -webkit-backface-visibility: hidden; // for a smooth font
+  }
+  &:hover .ch-info {
+    .opacity(100);
+    .scale(1);
+  }
+}
+
+// second
+.ch-item.ch-second {
+  position: relative;
+  cursor: default;
+  overflow: hidden;
+  .ch-info-wrap {
+    position: absolute;
+    .perspective(800px);
+    .transition(all 0.4s ease-in-out);
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    top: 10px;
+    .box-shadow(0 0 0 10px rgba(255, 255, 255, 0.3));
+  }
+  .ch-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .transition(all 0.4s ease-in-out);
+    .transformstyle (preserve-3d);
+  } 
+  .ch-info > div {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    .backface-visibility (hidden);
+  }
+  .ch-info .ch-info-back {
+    .rotate3d(0,1,0,180deg);
+  }
+  &:hover .ch-info {
+    .rotate3d(0,1,0,-180deg);
+  }
+}
+
+// opera fix
+x:-o-prefocus, .ch-item.ch-second .ch-info .ch-info-back {
+  display: none;
+}
+
+x:-o-prefocus, .ch-item.ch-second:hover .ch-info .ch-info-back {
+  display: block;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .ch-item.ch-second:hover .ch-info {
+        -ms-transform: none;
+        transform: none;
+    }
+    .ch-item.ch-second .ch-info .ch-info-back {
+        display: none;
+        -ms-transform: none;
+        transform: none;
+        .transition(all 0.4s ease-in-out);
+        .opacity(0);
+    }
+    .ch-item.ch-second:hover .ch-info .ch-info-back {
+        display: block;
+        .opacity(100);
+    }
+}
+
+// third
+.ch-item.ch-third {
+  position: relative;
+  cursor: default;
+  .perspective(900px);
+  .ch-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .transformstyle (preserve-3d);
+  }
+  .ch-info > div {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    .transition(all 0.4s linear);
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -o-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+  }
+  .ch-info .ch-info-back {
+    -webkit-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+    -moz-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+    -o-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+    -ms-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+    transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+    .opacity(0);
+  }
+  &:hover .ch-info-front {
+    -webkit-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+    -moz-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+    -o-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+    -ms-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+    transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+    .opacity(0);
+  }
+  &:hover .ch-info-back {
+    .rotate3d(1,0,0,0deg);
+    .opacity(100);
+  }
+}

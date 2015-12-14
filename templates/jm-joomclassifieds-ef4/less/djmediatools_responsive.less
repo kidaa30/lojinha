@@ -1,0 +1,75 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MEDIATOOLS RESPONSIVE
+//---------------------------------------------------------------
+
+@media (max-width: 979px) {
+	.dj-slide-title {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-rendering: optimizeLegibility;
+    .box-sizing(border-box);
+  }
+  .dj-slide-description,
+  .dj-slide-description p {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-rendering: optimizeLegibility;
+    .box-sizing(border-box);
+  } 
+  .dj-tabber .dj-tabs {
+     display: none!important;
+   }
+   .dj-tabber .dj-slides {
+     margin: 0!important;
+   }
+   .dj-tabber .dj-tabber-in {
+     min-height: 200px;
+   }
+   .dj-tabber .dj-navigation {
+     display: none;
+   }
+   //suffix
+   .slider2-ms .dj-slide-desc-text {
+   	padding: 10px!important;	
+   }
+   .slider2-ms .dj-readmore-wrapper {
+   	display: none;
+   }
+}
+
+
+@media (max-width: 480px) {
+	.dj-slide-title {
+    font-size: 14px!important;
+  } 
+  .dj-slide-desc-text {
+    padding: 10px!important;
+  }
+  .dj-readmore-wrapper {
+    display: none!important;
+  }
+}
+
+@media (max-width: 320px) {
+  .dj-slide-title,
+  .nivo-controlNav,
+  .dj-indicators,
+  .navigation-container-custom,
+  .dj-slide-description,
+  .dj-slide-desc-text,
+  .dj-slide-desc-bg {
+    display: none!important;
+  }
+}

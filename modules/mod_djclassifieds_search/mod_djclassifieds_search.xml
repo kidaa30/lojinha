@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" method="upgrade" >
+	<name>DJClassifieds Search</name>
+	<creationDate>January 2013</creationDate>
+	<author>DJ-Extensions.com</author>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<copyright>dj-extensions.com</copyright>
+	<license>GPL</license>
+    <version>3.4.1</version>
+	<description>DJ Classifieds Search module</description>
+	<files>
+		<filename module="mod_djclassifieds_search">mod_djclassifieds_search.php</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_djclassifieds/models/fields">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="search_layout" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_LAYOUT">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_VERTICAL</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_HORIZONTAL</option>
+				</field>
+				<field name="result_view" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_RESULT_VIEW">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_TABLE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_BLOG</option>
+				</field>
+				<field name="cat_id" type="djcfcategorysingle" default="0" parent="false" label="MOD_DJCLASSIFIEDS_SEARCH_DEFAULT_CATEGORY" description="MOD_DJCLASSIFIEDS_ITEMS_CATEGORIES_DESC" />
+				<field name="fallow_cat" type="list" default="1" label="MOD_DJCLASSIFIEDS_SEARCH_FALLOW_CATEGORY">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_cat" type="list" default="1" label="MOD_DJCLASSIFIEDS_SEARCH_FILTER_CATEGORY">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_cat_label" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_SHOW_CATEGORY_LABEL">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="cat_ordering" type="list" default="ord" label="MOD_DJCLASSIFIEDS_SEARCH_CATEGORY_ORDERING">
+					<option value="ord">MOD_DJCLASSIFIEDS_SEARCH_ORDERING</option>
+					<option value="name">MOD_DJCLASSIFIEDS_SEARCH_NAME</option>
+				</field>
+				<field name="cat_hide_empty" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_HIDE_EMPTY_CATEGORIES">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_type" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_FILTER_TYPE">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>				
+				<field name="show_type_label" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_SHOW_TYPE_LABEL">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_loc" type="list" default="1" label="MOD_DJCLASSIFIEDS_SEARCH_FILTER_LOCALIZATION">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_loc_label" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_SHOW_LOZALIZATION_LABEL">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_geoloc" type="list" default="0" label="COM_DJCLASSIFIEDS_SEARCH_GEOLOCALIZATION" description="COM_DJCLASSIFIEDS_SEARCH_GEOLOCALIZATION_DESC">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_postcode" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_POSTCODE_SEARCH" description="MOD_DJCLASSIFIEDS_SEARCH_POSTCODE_SEARCH_DESC">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_address" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_ADDRESS_SEARCH" description="MOD_DJCLASSIFIEDS_SEARCH_ADDRESS_SEARCH_DESC">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="api_country" type="text" default="" label="MOD_DJCLASSIFIEDS_SEARCH_ADDRESS_COUNTRY" description="MOD_DJCLASSIFIEDS_SEARCH_ADDRESS_COUNTRY_DESC" />
+				<field name="show_postcode_label" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_SHOW_POSTCODE_LABEL">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="postcode_country" type="text" default="" label="MOD_DJCLASSIFIEDS_SEARCH_DEFAULT_COUNTRY_FOR_POSTCODE" />
+				<field name="radius_list" type="text" default="5,10,25,50,100,150" label="MOD_DJCLASSIFIEDS_SEARCH_RADIUS_LIST" description="MOD_DJCLASSIFIEDS_SEARCH_RADIUS_LIST_DESC" />
+				<field name="default_radius" type="text" default="50" label="MOD_DJCLASSIFIEDS_SEARCH_DEFAULT_RADIUS" />
+				<field name="radius_unit" type="list" default="km" label="MOD_DJCLASSIFIEDS_SEARCH_RADIUS_UNIT">
+					<option value="km">MOD_DJCLASSIFIEDS_SEARCH_KILOMETER</option>
+					<option value="mile">MOD_DJCLASSIFIEDS_SEARCH_MILE</option>
+				</field>
+				<field name="show_input" type="list" default="1" label="MOD_DJCLASSIFIEDS_SEARCH_INPUT">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_input_label" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_SHOW_INPUT_LABEL">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_price" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_PRICE">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>	
+				<field name="show_price_label" type="list" default="1" label="MOD_DJCLASSIFIEDS_SEARCH_SHOW_PRICE_LABEL">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_only_images" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_SHOW_ONLY_WITH_IMAGES">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_only_images" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_SHOW_ONLY_WITH_IMAGES">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_only_video" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_SHOW_ONLY_WITH_VIDEO">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_only_auctions" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_FILTER_SHOW_ONLY_AUCTIONS">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_time" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_SHOW_TIME_FILTER" description="MOD_DJCLASSIFIEDS_SEARCH_SHOW_TIME_FILTER_DESC">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_time_label" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_SHOW_TIME_LABEL">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>
+				<field name="show_restriction_18" type="list" default="0" label="MOD_DJCLASSIFIEDS_SEARCH_SHOW_RESTRICTION_18" description="MOD_DJCLASSIFIEDS_SEARCH_SHOW_RESTRICTION_18_DESC">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW</option>
+				</field>				
+				<field name="show_reset" type="list" default="1" label="MOD_DJCLASSIFIEDS_SEARCH_RESET">
+					<option value="0">MOD_DJCLASSIFIEDS_SEARCH_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_SEARCH_SHOW_AS_LINK</option>
+					<option value="2">MOD_DJCLASSIFIEDS_SEARCH_SHOW_AS_BUTTON</option>
+				</field>		
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="results_itemid" type="text" default="0" label="MOD_DJCLASSIFIEDS_MENU_ID_OF_RESULTS_PAGE" description="MOD_DJCLASSIFIEDS_MENU_ID_OF_RESULTS_PAGE_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

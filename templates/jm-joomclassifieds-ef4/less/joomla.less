@@ -1,0 +1,872 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// BOOTSTRAP
+//---------------------------------------------------------------
+
+// Theme Customizer
+// --------------------------
+
+#jmthemeform .jmtheme-set-inside .control-group select,
+#jmthemeform .jmtheme-set-inside .control-group input[type="text"] {
+	.box-shadow(none);
+	.border-radius(0);
+}
+
+
+// breadcrumbs.less
+// --------------------------  
+
+.breadcrumb {
+	.border-radius(0);
+  > li {
+    background: none;
+    padding: 0;
+    > .divider {
+      img {
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
+
+// button-groups.less
+// --------------------------  
+
+.btn-toolbar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+// labels-badges.less
+// --------------------------
+
+.tags {
+  padding: 5px 0;
+  margin: @JMbaseSpace 0;
+}
+
+//article tabs
+.tags span .label {
+  text-decoration: none;
+  .border-radius(0);
+  padding: 7px 10px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.label-info[href], .badge-info[href],
+.label-info, .badge-info {
+  color: @white!important;
+  background: @JMstyle;
+  text-decoration: none;
+  &:hover {
+    background: lighten(@JMstyle, 10%);
+  }
+}
+
+// media.less
+// --------------------------
+
+.media-list > li {
+  background: none;
+  padding: 0;
+}
+
+// sprites.less
+// --------------------------
+
+//button icons
+.btn [class^="icon-"],
+.btn [class*=" icon-"] {
+  height: @baseLineHeight;
+  line-height: @baseLineHeight;
+  vertical-align: top;
+  padding: 0 2px;
+}
+
+// thumbnails.less
+// -------------------------- 
+
+.thumbnails > li {
+  background: none;
+  padding: 0;
+}
+
+// wells.less
+// -------------------------- 
+
+.well {
+  .box-shadow(none);
+  border: 1px solid @JMborder;
+}
+
+// chosen script
+// -------------------------- 
+
+.chzn-container {
+  li {
+    background: none;
+  }
+}
+
+.chzn-container-multi .chzn-choices li.search-field input[type="text"] {
+  height: 25px !important;
+}
+
+//chzn
+#jm-allpage {
+  .chzn-container-single .chzn-single,
+  .chzn-container-multi .chzn-choices {
+    line-height: @JMinputHeight;
+    height: @JMinputHeight;
+    font-size: @JMinputFontSize;
+    padding: 0 8px;
+    vertical-align: middle;
+    border: 1px solid @JMinputBorder;
+    color: @JMinputFontColor;
+    background: @JMinputBackground;
+    .box-shadow(inset 0px 1px 1px 0px @JMinputBorder);
+    .border-radius(@baseBorderRadius);
+    .box-sizing(border-box);
+  }
+  .chzn-container-single .chzn-single div {
+    left: auto;
+    right: 8px;
+    width: 15px;
+  }
+  .chzn-container .chzn-drop {
+    border: 1px solid @JMinputBorder;
+    background: @JMinputBackground;
+    .border-radius(0);
+    .box-shadow(none);
+  }
+  .chzn-container-multi .chzn-choices .search-field input.default {
+    font-family: inherit;
+    color: @JMinputFontColor;
+    padding: 0;
+    margin: 0;
+    height: @JMinputHeight;
+  }  
+  .chzn-container-single .chzn-single div b {
+    margin-top: 6px;
+  }  
+  .chzn-container-multi .chzn-choices .search-choice {
+    line-height: 24px;
+    border: 1px solid @JMinputBorder;
+    background: @JMinputBackground;
+    span {
+      font-size: 14px;
+    }
+  } 
+  .chzn-container-multi .chzn-choices .search-choice .search-choice-close {
+    top: 10px;
+  }
+  .chzn-choices li,
+  .chzn-results li {
+    background-image: none!important;
+  }
+  .chzn-container .chzn-results {
+    padding-top: 4px;
+  }
+}
+ 
+// JOOMLA COMPONENT
+//---------------------------------------------------------------
+  
+//page headings
+h1.componentheading, //extension headings support
+.tag-category > h1, //tag category
+.page-header > h1, //global
+.content-category > h1, //category-list
+.categories-list > h1, //categories-list
+.blog-featured > h1, //featured contacts
+.contact-category > h1, //contact category
+.contact > h1, //single contact
+.newsfeed-category > h1, //newsfeed category
+h1.page-title, //search form
+.finder > h1, //smart search
+.weblink-category > h1, //weblink category
+.edit > h1, //submit weblink 
+.blog > h2 //blog category
+{
+  font-family: @JMarticleTitleFontFamily;
+  font-size: @JMarticleTitleFontSize;
+  color: @JMheadingColor;
+  font-weight: @JMheadingFontWeight;
+  margin: 0 0 30px;
+  padding: 0 0 30px;
+  position: relative;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  &:after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 100px;
+    background: @JMheadingBorderColor;
+    bottom: 0;
+    left: 0;
+    right: auto;
+  } 
+}  
+
+//component headings  
+h2.item-title, //featured
+.page-header > h2, //global
+.content-category > h2, //category-list category
+.cat-children > h3, //category children
+.contact-category > h2, //contact category
+.weblink-category > h2, //weblink category
+.newsfeed > h2, //single newsfeed
+.newsfeed-category > h2, //newsfeed category 
+.weblink-category > h2, //weblink category
+.contact > h3 //contact headings
+{
+  font-family: @JMarticleTitleFontFamily;
+  font-size: @JMarticleTitleFontSize;
+  font-weight: @JMheadingFontWeight;
+  color: @JMheadingColor;
+  display: block;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  a {
+    color: @JMheadingColor;
+    text-decoration: none;
+    &:hover {
+      color: @JMstyleHeadingHoverColor;
+      .transition(all 0.2s ease-in);
+    }
+  }
+}
+
+//accordion etc. headings
+h3.page-header {
+  font-size: 1em;
+  line-height: @JMbaseLineHeight;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid @JMborder;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  > .btn-mini {
+    padding: 3px 6px;
+    [class^="icon-"], 
+    [class*=" icon-"] {
+      margin-top: 0;
+    }
+  }
+  > .badge {
+    margin: 0 5px;
+    vertical-align: middle;
+  }
+}
+
+//article dropdown
+.page-header + .icons .btn.dropdown-toggle {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+//hides severals labels in Joomla
+.element-invisible {
+  display: none !important;
+}
+
+//article details  
+dl.article-info {
+  font-size: @JMarticleFontSize;
+  color: @JMarticleFontColor;
+  margin: 0 0 20px;
+  dd {
+    margin: 0;
+  }
+  ~ dl.article-info {
+    margin: 0; 
+  }
+}
+
+.article-info-term {
+  display: none;
+}
+
+//rating and voting
+.content_rating {
+  margin-bottom: 10px;
+}
+
+.content_vote {
+  label {
+    margin-right: 5px;
+  }
+}
+
+//categories 
+.categories-list { 
+  .collapse {
+    padding: 0 0 0 @JMbaseSpace;
+  }
+  div > .category-desc {
+    margin-bottom: @JMbaseSpace;
+  }
+}
+
+//category blog
+//article separator
+.items-leading div[class*="leading-"],
+.items-row .item {
+  .cf();
+}
+
+.items-leading div[class*="leading-"],
+.items-row {
+  margin-bottom: @JMbaseSpace;
+  padding-bottom: @JMbaseSpace;
+  border-bottom: 1px dotted @JMborder;
+}
+
+.items-leading .leading:last-child,
+.items-row:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.items-more,
+.content-links {
+	margin: 0 0 @JMbaseSpace;
+}
+
+//article image
+.item-image {
+  margin-bottom: @JMbaseSpace;
+  max-width: 100%;
+}
+
+figure.pull-left,
+figure.pull-right,
+figure.pull-center {
+	max-width: 100%;
+	margin: 0 0 @JMbaseSpace;
+}
+
+.pull-none.item-image {
+  text-align: center;
+}
+
+.pull-left.item-image,
+figure.pull-left {
+  margin-right: @JMbaseSpace;
+}
+
+.pull-right.item-image,
+figure.pull-right {
+  margin-left: @JMbaseSpace;
+}
+
+.pull-center {
+	text-align: center;
+}
+
+.category-desc {
+	margin: 0 0 @JMbaseSpace;
+}
+
+//image caption
+div.img_caption {
+  margin: 0 auto;
+}
+
+p.img_caption {
+  text-align: center;
+  background: @grayLighter;
+  padding: 5px;
+  margin: 0;
+}
+
+//readmore
+.readmore {
+  font-size: @JMreadmoreFontSize;
+  line-height: 1.1;
+  color: @JMstyleReadmoreFontColor!important;
+  display: inline-block;
+  margin: 10px 0 0;
+  text-decoration: none!important;
+  text-transform: uppercase;
+  .box-shadow(none);
+  &::before,
+  &::after {
+    font-size: (@JMreadmoreFontSize+2);
+    display: inline-block;
+    .opacity(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+  }
+  &::before {
+    margin-right: 5px;
+    content: '[';
+    .translateX(20px);
+  }
+  &::after {
+    margin-left: 5px;
+    content: ']';
+    .translateX(-20px);
+  }
+  &:hover {
+    color: @JMstyleReadmoreFontColor!important;
+  }
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    .opacity(100);
+    .translateX(0px);
+  }
+  > a.btn {
+    vertical-align: baseline;
+    color: @JMstyleReadmoreFontColor!important;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    font-size: @JMreadmoreFontSize;
+    font-weight: normal;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: none;
+    .box-shadow(none);
+    .icon-chevron-right {
+      display: none;
+    }
+  }
+}
+
+.blog p.readmore {
+  display: block;
+  text-align: right;
+}
+
+.mod-articles-category-readmore a {
+  .readmore();
+}
+
+.jm-bottom {
+  p.readmore a,
+  a.readmore,
+  .mod-articles-category-readmore a {
+    color: @JMreadmoreInnerFontColor!important;
+    &:hover {
+      color: @JMstyleReadmoreInnerActiveFontColor!important;
+    } 
+  }
+}
+
+//readmore 2 and 3
+#jm-allpage {
+  .readmore2,
+  .readmore3 {
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: block;
+    padding: 9px 20px;
+    line-height: 1.1em;
+    .transition(all 0.2s ease-in);
+    width: 140px;
+    max-width: 100%;
+    text-decoration: none;
+    .border-radius(3px)
+  }
+  .readmore2:hover,
+  .jm-module.white-ms .readmore2:hover,
+  .jm-bottom .readmore2:hover,
+  .readmore3:hover {
+    color: @JMreadmore23ActiveFontColor!important;
+    border: 1px solid transparent;
+    text-decoration: none;
+  }
+  .readmore3 {
+    border: 1px solid @JMreadmore3BorderColor;
+    color: @JMreadmore3FontColor!important;
+  }
+  .readmore3:hover {
+    background: @JMreadmore3BackgroundColor;
+  }
+}
+
+#jm-allpage {
+  .readmore2,
+  .jm-module.white-ms .readmore2 {
+    border: 1px solid @JMstyleReadmore2BorderColor;
+    color: @JMstyleReadmoreFontColor!important;
+    &:hover {
+      background: @JMstyleReadmore2ActiveBackground;
+    }
+  }
+  .jm-bottom .readmore2 {
+    border: 1px solid @JMstyleReadmore2InnerActiveFontColor;
+    color: @JMstyleReadmoreInnerActiveFontColor!important;
+    &:hover {
+      background: @JMstyleReadmore2InnerActiveFontColor;
+    }
+  }
+}
+
+//hide readmore icon
+p.readmore a.btn .icon-chevron-right {
+  display: none;
+} 
+ 
+//archived articles
+.archive .filters {
+   margin-bottom: @JMbaseSpace;
+}
+
+//contact categories
+.categories-list ul li {
+  h4 {
+    font-size: 1em;
+    line-height: @JMbaseLineHeight;
+    font-weight: bold;
+  }
+  small.category-desc {
+    font-size: 1em;
+    line-height: @JMbaseLineHeight;
+  }
+}
+
+//contact single category
+ul.list-striped li {
+  background: none;
+  border-bottom: 1px solid @JMborder;
+  padding: 10px;
+}
+
+//weblinks single category
+.weblink-count {
+  display: inline-block;
+  width: 100%;
+  dt,
+  dd {
+    float: left;
+  }
+}
+
+//single news feed
+.newsfeed > ol > li > h3 {
+  font-size: 1em;
+}
+
+//registration fields star
+strong.red,
+span.star {
+  color: #ff0000;
+}
+
+//user profile
+.profile {
+  ul.btn-toolbar li {
+    background: none;
+    padding: 0;
+  }
+  .btn-toolbar + fieldset {
+    clear: both;
+  }
+}
+
+//single contact
+.contact {
+  .contact-form {
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  dl.contact-address {
+    margin: @JMbaseSpace 0;
+  }
+  .thumbnail {
+    border: none;
+    .box-shadow(none);
+  }
+}
+
+//search component
+.phrases-box,
+  fieldset.only {
+    padding: 0 0 20px;
+    label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+} 
+
+fieldset.phrases {
+  padding-bottom: 20px;
+}
+ 
+//tagged items
+.tag-category .category > li > h3 {
+  font-size: 1em;
+  margin: 0;
+} 
+
+//tag-category
+.tag-category {
+  .form-inline label {
+    vertical-align: middle;
+    margin-right: 10px;
+  } 
+  > h2 {
+    margin-bottom: @JMbaseSpace;
+  }
+  form > ul > li > h3 {
+    margin-bottom: @JMbaseSpace;
+  }
+  form > ul > li {
+    padding: 0;
+    background: none!important;
+  }
+  .tag-body {
+    margin: @JMbaseSpace 0;
+    display: block;
+  }
+  .thumbnails > li,
+  .category > li {
+    background: none;
+    padding: 0;
+  }
+  .thumbnails > li h3 {
+    font-size: 1em;
+  }
+}
+
+//joomla tooltip
+.tip-wrap {
+  .tip {
+  max-width: 300px;
+  padding: 3px 8px;
+  color: @tooltipColor;
+  text-align: center;
+  text-decoration: none;
+  background-color: @tooltipBackground;
+  .border-radius (@baseBorderRadius);
+  font-weight: normal;
+  z-index: 9999;
+  .opacity(100);
+  }
+  .tip-top {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    top: -@tooltipArrowWidth;
+    left: 50%;
+    margin-left: -@tooltipArrowWidth;
+    border-width: 0 @tooltipArrowWidth @tooltipArrowWidth;
+    border-bottom-color: @tooltipArrowColor;
+    .opacity(80);
+  }
+  .tip-title {
+    font-weight: bold;
+  }
+}
+
+//joomla edit button
+.jmodedit {
+  z-index: 9999;
+}
+
+//article index
+.article-index {
+  margin-left: @JMbaseSpace;
+  + .pagenavcounter {
+    margin-bottom: 10px;
+  }
+  .nav {
+    min-width: 150px;
+  }
+}
+
+//template options
+.jm-alert {
+  display: block;
+}
+
+#templates-form .form-horizontal .control-label {
+  float: none;
+  width: auto;
+  text-align: inherit;
+}
+
+#templates-form .form-horizontal .controls {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+//color picker
+#jm-allpage .minicolors-theme-bootstrap .minicolors-input {
+	line-height: 1.5;
+	height: auto;
+	width: auto;
+}
+
+
+// JOOMLA MODULES
+//---------------------------------------------------------------
+
+//newsflash module
+.newsflash {
+  .newsflash-title {
+    font-size: 1em;
+    margin: 10px 0 5px;
+    clear: both;
+    &:first-child {
+      margin: 0 0 5px;
+    }
+  }
+}
+
+//archive
+.archive-module > li {
+  margin: 10px 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+  
+//article categories
+.categories-module li  {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+    line-height: @JMbaseLineHeight;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+//article category
+.category-module li {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+    line-height: @JMbaseLineHeight;
+    font-weight: normal;
+    margin: 0;
+  }
+  span {
+    display: block;
+  }
+}
+
+//login module
+#form-login-username,
+#form-login-password {
+  label.element-invisible {
+    display: none;
+  }
+}
+
+#login-form ul li .icon-arrow-right {
+  display: none;
+}
+
+//smart search
+#mod-finder-searchform {
+  margin: 0;
+  a {
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+//search module
+.form-search {
+  label.finder {
+    padding: 0 10px 0 0;
+  }
+}
+
+//feed
+.feed h2 ~ ul.newsfeed {
+  margin-top: 10px;
+}
+
+//weblinks
+.weblinks li {
+  margin-top: 5px;
+  &:first-child {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+//search
+.search input#mod-search-searchword {
+  width: auto;
+}
+
+//languages module
+.mod-languages ul {
+  list-style: none;
+  li {
+    background: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+// System Message
+// --------------------------
+
+#system-message .alert {
+  margin-bottom: @JMbaseSpace;
+  a {
+    text-decoration: none;
+  }
+}
+
+// Other pages
+// --------------------------
+
+//error page
+.jm-error-page {
+  text-align: center;
+  > h1 {
+    color: @JMarticleFontColor;
+    font-size: 64px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  > h2 {
+    color: @JMarticleFontColor;
+    font-size: 24px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0 0 @JMbaseSpace * 2;
+  }
+  > p {
+    margin: 0 0 @JMbaseSpace * 2;
+  }
+  input.inputbox {
+    max-width: 260px;
+  }
+  .moduletable {
+    margin: 0 0 @JMbaseSpace * 2;
+  }
+}

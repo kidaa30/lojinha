@@ -1,0 +1,44 @@
+
+.djsep {
+	display: inline-block;
+	border-top: 1px solid #ccc;
+	width: 100%;
+	margin-top: 10px;
+}
+.djtitle {
+	display: inline-block;
+	background: #f7f7f7;
+	color: #2678CD;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	min-width: 420px;
+	margin: 5px 0;
+}
+.djinfo {
+	display: inline-block;
+	background: #C3D2E5;
+	color: #0055BB;
+	border: 1px solid #84A7DB;
+	width: 100%;
+	margin: 5px 0;
+}
+.djnotice {
+	display: inline-block;
+	background: #fcc;
+	color: #c00;
+	border: 1px solid #c00;
+	width: 100%;
+	margin: 5px 0;
+}
+.djtitle label,
+.djinfo label,
+.djnotice label {
+	width: auto;
+	text-align: left;
+	padding: 5px 10px;
+	cursor: auto;
+}
+
+.chzn-container {
+	min-width: 220px;
+}

@@ -1,0 +1,191 @@
+
+.djsep {
+	display: inline-block;
+	border-top: 1px solid #ccc;
+	width: 100%;
+	margin-top: 10px;
+}
+.djtitle {
+	display: inline-block;
+	background: #f7f7f7;
+	color: #2678CD;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	min-width: 420px;
+	margin: 5px 0;
+}
+.djinfo {
+	display: inline-block;
+	background: #C3D2E5;
+	color: #0055BB;
+	border: 1px solid #84A7DB;
+	width: 98%;
+	margin: 5px 0;
+}
+.djnotice {
+	display: inline-block;
+	background: #fcc;
+	color: #c00;
+	border: 1px solid #c00;
+	width: 98%;
+	margin: 5px 0;
+}
+.djtitle label,
+.djinfo label,
+.djnotice label {
+	width: auto;
+	text-align: left;
+	padding: 5px 10px;
+	
+}
+
+div.plgParams {
+	background: #f5f5f5;
+	border: 1px solid #ccc;
+	padding: 15px 20px 1px 20px;
+	margin: 10px 0;
+	clear:both;
+}
+div.plgParams.msg {
+	border:0;
+	padding:0;
+	background: none;
+}
+div#plgParams_component {
+	padding: 5px 0;
+	background: 0;
+	border: 0;
+}
+img.ajax-loader {
+	margin: 5px;
+}
+.djvideo_preview {
+	margin: 10px 0 0;
+}
+.djvideo_preview img {
+	margin: 0 0 0 10px;
+	vertical-align: top;
+}
+
+span.djinlineinfo {
+	display: inline-block;
+	color: #aaa;
+	font-weight: bold;
+	margin: 0 10px;
+	padding: 3px;
+	vertical-align: top;
+}
+
+#albumItemsWrap {
+	margin: 0 0 10px 0;
+}
+#albumItems .albumItem {
+	position: relative;
+	float: left;
+	margin: 0 2px 2px 0;
+	overflow: hidden;
+}
+#albumItems .albumItem img {
+	float: none;
+	margin: 0;
+	padding: 0;
+	height: 150px;
+}
+#albumItems .albumItem .itemMask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(bg.png) repeat;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s ease-out;
+	-moz-transition: opacity 0.2s ease-out;
+	-ms-transition: opacity 0.2s ease-out;
+	-o-transition: opacity 0.2s ease-out;
+	transition: opacity 0.2s ease-out;
+	cursor: move;
+}
+#albumItems .albumItem:hover .itemMask,
+#albumItems .albumItem.active .itemMask {
+	opacity: 1;
+}
+#albumItems input.itemInput {
+	position: absolute;
+	bottom: 0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+	padding: 6px 6px 6px 28px;
+	margin: 0;
+	border: 0;
+	width: 100%;
+	background-color: transparent;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	border-radius: 0;
+	box-shadow: none;
+	height: auto;
+}
+#albumItems input.itemInput:focus {
+	/* old browsers */
+	background-color: rgb(50, 50, 50);
+	/* modern browsers */
+	background-color: rgba(255, 255, 255, 0.25);
+	box-shadow: none;
+}
+#albumItems .itemMask input.editTitle {
+	background-image: url(edit.png);
+	background-position: 6px center;
+	background-repeat: no-repeat;
+}
+#albumItems .albumItem .delBtn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 32px;
+	height: 32px;
+	background: url(delete.png) no-repeat;
+	cursor: pointer;
+	opacity: 0.5;
+	-webkit-transition: opacity 0.2s ease-out;
+	-moz-transition: opacity 0.2s ease-out;
+	-ms-transition: opacity 0.2s ease-out;
+	-o-transition: opacity 0.2s ease-out;
+	transition: opacity 0.2s ease-out;
+}
+#albumItems .albumItem .delBtn:hover {
+	opacity: 1;
+}
+
+.chzn-container {
+	min-width: 220px;
+}
+
+.djfolderlist ul {
+	margin: 10px 0;
+	padding: 10px;
+	border: 1px solid #ebebeb;
+	background: #f7f7f7;
+}
+.djfolderlist ul li {
+	list-style: none outside;
+	display: inline-block;
+}
+.djfolderlist ul li a {
+	display: inline-block;
+	width: 200px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.djfolderlist ul li a:hover {
+	background: #e3e3e3;
+	text-decoration: none;
+}

@@ -1,0 +1,113 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";  
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+  
+@import "override/rtl/mixins.less";
+@import "template_mixins.less";
+
+// MEGAMENU
+//---------------------------------------------------------------
+
+#jm-allpage {
+
+	.dj-megamenu {
+	  text-align: right;
+	}
+	
+	.dj-megamenu li.dj-up {
+	  float: right;
+	  a.dj-up_a {
+	    span.dj-drop {
+	      padding: 0 0 0 25px !important;
+	      &:after {
+	        right: auto;
+	        left: 5px;
+	      }
+	    }
+	  }
+		+ li.dj-up {
+			border-left: none;
+			border-right: 1px solid @JMmegamenuBorder;
+		}
+	}
+	
+	// submenu
+	// --------------------------  
+	
+	//first level submenu
+	.dj-megamenu {
+	  li:hover,
+	  li.hover {
+	    div.dj-subwrap {
+	      left: auto;
+	      right: -1px;
+	    }
+	  }
+	}
+	
+	//higher level submenu (2+)
+	.dj-megamenu {
+	  li:hover,
+	  li.hover {
+	    div.dj-subwrap div.dj-subwrap {
+	      left: auto;
+	      right: 100%;
+	    }
+	  }
+	}
+	
+	.dj-megamenu .dj-submenu {
+	  > li.parent > a {
+	    padding-right: 0;
+	    padding-left: 20px;
+	    &:after {
+	      right: auto;
+	      left: 5px;
+	    }
+	  }
+	}
+	
+	// submenu tree
+	// --------------------------  
+	.dj-megamenu .dj-subtree {
+	  > li {
+	    padding: 0 10px 0 0;
+	  }
+	  > li > a {
+	    background-position: right 10px;
+	    background-image: url('../images/@{JMimgDir}/li_RTL.png');
+	  }
+	}
+	
+	//image in menu
+	.dj-megamenu {
+	  li.dj-up a span.image-title {
+	    margin: 0 15px 0 0;
+	  }
+	}
+	
+	// modules
+	// --------------------------  
+	
+	.dj-megamenu .modules-wrap {
+		.moduletable {
+		  &:after {
+		    left: auto;
+		    right: 10%;
+		  }
+	  }
+	}
+
+}

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>DJ Classifieds</name>
+	<creationDate>January 2013</creationDate>
+	<author>DJ-Extensions.com</author>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<copyright>dj-extensions.com</copyright>
+	<license>GPL</license>
+	<version>3.4.1.1</version> 
+	<description>DJ Classifieds - Advertising Component</description>	
+	<install>
+		<sql>
+            <file charset="utf8" driver="mysql">sql/install.sql</file>
+        </sql>
+    </install>
+	
+	<uninstall>
+		<sql>
+            <file charset="utf8" driver="mysql">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+    
+    <update>
+		<schemas>
+			<schemapath type="mysql">sql/updates</schemapath>
+		</schemas>
+	</update>
+	
+	<administration>
+		<menu link="option=com_djclassifieds" img="components/com_djclassifieds/images/icon-16-djclassifieds.png">COM_DJCLASSIFIEDS</menu>
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<filename>djclassifieds.php</filename>
+			<filename>config.xml</filename>		
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<folder>assets</folder>			
+			<folder>controllers</folder>
+			<folder>images</folder>
+			<folder>language</folder>
+			<folder>lib</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+	<files folder="site">		
+		<filename>controller.php</filename>
+		<filename>defines.djclassifieds.php</filename>
+		<filename>djclassifieds.php</filename>
+		<filename>gpl.txt</filename>
+		<filename>index.html</filename>
+		<filename>komento_plugin.php</filename>		
+		<filename>router.php</filename>
+		<folder>assets</folder>
+		<folder>controllers</folder>		
+		<folder>images</folder>		
+		<folder>language</folder>		
+		<folder>models</folder>
+		<folder>themes</folder>		
+		<folder>views</folder>				
+	</files>		
+	<scriptfile>script.djclassifieds.php</scriptfile>	
+    <config>
+		<fields>
+			<fieldset>
+				<field name="exp_days" default="7" />
+				<field name="durations_list" default="1" />
+				<field name="notify_days" default="3" />			
+				<field name="notify_days_trigger" default="1"/>
+				<field name="renew_days" default="3" />
+				<field name="points" default="0" />
+				<field name="user_type" default="1"/>
+				<field name="guest_can_edit" default="0"/>
+				<field name="guest_can_delete" default="0"/>
+				<field name="adverts_limit" default="0"/>
+				<field name="autopublish" default="1"/>
+				<field name="promotion" default="1" />
+				<field name="promotion_move_top" default="0" />
+				<field name="promotion_move_top_price" default="0" />
+				<field name="promotion_move_top_points" default="0" />
+				<field name="search_type_phrase" default="0" />
+				<field name="vat_value" default="-1" />
+				<field name="show_archived" default="1" />
+				<field name="allow_user_archive" default="0" />
+				<field name="allow_user_delete_archive" default="0" />
+				<field name="user_ad_delete" default="0" />
+				<field name="search_type_words" default="0" />
+				<field name="auctions" default="0" />
+				<field name="bids_displayed" default="5" />
+				<field name="mask_bidder_name" default="0" />
+				<field name="buynow" default="0" />								
+				<field name="notify_admin" default="0"/>
+				<field name="notify_user_email" default="" />
+				<field name="user_new_ad_email" default="0" />
+				<field name="favourite" default="1"/>
+				<field name="email_for_guest" default="0"/>
+				<field name="cf_values_to_labels" default="0"/>
+				<field name="unit_price"  default="EUR" />
+				<field name="unit_price_list"  default="" />
+				<field name="unit_price_position"  default="0" />
+				<field name="unit_price_space"  default="1" />				
+				<field name="price_format"  default="0" />
+				<field name="price_thousand_separator"  default="0" />
+				<field name="price_decimal_separator"  default="0" />
+				<field name="price_decimals"  default="2" />
+				<field name="price_only_numbers"  default="0" />
+				<field name="date_format_type"  default="0" />
+				<field name="date_format_type_item"  default="0" />
+				<field name="date_format_type_modules"  default="0" />
+				<field name="date_format"  default="Y-m-d H:i:s" />
+				<field name="date_format_ago_limit"  default="2" />
+				<field name="date_persian"  default="0" />
+				<field name="show_types"  default="0" />
+				<field name="types_required"  default="0" />
+				<field name="show_postcode"  default="0" />
+				<field name="show_contact"  default="1" />
+				<field name="show_contact_only_registered"  default="0" />
+				<field name="show_price"  default="1" />
+				<field name="show_price_negotiable"  default="0" />
+				<field name="show_introdesc"  default="1" />
+				<field name="show_website"  default="0" />
+				<field name="website_nofollow"  default="0" />
+				<field name="show_video"  default="0" />
+				<field name="show_regions"  default="1" />
+				<field name="show_address"  default="1" />					
+				<field name="allow_user_lat_lng"  default="0" />
+				<field name="map_lat_lng_address"  default="England, London" />
+				<field name="show_lat_lng"  default="0" />
+				<field name="show_googlemap"  default="1" />
+				<field name="gm_type"  default="ROADMAP" />
+				<field name="gm_zoom"  default="10" />				
+				<field name="show_gm_driving"  default="0" />
+				<field name="gm_icon"  default="0" />
+				<field name="pay_desc_chars" default="0" />
+				<field name="pay_desc_chars_limit" default="0" />
+				<field name="pay_desc_chars_free_limit" default="0" />
+				<field name="desc_char_price" default="0" />
+				<field name="desc_char_price_points" default="0" />
+				<field name="desc_char_price_renew" default="0" />
+				<field name="desc_char_price_renew_points" default="0" />				
+				<field name="theme"  default="default" />
+				<field name="include_css"  default="1" />
+				<field name="table_type"  default="" />
+				<field name="profileitems_table_type"  default="" />
+				<field name="include_awesome_font"  default="1" />
+				<field name="limit_djitem_show"  default="7"/>
+				<field name="blog_columns_number" default="2" />
+				<field name="blog_desc_position" default="right" />
+				<field name="blog_image" default="1" />
+				<field name="blog_category" default="0" />
+				<field name="blog_location" default="1" />
+				<field name="blog_price" default="1" />
+				<field name="blog_readmore" default="1" />
+				<field name="blog_sorting" default="0" />
+				<field name="blog_sorting_fields" default="" />
+				<field name="img_limit" default="5" />
+				<field name="img_free_limit" default="-1" />
+				<field name="img_maxsize" default="0" />
+				<field name="img_price" default="0" />
+				<field name="img_price_points" default="0" />
+				<field name="img_price_renew" default="0" />
+				<field name="img_price_renew_points" default="0" />
+				<field name="introdesc_char_limit" default="120" />
+				<field name="title_char_limit" default="0" />
+				<field name="show_tooltips_newad" default="0" />
+				<field name="show_adsn_cat" type="list"  default="1" />				
+				<field name="show_subcats" default="1" />
+				<field name="subcats_dir" default="0" />
+				<field name="subcats_ordering" default="ord" />
+				<field name="subcats_hide_empty" default="0" />
+				<field name="subcats_columns" default="3" />
+				<field name="title_in_items" default="1" />
+				<field name="main_cat_desc" default="0" />
+				<field name="sub_cat_desc" default="0" />
+				<field name="items_in_main_cat" default="1" />
+				<field name="desc_plugins" default="1" />
+				<field name="desc_editor" default="1" />
+				<field name="allow_htmltags" default="1" />
+				<field name="allowed_htmltags" default="div;p;span;strong;i;b;em;ul;li;ol;br;hr" />
+				<field name="allow_htmltags_cf" default="0" />
+				<field name="allowed_htmltags_cf" default="div;p;span;strong;i;b;em;ul;li;ol;br;a" />
+				<field name="showitem_jump" default="0" />
+				<field name="category_jump" default="0" />
+				<field name="title_breadcrumb"  default="1" />
+				<field name="tooltip_img"  default="1" />
+				<field name="tooltip_title"  default="1" />
+				<field name="tooltip_images"  default="3" />
+				<field name="tooltip_price"  default="1" />
+				<field name="tooltip_contact"  default="1" />
+				<field name="tooltip_location"  default="1" />
+				<field name="items_ordering"  default="date_e"/>
+				<field name="items_ordering_dir" default="desc" />
+				<field name="column_image" default="1"/>
+				<field name="column_loc" default="1"/>
+				<field name="column_price" default="1"/>
+				<field name="column_desc" default="1"/>
+				<field name="column_category" default="1"/>
+				<field name="column_date_a" default="1"/>
+				<field name="column_date_e" default="1"/>
+				<field name="column_displayed" default="1"/>
+				<field name="column_distance" default="0"/>
+				<field name="column_distance_unit" default="km"/>
+				<field name="lightbox_type" default="slimbox"/>
+				<field name="gallery_width" default="200"/>
+				<field name="gallery_thumbs_in_row" default="3"/>				
+				<field name="watermark" default="0"/>
+				<field name="watermark_size" default="20"/>
+				<field name="watermark_alignment_h" default="1"/>
+				<field name="watermark_alignment_v" default="b"/>
+				<field name="ad_image_default" default="0"/>
+				<field name="auctions_position" default="top"/>
+				<field name="auctions_price_link" default="0"/>								
+				<field name="intro_desc_in_advert" default="0"/>				
+				<field name="ask_seller" default="1"/>
+				<field name="ask_seller_copy_admin" default="0"/>
+				<field name="ask_seller_type" default="0"/>
+				<field name="ask_seller_file" default="0"/>
+				<field name="ask_seller_file_types" default="doc,pdf,zip"/>
+				<field name="ask_seller_file_size" default="2"/>
+				<field name="abuse_reporting" default="1"/>
+				<field name="ask_seller_position" default="0"/>
+				<field name="showaddetails" default="1"/>
+				<field name="show_ad_added_date" default="1"/>
+				<field name="showauthor" default="1"/>
+				<field name="authorname" default="name"/>
+				<field name="profile_avatar_source" default=""/>
+				<field name="profile_social_link" default=""/>
+				<field name="show_empty_cf" default="1"/>
+				<field name="cattree_type" default=""/>
+				<field name="cattree_cols" default="3"/>
+				<field name="cattree_levels" default="0"/>
+				<field name="cattree_ic" default="1"/>
+				<field name="cattree_img" default="0"/>
+				<field name="cattree_last_level_type" default="0"/>
+				<field name="rss_feed" default="1"/>
+				<field name="icon_new" default="1"/>
+				<field name="icon_new_time" default="3"/>
+				<field name="sb_position" default="bottom"/>				
+				<field name="sb_code" default="&lt;div class=&quot;addthis_toolbox addthis_default_style &quot;&gt;&lt;a class=&quot;addthis_button_preferred_1&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_button_preferred_2&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_button_preferred_3&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_button_preferred_4&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_button_compact&quot;&gt;&lt;/a&gt;&lt;a class=&quot;addthis_counter addthis_bubble_style&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-501a7c83604a8bb4&quot;&gt;&lt;/script&gt;"/>
+				<field name="comments" default="0"/>
+				<field name="fb_comments_admin" default=""/>
+				<field name="fb_comments_width" default="550px"/>
+				<field name="fb_comments_posts" default="10"/>
+				<field name="disqus_shortname" default=""/>
+				<field name="image_quality" default="100"/>
+				<field name="store_org_img" default="1"/>
+				<field name="image_label_from_name" default="1"/>
+				<field name="image_resize" default="0"/>
+				<field name="crop_alignment_h" default="m"/>
+				<field name="crop_alignment_v" default="m"/>					
+				<field name="th_width" default="270"/>
+				<field name="th_height" default="180" />
+				<field name="bigth_width"  default="600" />
+				<field name="bigth_height" default="0"/>
+				<field name="smallth_width" default="56" />
+				<field name="smallth_height"  default="32" />
+				<field name="middleth_width"  default="150" />
+				<field name="middleth_height"  default="110" />
+				<field name="catth_width" default="68" />
+				<field name="catth_height" default="50" />
+				<field name="profth_width" default="120" />
+				<field name="profth_height" default="120" />
+				<field name="prof_smallth_width" default="50" />
+				<field name="prof_smallth_height" default="50" />
+				<field name="blank_img_path" default="/components/com_djclassifieds/assets/images/" />
+				<field name="acl_redirect" default="0" />
+				<field name="acl_red_article_id" default="0" />
+				<field name="restriction_18_art" default="0" />
+				<field name="restriction_18_art_id" default="0" />
+				<field name="restriction_18_allads" default="0" />
+				<field name="ask_limit_one"  default="5" />
+				<field name="ask_limit_hour"  default="15" />
+				<field name="captcha"  default="0" />
+				<field name="captcha_type"  default="recaptcha" />	
+				<field name="captcha_theme"  default="red" />
+				<field name="captcha_publickey"  default="6LfzhgkAAAAAAL9RlsE0x-hR2H43IgOFfrt0BxI0" />
+				<field name="captcha_privatekey"  default="6LfzhgkAAAAAAOJNzAjPz3vXlX-Bw0l-sqDgipgs" />
+				<field name="terms"  default="1" />
+				<field name="terms_article_id"  default="1" />
+				<field name="seo_item_metadesc"  default="0" />
+				<field name="seo_metadesc_char_limit"  default="160" />
+				<field name="seo_metadesc_user_edit"  default="0" />
+				<field name="seo_keywords_user_edit"  default="0" />
+				<field name="seo_title_separator"  default=" - " />
+				<field name="seo_title_item"  default="&lt;item_name&gt;|&lt;category_name&gt;|&lt;region_name&gt;|&lt;default_title&gt;" />
+				<field name="seo_title_items"  default="&lt;category_path&gt;|&lt;default_title&gt;" />
+				<field name="seo_link_separator"  default="," />
+				<field name="seo_id_position"  default="1" />
+				<field name="seo_alias_urlsafe"  default="1" />
+				<field name="seo_alias_in_url"  default="1" />
+				<field name="seo_view_item"  default="ad" />				
+				<field name="seo_view_additem"  default="additem" />
+				<field name="seo_view_edititem"  default="edititem" />
+				<field name="seo_view_categories"  default="categories" />
+				<field name="seo_view_useritems"  default="useritems" />
+				<field name="seo_view_items"  default="ads" />
+				<field name="seo_view_profile"  default="profile" />
+				<field name="seo_view_profileedit"  default="profileedit" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

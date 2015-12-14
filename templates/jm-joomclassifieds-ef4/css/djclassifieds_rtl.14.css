@@ -1,0 +1,603 @@
+#dj-classifieds .dj-category .cat_row_title:after,
+#dj-classifieds h1.main_cat_title:after,
+#dj-classifieds .dj-cattree-box .title_top:after,
+#dj-classifieds .title_top h1:after,
+#dj-classifieds .dj-additem .title_top:after,
+#dj-classifieds table.paymentdetails td.td_title h2:after,
+#dj-classifieds .profile_outer h2.profile_name:after,
+#dj-classifieds .djcf_warning_outer .title_top:after,
+#dj-classifieds .pointspackages .title_top:after,
+#dj-classifieds .djcf_checkout_outer .title_top:after {
+  left: auto;
+  right: 0;
+}
+#dj-classifieds a.rss_icon {
+  margin-left: 0;
+  margin-right: 10px;
+}
+#dj-classifieds .dj-category .cat_col {
+  float: right;
+}
+#dj-classifieds table.dj-items .main_title th,
+#dj-classifieds .dj-items-table2 .main_title .item_col {
+  border-left: none;
+  border-right: 1px solid #3f3e3b;
+}
+#dj-classifieds table.dj-items .main_title th:first-child,
+#dj-classifieds .dj-items-table2 .main_title .item_col:first-child {
+  border-right: none;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+}
+#dj-classifieds table.dj-items .main_title th:last-child,
+#dj-classifieds .dj-items-table2 .main_title .item_col:last-child {
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+}
+#dj-classifieds table.dj-items td,
+#dj-classifieds .dj-items-table2 .item_col {
+  border-right: none;
+  border-left: 1px dotted #e0e0e0;
+}
+#dj-classifieds table.dj-items td:first-child,
+#dj-classifieds .dj-items-table2 .item_col:first-child {
+  border-left: 1px dotted #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+}
+#dj-classifieds table.dj-items td:last-child,
+#dj-classifieds .dj-items-table2 .item_col:last-child {
+  border-right: none;
+  border-left: 1px solid #e0e0e0;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+}
+#dj-classifieds .col_distance .show_distance span:before,
+#dj-classifieds .col_distance .show_on_map span:before {
+  left: auto;
+  right: 0;
+}
+#dj-classifieds table.dj-items tr.promotion.p_border td,
+#dj-classifieds .dj-items-table2 tr.promotion.p_border td {
+  border-bottom: 3px solid #3fb8af;
+  border-top: 3px solid #3fb8af;
+  border-right: none;
+  border-left: 1px dotted #3fb8af;
+}
+#dj-classifieds table.dj-items tr.promotion.p_border td:first-child,
+#dj-classifieds .dj-items-table2 tr.promotion.p_border td:first-child {
+  border-left: 1px dotted #3fb8af;
+  border-right: 3px solid #3fb8af;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+}
+#dj-classifieds table.dj-items tr.promotion.p_border td:last-child,
+#dj-classifieds .dj-items-table2 tr.promotion.p_border td:last-child {
+  border-right: none;
+  border-left: 3px solid #3fb8af;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+}
+#dj-classifieds .dj-items_order_by_in .dj-items_order_by_values a {
+  display: inline-block;
+}
+#dj-classifieds .dj-items .item_row .item_outer {
+  float: right;
+}
+#dj-classifieds .dj-items .item_row .item_img_box_in {
+  padding-right: 0;
+  padding-left: 30px;
+}
+#dj-classifieds .dj-items .item_row .item_outer_in .item_content_in {
+  padding-right: 0;
+  padding-left: 25px;
+}
+#dj-classifieds .dj-items .item_row .item_cat_region_outer .item_region .item_distance {
+  background-position: right center;
+  margin-left: 0;
+  padding-left: 0;
+  margin-right: 5px;
+  padding-right: 22px;
+}
+#dj-classifieds .dj-items .item_row .item_details .item_date_start,
+#dj-classifieds .dj-items .item_row .item_details .item_date_exp,
+#dj-classifieds .dj-items .item_row .item_details .item_display {
+  background-position: right center;
+  padding-left: 0;
+  padding-right: 22px;
+  float: left;
+}
+#dj-classifieds .dj-items .item_row .item_details {
+  float: left;
+  text-align: left;
+}
+#dj-classifieds .djcf_items_blog .item_box {
+  float: right;
+}
+#dj-classifieds .djcf_items_blog .title h2 {
+  margin-right: 0;
+  margin-left: 5px;
+}
+#dj-classifieds .djcf_items_blog .title h2 + * {
+  margin-left: 5px !important;
+  margin-right: 0 !important;
+}
+#dj-classifieds .djcf_items_blog .item_img:after {
+  left: auto;
+  right: 0;
+}
+#dj-classifieds .djcf_items_blog .item_box_right .item_img {
+  float: right;
+  padding-right: 0;
+  padding-left: 20px;
+}
+#dj-classifieds .djcf_items_blog .item_desc .label_title {
+  padding-left: 0;
+  padding-right: 30px;
+}
+#dj-classifieds .djcf_items_blog span.desc_info {
+  padding-left: 0;
+  padding-right: 30px;
+}
+#dj-classifieds .blog_det .region .label_title,
+#dj-classifieds .blog_det .category .label_title,
+#dj-classifieds .blog_det .price .label_title {
+  float: right;
+  margin-right: 0;
+  margin-left: 10px;
+}
+#dj-classifieds .blog_det .cf_box .label_title {
+  padding-left: 0;
+  padding-right: 30px;
+}
+#dj-classifieds .djcf_items_blog .item_desc .label_title,
+#dj-classifieds .blog_det .price .label_title,
+#dj-classifieds .blog_det .region .label_title,
+#dj-classifieds .blog_det .category .label_title,
+#dj-classifieds .blog_det .cf_box .label_title {
+  background-position: right top;
+}
+#dj-classifieds .dj-cattree-box .dj-cattree {
+  float: right;
+}
+#dj-classifieds .dj-cattree-box .dj-cattree li {
+  padding: 0 0 0 15px;
+}
+#dj-classifieds .dj-cattree-box .dj-cattree li a img.cat_tree_icon {
+  margin: 3px 0 3px 5px;
+}
+#dj-classifieds .dj-useradverts .main_title .main_title_box_in {
+  border-left: none;
+  border-right: 1px solid #3f3e3b;
+}
+#dj-classifieds .dj-useradverts .main_title_box {
+  float: right;
+}
+#dj-classifieds .dj-useradverts .main_title_box:first-child .main_title_box_in {
+  border-right: none;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+}
+#dj-classifieds .dj-useradverts .main_title_box:nth-last-child(2) .main_title_box_in {
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+}
+#dj-classifieds .dj-useradverts .row_ua .row_ua1 .col_ua {
+  border-left: none;
+  border-right: 1px dotted #ececec;
+}
+#dj-classifieds .dj-useradverts .row_ua .row_ua1 .col_ua:first-child {
+  border-right: none;
+}
+#dj-classifieds .dj-useradverts .row_ua .row_ua1 .icon_name .icon {
+  float: right;
+  margin-right: 0;
+  margin-left: 30px;
+}
+#dj-classifieds .dj-useradverts .row_ua .row_ua2 {
+  text-align: left;
+}
+#dj-classifieds .dj-useradverts .row_ua .row_ua2 .row_ua2_in .button {
+  margin: 5px 10px 0 0;
+}
+#dj-classifieds .dj-useradverts .row_ua .row_ua_orders .row_ua_orders_title {
+  text-align: left;
+}
+#dj-classifieds .dj-additem .label {
+  text-align: left;
+}
+#dj-classifieds .dj-additem .djform_field span.radio_label {
+  margin: 0 7px 0 0;
+}
+#dj-classifieds .dj-additem .djform_row .reg_loader,
+#dj-classifieds .dj-additem #guest_email_loader {
+  margin: 5px 10px 0 0;
+}
+#dj-classifieds .dj-additem .price_neg_box span {
+  margin-left: 0;
+  margin-right: 5px;
+}
+#dj-classifieds .dj-additem .images_box #itemImages .itemImage {
+  float: right;
+  margin: 0 0 2px 2px;
+}
+#dj-classifieds .dj-additem .prom_rows .djform_prom_v,
+#dj-classifieds .dj-additem .prom_rows .djform_prom_img,
+#dj-classifieds .dj-additem .prom_rows .djform_prom_desc {
+  float: right;
+  padding-left: 0;
+  padding-right: 20px;
+}
+#dj-classifieds .dj-additem #buynow_quantity_box input {
+  float: right;
+}
+#dj-classifieds .dj-additem #buynow_quantity_box input + select {
+  float: right;
+}
+#dj-classifieds .dj-additem #buynow_config span.button {
+  margin-left: 0;
+  margin-right: 25%;
+}
+#dj-classifieds .dj-item .title_top {
+  text-align: right;
+}
+#dj-classifieds .dj-item .title_top h2 {
+  margin: 0 0 0 5px;
+}
+#dj-classifieds .dj-item .title_top .sb_top {
+  float: left;
+}
+#dj-classifieds .dj-item .title_top .button {
+  margin: 1px 10px 1px 0;
+  float: left;
+}
+#dj-classifieds .dj-item .general_det_in {
+  padding-left: 0;
+  padding-right: 30px;
+}
+#dj-classifieds .dj-item .images_wrap {
+  float: right;
+}
+#dj-classifieds .dj-item .images_wrap .djc_thumbnails {
+  margin-left: 0;
+  margin-right: -1px;
+}
+#dj-classifieds .dj-item .images_wrap .djc_thumbnails .djc_thumbnail {
+  float: right;
+}
+#dj-classifieds .dj-item .images_wrap .djc_thumbnails .djc_thumbnail img {
+  padding-left: 0;
+  padding-right: 1px;
+}
+#dj-classifieds .dj-item .general_det {
+  float: left;
+}
+#dj-classifieds .dj-item .general_det span.row_label {
+  padding: 0 30px 10px 0;
+}
+#dj-classifieds .dj-item .description .desc_content,
+#dj-classifieds .dj-item .custom_det .row,
+#dj-classifieds .dj-item .additional .row,
+#dj-classifieds .dj-item .additional ul,
+#dj-classifieds .dj-item .localization_det .row,
+#dj-classifieds .dj-item .general_det .row_value,
+#dj-classifieds .dj-item #google_map_box,
+#dj-classifieds .dj-item .fb_iframe_widget {
+  padding-left: 0;
+  padding-right: 30px;
+}
+#dj-classifieds .dj-item .auction .bids_title h2 {
+  padding: 0 30px 10px 0;
+}
+#dj-classifieds .dj-item .auction #djbid_message,
+#dj-classifieds .dj-item .auction #djbid_alert,
+#dj-classifieds .dj-item .auction .bids_close_info {
+  margin-left: 0;
+  margin-right: 30px;
+}
+#dj-classifieds .dj-item .auction .bids_list,
+#dj-classifieds .dj-item .auction .bids_box,
+#dj-classifieds .dj-item .auction .bids_login_info {
+  padding: 0 30px 0 0;
+}
+#dj-classifieds .dj-item .auction .bids_row_title .bids_col:first-child {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+#dj-classifieds .dj-item .auction .bids_row_title .bids_col:nth-last-child(2) {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+#dj-classifieds .dj-item .auction .bids_col {
+  float: right;
+}
+#dj-classifieds .dj-item .auction .bids_col_bid {
+  text-align: left;
+}
+#dj-classifieds .dj-item .general_det .djcf_contact span.row_label {
+  background: url("../images/scheme2/desc.png") no-repeat right top;
+}
+#dj-classifieds .dj-item .general_det .added span.row_label {
+  background: url("../images/scheme2/added.png") no-repeat right top;
+}
+#dj-classifieds .dj-item .general_det .user_name span.row_label {
+  background: url("../images/scheme2/created.png") no-repeat right top;
+}
+#dj-classifieds .dj-item .description h2 {
+  background: url("../images/scheme2/desc.png") no-repeat right top;
+}
+#dj-classifieds .dj-item .custom_det h2 {
+  background: url("../images/scheme2/details.png") no-repeat right top;
+}
+#dj-classifieds .dj-item .localization_det h2 {
+  background: url("../images/scheme2/region.png") no-repeat right top;
+}
+#dj-classifieds .dj-item .additional h2 {
+  background: url("../images/scheme2/details.png") no-repeat right top;
+}
+#dj-classifieds .dj-item .video_box h2 {
+  background: url("../images/scheme2/video.png") no-repeat right top;
+}
+#dj-classifieds .dj-item .djcf_comments h2 {
+  background: url("../images/scheme2/comments.png") no-repeat right top;
+}
+#dj-classifieds .dj-item .auction .bids_title h2 {
+  background: url("../images/scheme2/price.png") no-repeat right top;
+}
+#dj-classifieds .dj-item .general_det .price_wrap .row_value {
+  padding-left: 0;
+  padding-right: 10px;
+}
+#dj-classifieds .dj-item .general_det .price_wrap span.row_label {
+  padding: 0 30px 0 0;
+  background-position: right top;
+}
+#dj-classifieds #ask_form .radio_label,
+#dj-classifieds #abuse_form .radio_label {
+  margin: 0 5px 0 0;
+}
+#dj-classified .button#ask_form_button,
+#dj-classified .button#abuse_form_button {
+  margin: 0 0 0 16px;
+}
+#dj-classifieds .dj-item .description h2,
+#dj-classifieds .dj-item .custom_det h2,
+#dj-classifieds .dj-item .localization_det h2,
+#dj-classifieds .dj-item .additional h2,
+#dj-classifieds .dj-item .video_box h2,
+#dj-classifieds .dj-item .djcf_comments h2 {
+  padding: 0 30px 10px 0;
+}
+#dj-classifieds .dj-item .localization_det {
+  float: left;
+  margin-left: 0;
+  margin-right: 3%;
+}
+#dj-classifieds .dj-item .localization_det .geo_coordinates span {
+  margin-left: 0;
+  margin-right: 2px;
+}
+#dj-classifieds .dj-item .localization_det .gm_drive_dir input.button {
+  margin-left: 0;
+  margin-right: 7px;
+}
+#dj-classifieds .dj-item .custom_det {
+  float: right;
+  margin-right: 0;
+  margin-left: 3%;
+}
+#dj-classifieds .dj-item .video_box {
+  float: right;
+}
+#dj-classifieds .videoWrapper .videoWrapper-in iframe,
+#dj-classifieds .videoWrapper .videoWrapper-in object,
+#dj-classifieds .videoWrapper .videoWrapper-in embed {
+  left: auto;
+  right: 0;
+}
+#dj-classifieds .dj-item .djcf_comments {
+  float: right;
+}
+#dj-classifieds .dj-item .sb_bottom {
+  float: right;
+}
+#dj-classifieds .userpoints .points_available {
+  text-align: left;
+  padding-right: 0;
+  padding-left: 5px;
+}
+#dj-classifieds .profile_outer .profile_img {
+  padding-right: 0;
+  padding-left: 20px;
+}
+#dj-classifieds .profile_outer .profile_row_label {
+  float: right;
+  text-align: left;
+}
+#dj-classifieds .profile_outer .profile_row_value {
+  float: right;
+}
+#dj-classifieds .pointspackages .djcf_prow {
+  float: right;
+}
+#dj-classifieds .pointspackages table.paymentdetails td.table_payment table td.td2 {
+  border-right: none;
+  border-left: 1px solid #e0e0e0;
+}
+#dj-classifieds table.paymentdetails td.td_pdetails div span.price {
+  float: left;
+}
+#dj-classifieds table.paymentdetails .table_payment table td.td2 table th {
+  text-align: right;
+}
+#dj-classifieds .djcf_checkout_outer .djcf_checkout_det .ch_row_button .button {
+  float: right;
+}
+#dj-classifieds .djcf_checkout_outer .djcf_checkout_det .ch_row_button form .button {
+  margin-left: 0;
+  margin-right: 30px;
+}
+.mod_djclassifieds_items .items-col {
+  float: right;
+}
+.mod_djclassifieds_items div.title {
+  float: right;
+}
+.mod_djclassifieds_items div.title a.title:after {
+  left: auto;
+  right: 0;
+}
+.mod_djclassifieds_items div.title img {
+  float: right;
+  margin-right: 0 !important;
+  margin-left: 20px !important;
+}
+.mod_djclassifieds_items .desc {
+  float: right;
+}
+.mod_djclassifieds_items.mod_djcf_slider .items-content .item-box {
+  float: right;
+}
+.mod_djclassifieds_items.mod_djcf_slider .djcf_slider_left,
+.mod_djclassifieds_items.mod_djcf_slider .djcf_slider_right {
+  left: auto;
+  right: 5px;
+  background: #75796f url('../images/classifieds/slider_arrow_left.png') center 8px no-repeat;
+}
+.mod_djclassifieds_items.mod_djcf_slider .djcf_slider_right {
+  background: #75796f url('../images/classifieds/slider_arrow_right.png') center 8px no-repeat;
+  left: 5px;
+  right: auto;
+}
+.mod_djclassifieds_items.mod_djcf_slider .djcf_slider_left.blocked {
+  background: #cccccc url('../images/classifieds/slider_arrow_right.png') center 8px no-repeat;
+}
+.mod_djclassifieds_items.mod_djcf_slider .djcf_slider_right.blocked {
+  background: #cccccc url('../images/classifieds/slider_arrow_left.png') center 8px no-repeat;
+}
+.mod_djclassifieds_items.mod_djcf_slider .djcf_slider_loader {
+  left: auto;
+  right: 0;
+}
+.mod_djclassifieds_items.mod_djcf_slider .djcf_slider_loader_img {
+  background: url('../images/classifieds/slider_loader.gif') top right no-repeat;
+}
+/* < */
+.jm-bottom .djcf_menu .menu > li:hover:after {
+  border-color: transparent #38a59d transparent transparent;
+  border-color: rgba(0, 0, 0, 0) #38a59d rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+.dj_cf_search input[type="radio"],
+.dj_cf_search input[type="checkbox"] {
+  margin: 0 0 0 5px;
+}
+.dj_cf_search .search_buttons .button + .button {
+  margin-left: 10px;
+  background-position: top right;
+}
+.dj_cf_search .djfields_accordion_c .label:after,
+.dj_cf_search .djfields_accordion_o .label:after {
+  right: 5px;
+  left: auto;
+}
+.dj_cf_search.dj_cf_search_horizontal .search_type,
+.dj_cf_search.dj_cf_search_horizontal .search_time,
+.dj_cf_search.dj_cf_search_horizontal .search_price {
+  float: right;
+  margin-right: 0;
+  margin-left: 2%;
+}
+.dj_cf_search.dj_cf_search_horizontal .search_radius input[type="text"],
+.dj_cf_search.dj_cf_search_horizontal .search_regions input[type="text"],
+.dj_cf_search.dj_cf_search_horizontal .search_cats input[type="text"],
+.dj_cf_search.dj_cf_search_horizontal .search_radius select,
+.dj_cf_search.dj_cf_search_horizontal .search_regions select,
+.dj_cf_search.dj_cf_search_horizontal .search_cats select {
+  float: right;
+  margin-right: 0;
+  margin-left: 2%;
+}
+.dj_cf_search.dj_cf_search_horizontal .search_radius.se_radius_geoloc .se_geoloc_icon {
+  float: right;
+  margin-right: 0;
+  margin-left: 2%;
+}
+.dj_cf_search.dj_cf_search_horizontal .search_ex_fields .djseform_field {
+  float: right;
+}
+.dj_cf_search.dj_cf_search_horizontal .search_ex_fields .djseform_field + .djseform_field {
+  margin-left: 0;
+  margin-right: 2%;
+}
+.dj_cf_search.dj_cf_search_horizontal div.search_ex_fields .djseform_field:nth-of-type(3n+1) {
+  clear: both;
+  margin-left: 0;
+  margin-right: 0;
+}
+.djcf_user_points .djcf_upoints_box .djcf_upoints {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.mod_djclassifieds_cattree .dj-cattree-box ul.dj-cattree {
+  float: right;
+}
+.mod_djclassifieds_cattree .dj-cattree-box ul.dj-cattree li a img.cat_tree_icon {
+  float: right;
+  margin: 0 0 0 10px;
+}
+.djcf .tip-text .row_location,
+.djcf .tip-text .row_contact {
+  float: right;
+  margin-right: 0;
+  margin-left: 5%;
+}
+.djcf .tip-text .row_price {
+  float: right;
+}
+.tip-text .images_box img {
+  margin-right: 0;
+  margin-left: 5px;
+}
+#dj-classifieds .dj-item_button {
+  margin-left: 0;
+  margin-right: 5px;
+}
+#dj-classifieds .dj-category .title h2 span {
+  display: inline-block;
+}
+#dj-classifieds .dj-cattree-box li a span {
+  display: inline-block;
+}
+#dj-classifieds .dj-item .general_det .user_name .row_value a span {
+  display: inline-block;
+}
+#dj-classifieds .dj-item span.row_label {
+  display: inline-block;
+}
+#dj-classifieds .dj-item .sb_bottom .addthis_toolbox {
+  display: inline-block;
+}
+#dj-classifieds .dj-useradverts .row_ua .col_ua span {
+  display: inline-block;
+}
+#dj-classifieds .dj-additem .djform_row .label span {
+  display: inline-block;
+}
+.dj_cf_search .search_price span.label1,
+.dj_cf_search span.from_class {
+  display: inline-block;
+}
+#dj-classifieds table.paymentdetails .table_payment table td.td2 table {
+  float: right !important;
+}

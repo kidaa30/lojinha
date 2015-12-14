@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_DJCLASSIFIEDS_CATEGORY_TABLE_LAYOUT">
+		<message></message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_djclassifieds/models/fields" >
+			<field name="cid" type="djcfcategorysingle" default="0" default_name="COM_DJCLASSIFIEDS_CATID" label="COM_DJCLASSIFIEDS_CATEGORY" />
+		</fieldset>
+	</fields>	
+	<fields name="params">
+		<fieldset  name="global" label="COM_DJCLASSIFIEDS_CONFIG_GLOBAL_SETTINGS_LABEL" addfieldpath="/administrator/components/com_djclassifieds/models/fields">
+				<field name="table_type" type="list" default="-1" label="COM_DJCLASSIFIEDS_CONFIG_TABLE_TYPE" description="COM_DJCLASSIFIEDS_CONFIG_TABLE_TYPE_DESC" menu="hide">
+					<option value="-1">JGLOBAL_USE_GLOBAL</option>
+					<option value="classic">COM_DJCLASSIFIEDS_CLASSIC_TABLE</option>
+					<option value="rwd">COM_DJCLASSIFIEDS_RWD_TABLE</option>
+					<option value="smart">COM_DJCLASSIFIEDS_SMART_TABLE</option>
+				</field> 
+				<field name="tooltip_img" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_TOOLTIPIMGTABLEVIEW" description="COM_DJCLASSIFIEDS_CONFIG_TOOLTIPIMGTABLEVIEW_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="tooltip_title" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_TOOLTIPTITLETABLEVIEW" description="COM_DJCLASSIFIEDS_CONFIG_TOOLTIPTITLETABLEVIEW_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+				<field name="column_image" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_IMAGE_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_IMAGE_COLUMN_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+				<field name="column_loc" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_LOCALIZATION_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_LOCALIZATION_COLUMN_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_price" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SHOWPRICE_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOWPRICE_COLUMN_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_desc" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_DESC_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_DESC_COLUMN_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_category" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_CATEGORY_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_CATEGORY_COLUMN_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_date_a" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_DATE_ADD_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_DATE_ADD_COLUMN_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_date_e" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_DATE_EXP_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_DATE_EXP_COLUMN_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_displayed" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_DISPLAYED_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_DISPLAYED_COLUMN_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>
+				<field name="column_distance" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SHOW_DISTANCE_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_SHOW_DISTANCE_COLUMN_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_YES_ALWAYS</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+					<option value="2">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP_AND_TABLET</option>
+					<option value="3">COM_DJCLASSIFIEDS_CONFIG_YES_ONLY_DESKTOP</option>
+				</field>					
+				<field name="column_distance_unit" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_DISTANCE_UNIT_COLUMN" description="COM_DJCLASSIFIEDS_CONFIG_DISTANCE_UNIT_COLUMN_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="km">MOD_DJCLASSIFIEDS_KILOMETER</option>
+					<option value="mile">MOD_DJCLASSIFIEDS_MILE</option>
+				</field>	
+			
+			<field type="djcfspacer" class="djtitle" label="COM_DJCLASSIFIEDS_CONFIG_SPACER_CATEGORIES_VIEW_LABEL" />
+				<field name="show_adsn_cat" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_NUMBEROFADSINCATEGORY" description="COM_DJCLASSIFIEDS_CONFIG_NUMBEROFADSINCATEGORY_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+				<field name="show_subcats" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_ON_ITEMS" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_ON_ITEMS_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>					
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="2">COM_DJCLASSIFIEDS_ONLY_ON_MAIN_CATEGORY</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="subcats_dir" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_DIRECTION" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_DIRECTION_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_CONFIG_HORIZONTAL</option>
+					<option value="0">COM_DJCLASSIFIEDS_CONFIG_VERTICAL</option>
+				</field>
+				<field name="subcats_ordering" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_ORDERING" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_ORDERING_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>				
+					<option value="ord">COM_DJCLASSIFIEDS_ORDERING</option>
+					<option value="name">COM_DJCLASSIFIEDS_NAME</option>
+				</field>
+				<field name="subcats_hide_empty" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_HIDE_EMPTY" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_HIDE_EMPTY_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="subcats_columns" type="list" label="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_COLUMNS_NUMBER" description="COM_DJCLASSIFIEDS_CONFIG_SUBCATEGORIES_COLUMNS_NUMBER_DESC" default="" menu="hide" >
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="title_in_items" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_ITEMS_HIDE_HEADER" description="COM_DJCLASSIFIEDS_CONFIG_ITEMS_HIDE_HEADER_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="main_cat_desc" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_ITEMS_HEADER_CATEGORY_DESCRIPTION" description="COM_DJCLASSIFIEDS_CONFIG_ITEMS_HEADER_CATEGORY_DESCRIPTION_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="sub_cat_desc" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_ITEMS_CATEGORIES_DESCRIPTION" description="COM_DJCLASSIFIEDS_CONFIG_ITEMS_CATEGORIES_DESCRIPTION_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="items_in_main_cat" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_HIDE_ITEMS_ON_MAIN_CAT" description="COM_DJCLASSIFIEDS_CONFIG_HIDE_ITEMS_ON_MAIN_CAT_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>				
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>
+				<field name="category_jump" type="list" default="" label="COM_DJCLASSIFIEDS_CONFIG_JUMPTOCATEGORY" description="COM_DJCLASSIFIEDS_CONFIG_JUMPTOCATEGORY_DESC" menu="hide">
+					<option value="">JGLOBAL_USE_GLOBAL</option>
+					<option value="1">COM_DJCLASSIFIEDS_YES</option>
+					<option value="0">COM_DJCLASSIFIEDS_NO</option>
+				</field>			
+			
+		</fieldset>
+	</fields>				
+</metadata>

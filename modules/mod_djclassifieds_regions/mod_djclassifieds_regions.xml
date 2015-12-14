@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0"  method="upgrade">
+	<name>DJClassifieds Regions</name>
+	<creationDate>January 2013</creationDate>
+	<author>DJ-Extensions.com</author>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<copyright>dj-extensions.com</copyright>
+	<license>GPL</license>
+	<version>3.4.1</version>
+	<description>DJ Classifieds Regions Menu module</description>
+	<files>
+		<filename module="mod_djclassifieds_regions">mod_djclassifieds_regions.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_djclassifieds/models/fields">
+				<field name="moduleclass_sfx" type="text" default="_menu" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="max_level" type="list" default="0" label="MOD_DJCLASSIFIEDS_MENU_MAX_LEVEL">
+					<option value="0">MOD_DJCLASSIFIEDS_MENU_ALL</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="expand_type" type="list" default="0" label="MOD_DJCLASSIFIEDS_MENU_EXPAND_TYPE" desc="MOD_DJCLASSIFIEDS_MENU_EXPAND_TYPE_DESC">
+					<option value="0">MOD_DJCLASSIFIEDS_MENU_CURRENT_PATH</option>
+					<option value="1">MOD_DJCLASSIFIEDS_MENU_ALL_REGIONS</option>
+				</field>
+				<field name="items_count" type="list" default="0" label="MOD_DJCLASSIFIEDS_MENU_NUMBER_OF_ADVERTS" desc="MOD_DJCLASSIFIEDS_MENU_NUMBER_OF_ADVERTS_DESC">
+					<option value="0">MOD_DJCLASSIFIEDS_MENU_HIDE</option>
+					<option value="1">MOD_DJCLASSIFIEDS_MENU_SHOW</option>
+				</field>
+				<field name="region_id" type="djcfregionsingle" default="0" parent="false" label="MOD_DJCLASSIFIEDS_MAIN_REGION" description="MOD_DJCLASSIFIEDS_MAIN_REGION_DESC"  multiple="false" size="10"/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="results_itemid" type="text" default="0" label="MOD_DJCLASSIFIEDS_MENU_ID_OF_RESULTS_PAGE" description="MOD_DJCLASSIFIEDS_MENU_ID_OF_RESULTS_PAGE_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

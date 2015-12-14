@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5.5" method="upgrade">
+	<name>DJ-MediaTools Package</name>
+	<packagename>dj-mediatools</packagename>
+	<creationDate>July 2013</creationDate>
+	<author>DJ-Extensions.com</author>
+	<copyright>Copyright (C) 2012-2013 DJ-Extensions.com, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>2.4.6</version>
+	<url>http://dj-extensions.com</url>
+	<packager></packager>
+	<packagerurl></packagerurl>
+	<description><![CDATA[
+		<style> #right-text {font-family:Arial, Helvetica, sans-serif;	font-size:11px;	} #right-text a:link, #right-text a:visited {color:#4991c1;font-weight:bold; font-size: 13px;} #right-text a:hover {text-decoration:underline;}	#right-text h2 {color:#fa9539;text-transform:uppercase;	font-size:16px;	padding:0;	margin:2px 0;}	#right-text p {padding:0;margin:4px 0;}	#left-logo {float:left;width:270px;height:120px;display:block;} #left-logo img {margin: 40px 20px;} #right-text {float:left;width:400px;}</style>
+		<div id="left-logo">
+			<a target="_blank" href="http://dj-extensions.com"><img src="components/com_djimageslider/assets/logo.png" alt="DJ-Extensions.com" /></a>
+		</div>		
+		<div id="right-text">
+			<h2>Thank you for installing DJ-MediaTools!</h2>
+			<p>The DJ-MediaTools extension allows you to display albums containing custom items or any different content from other 3rd party extensions on different layouts including gallery grid, slideshow based on our new script or slider based on DJ-ImageSlider and more up to 9 different layouts.</p>
+			<p>If you want to learn how to use DJ-MediaTools please read <a target="_blank" href="http://dj-extensions.com/documentation">Documentation</a> and <a target="_blank" href="http://dj-extensions.com/faq">FAQ section</a><br /><br />Check out our other extensions at <a target="_blank" href="http://dj-extensions.com">DJ-Extensions.com</a></p>
+		</div>
+		]]></description>
+	<files>
+	        <file type="module" client="site" id="mod_djmediatools">mod_djmediatools.zip</file>
+	        <file type="plugin" group="content" id="djmediatools">plg_content_djmediatools.zip</file>
+	        <file type="plugin" group="editors-xtd" id="djmediatools">plg_editors-xtd_djmediatools.zip</file>
+	        <file type="plugin" group="djmediatools" id="content">plg_djmediatools_content.zip</file>
+	        <file type="plugin" group="djmediatools" id="folder">plg_djmediatools_folder.zip</file>
+	        <file type="plugin" group="djmediatools" id="djcatalog2">plg_djmediatools_djcatalog2.zip</file>
+	        <file type="plugin" group="djmediatools" id="djclassifieds">plg_djmediatools_djclassifieds.zip</file>
+	        <file type="plugin" group="djmediatools" id="virtuemart">plg_djmediatools_virtuemart.zip</file>
+	        <file type="plugin" group="djmediatools" id="k2">plg_djmediatools_k2.zip</file>
+	        <file type="plugin" group="djmediatools" id="easyblog">plg_djmediatools_easyblog.zip</file>
+	        <file type="plugin" group="djmediatools" id="hikashop">plg_djmediatools_hikashop.zip</file>
+	        <file type="plugin" group="djmediatools" id="sobipro">plg_djmediatools_sobipro.zip</file>
+	        <file type="component" client="admin" id="com_djmediatools">com_djmediatools.zip</file>
+	</files>
+</extension>

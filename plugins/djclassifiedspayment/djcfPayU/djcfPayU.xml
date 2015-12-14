@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="djclassifiedspayment"  method="upgrade">
+	<name>DJ Classifieds PayU payment</name>
+	<author>DJ-Extensions.com</author>
+	<creationDate>September 2011</creationDate>
+	<copyright>Copyright (C) 2010 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>contact@design-jooma.eu</authorEmail>
+	<authorUrl>http://design-joomla.eu</authorUrl>
+	<version>3.4</version>
+	<description>DJ Classifieds PayU payment</description>
+	<files>
+		<filename plugin="djcfPayU">djcfPayU.php</filename>
+		<folder>djcfPayU</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_djclassifiedspayment_djcfPayU.ini</language>
+		<language tag="pl-PL">pl-PL.plg_djclassifiedspayment_djcfPayU.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="pos_id" type="text" size="50" default="" label="Id punktu płatności (pos_id)" description="PayU Id punktu płatności (pos_id)"/>
+				<field name="md5_key" type="text" size="50" default="" label="Klucz (MD5)" description="Klucz (MD5)"/>
+				<field name="md5_key2" type="text" size="50" default="" label="Drugi Klucz (MD5)" description="Drugi Klucz (MD5)"/>
+				<field name="pos_auth_key" type="text" size="50" default="" label="Klucz autoryzacji płatności (pos_auth_key)" description="Klucz autoryzacji płatności (pos_auth_key)"/>
+				<field name="notify_url_label" type="text" size="80" readonly="true"  label="Adres raportów" description="Proszę skopiować adres do punku płatności w serwisie payu.pl, zamieniając 'domain.com' na domenę serwisu" default="http://domain.com/index.php?option=com_djclassifieds&amp;task=processPayment&amp;ptype=djcfPayU&amp;pactiontype=notify"/>
+				<field name="return_url_label" type="text" size="80" readonly="true"  label="Adres powrotu - poprawnie" description="Proszę skopiować adres do punku płatności w serwisie payu.pl, zamieniając 'domain.com' na domenę serwisu" default="http://domain.com/index.php?option=com_djclassifieds&amp;task=paymentReturn&amp;r=ok"/>
+				<field name="return_error_url_label" type="text" size="80" readonly="true"  label="Adres powrotu - błąd" description="Proszę skopiować adres do punku płatności w serwisie payu.pl, zamieniając 'domain.com' na domenę serwisu" default="http://domain.com/index.php?option=com_djclassifieds&amp;task=paymentReturn&amp;r=error"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

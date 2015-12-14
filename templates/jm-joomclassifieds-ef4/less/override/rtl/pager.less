@@ -1,0 +1,57 @@
+//
+// Pager pagination
+// --------------------------------------------------
+
+
+.pager {
+  margin: @baseLineHeight 0;
+  list-style: none;
+  text-align: center;
+  .clearfix();
+}
+.pager li {
+  display: inline;
+  background-image: none;
+  padding: 0;
+}
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding: 0 15px;
+  line-height: 36px;
+  .transition(all 0.2s ease-in);
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: @JMpaginationFontColor;
+  background: @JMpaginationBackground;
+  border-top: none;
+  border-bottom: 1px solid @JMpaginationBorderBottomColor;
+  border-left: 1px solid @JMpaginationBorderColor;
+  border-right: 1px solid @JMpaginationBorderColor;
+  .box-shadow(0 2px 1px -1px @JMpaginationBorderColor);
+  .border-radius(@baseBorderRadius);
+}
+.pager li > a:hover,
+.pager li > a:focus {
+  color: @JMpaginationActiveFontColor;
+  background: @JMstylePaginationActiveBackground;
+}
+.pager .next > a,
+.pager .next > span {
+  float: left;
+}
+.pager .previous > a,
+.pager .previous > span {
+  float: right;
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+  .opacity(60);
+
+}

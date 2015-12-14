@@ -1,0 +1,3460 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// VARIABLES import
+//---------------------------------------------------------------
+
+@import "bootstrap_variables.less";  
+@import "template_variables.less";
+
+// MIXINS import
+//---------------------------------------------------------------
+  
+@import "override/ltr/mixins.less";
+@import "template_mixins.less";
+
+// DJ-CLASSIFIEDS
+//---------------------------------------------------------------
+
+//copy class btn
+.insert-btn() {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  line-height: @baseLineHeight;
+  text-decoration: none!important;
+  .border-radius(@baseBorderRadius);
+ 
+  //JM added
+  font-size: @JMbuttonFontSize;
+  font-family: inherit;
+  font-weight: 700;
+  color: @JMbuttonFontColor!important;
+  padding: @JMbuttonPadding;
+  border: none!important;
+  color: @JMbuttonFontColor!important;
+  #gradient .vertical(@JMstyleButtonBackground, @JMstyleButtonActiveBackground);
+  .box-shadow(inset 0px -1px 1px 0px @JMstyleButtonBorderColor);
+  
+  // Hover/focus state
+  &:hover,
+  &:focus {  
+    .transition(none);
+    background: @JMstyleButtonActiveBackground;
+  }
+}
+
+#dj-classifieds div.pagination {
+  padding: 0;
+}
+
+#dj-classifieds .dj-useradverts + div.pagination {
+  padding: @JMbaseSpace 0 0;
+}
+
+//checkbox radio
+#dj-classifieds input[type="radio"], 
+#dj-classifieds input[type="checkbox"] {
+  margin: 0 4px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+#dj-classifieds {
+	.radiofield_box,
+	.radiofield_box div {
+		float: none !important;
+	}
+}
+
+//label
+#dj-classifieds .label {
+	background: none;
+	text-shadow: none;
+	color: inherit;
+	font-size: inherit;
+	font-weight: normal;
+	.border-radius(0);
+	padding: 0;
+}
+
+//clearfix
+.clear_both {
+	clear: both;
+	height: 0;
+}
+
+#dj-classifieds {
+  .dj-category .cat_row_title,
+  h1.main_cat_title,
+  .dj-cattree-box .title_top,
+  .title_top h1,
+  .dj-additem .title_top,
+  table.paymentdetails td.td_title h2,
+  .profile_outer h2.profile_name,
+  .djcf_warning_outer .title_top,
+	.pointspackages .title_top,
+	.djcf_checkout_outer .title_top {
+    font-family: @JMarticleTitleFontFamily;
+    font-size: @JMarticleTitleFontSize;
+    color: @JMheadingColor;
+    font-weight: @JMheadingFontWeight;
+    margin: 0 0 @JMbaseSpace;
+    padding: 0 0 32px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    &:after {
+      bottom: 0;
+	    content: "";
+	    height: 5px;
+	    left: 0;
+	    position: absolute;
+	    width: 100px;
+      background: @JMtitleBorderModuleBorderColor;
+    }
+  }
+}
+
+// Categories
+// -------------------------- 
+
+//rss icon
+#dj-classifieds a.rss_icon {
+  margin-left: 10px;
+  img {
+    margin-bottom: 4px;
+    vertical-align: middle; 
+  }
+}
+
+//categories
+#dj-classifieds .dj-category {
+  border-bottom: 1px dotted @JMclassifiedsBorder;
+  margin: 0 0 @JMbaseSpace;
+  .cat_row {
+    padding: 0;
+    margin: 0 -(@JMbaseSpace/2) 0;
+  }
+  .cat_row + .cat_row {
+    padding-top: 0;
+  }
+  .cat_col {
+    float: left;
+  }
+  .cat_col .cat_col_in {
+    padding: 0 (@JMbaseSpace/2) @JMbaseSpace; 
+  }
+  .title {
+    text-align: center;
+    img {
+      float: none;
+      display: block;
+      margin: 0 auto 20px;
+      &:hover {
+        .opacity(80);
+        .transition(all 0.2s ease-in);
+      }
+    }
+    h2 {
+      background: @JMclassifiedsCategoriesTitleBackground;
+      color: @JMheadingColor;
+      font-size: @JMclassifiedsCategoriesFontSize;
+      font-weight: @JMheadingFontWeight;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+      .border-radius(5px);
+      text-transform: uppercase;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-style: solid inset;
+        border-width: 0 9px 9px 9px;
+        border-color: transparent transparent @JMclassifiedsCategoriesTitleBackground transparent;
+        top: -8px;
+        left: 50%;
+        right: auto;
+        margin-left: -9px;
+        display: none;
+      }
+    }
+    a + .cat_title_desc h2:after {
+      display: block;
+    }
+  }
+}
+
+#dj-classifieds .dj-category {
+  &.cat_cols1 .cat_col {
+    width: 100%;
+  }
+  &.cat_cols2 .cat_col {
+    width: 50%;
+  }
+  &.cat_cols3 .cat_col {
+    width: 33.3%;
+  }
+  &.cat_cols4 .cat_col {
+    width: 25%;
+  }
+  &.cat_cols5 .cat_col {
+    width: 20%;
+  }
+  &.cat_cols6 .cat_col {
+    width: 16.6%;
+  }
+  &.cat_cols7 .cat_col {
+    width: 14.2%;
+  }
+  &.cat_cols8 .cat_col {
+    width: 12.5%;
+  }
+  &.cat_cols9 .cat_col {
+    width: 11.1%;
+  }
+  &.cat_cols10 .cat_col {
+    width: 50%;
+  }
+}
+
+#dj-classifieds h1.main_cat_title .main_cat_title_path {
+  font-size: 13px;
+  color: #999;
+  line-height: 1.1;
+  a {
+    color: #999;
+  }
+}
+
+#dj-classifieds .main_cat_desc{
+  margin: 10px 0;
+  text-align: center;
+}
+
+#dj-classifieds h1.main_cat_title + .dj-category .cat_row_title {
+    display: none;
+}
+
+// Table
+// -------------------------- 
+
+#dj-classifieds table.dj-items,
+#dj-classifieds .dj-items-table2 {
+  clear: both;
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0 @JMbaseSpace;
+  margin: -@JMbaseSpace 0 0;
+  width: 100%;
+  td.name a,
+  tr.special td a,
+  .item_col.name a {
+    font-weight: 600;
+    font-size: @JMclassifiedsTableTitleFontSize;
+    color: @JMclassifiedsBoxTitle;
+    text-transform: uppercase;
+    &:hover {
+      color: @JMstyle;
+    }
+  }
+}
+
+//table heading
+#dj-classifieds table.dj-items .main_title th,
+#dj-classifieds .dj-items-table2 .main_title .item_col {
+  color: @JMtableHeadFontColor;
+  text-align: center!important;
+  white-space: nowrap;
+  padding: 15px 8px;
+  font-weight: 600;
+  background: @JMtableHeadBackground;
+  border-left: 1px solid @JMtableHeadBackgroundHover;
+  border-right: none;
+  border-bottom: none;
+  text-transform: none;
+  .box-shadow(none);
+  a {
+    color: @JMtableHeadFontColor!important;
+    text-decoration: none;
+    img {
+      margin: 0 8px;
+      vertical-align: middle;
+    }
+    &.normal {
+      margin: 0!important;
+    }
+  } 
+  &:first-child {
+    border-left: none;
+    .border-radius(5px 0 0 5px);
+  }
+  &:last-child {
+  	.border-radius(0 5px 5px 0);
+  }
+  &:hover,
+  &.active {
+    background: @JMtableHeadBackgroundHover;
+  }
+}
+
+//table cell
+#dj-classifieds table.dj-items td,
+#dj-classifieds .dj-items-table2 .item_col {
+  font-weight: 600;
+  border-bottom: 1px solid @JMclassifiedsBorder;
+  border-right: 1px dotted @JMclassifiedsBorder;
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  .box-shadow(0px 2px 1px -1px @JMclassifiedsBoxBorderBottom);
+  background: @JMclassifiedsBoxBackground;
+  line-height: 1.5em;
+  color: @JMclassifiedsBoxText; 
+  &:first-child {
+    border-left: 1px solid @JMclassifiedsBorder;
+    .border-radius(5px 0 0 5px);
+  } 
+  &:last-child {
+    border-right: 1px solid @JMclassifiedsBorder;
+    .border-radius(0 5px 5px 0);
+  }
+  h3 {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  &.icon {
+  	width: auto!important;
+    img {
+      .box-sizing(content-box);
+    }
+  }
+  &.price {
+    font-size: @JMclassifiedsTablePriceFontSize;
+    line-height: 1.1;
+    color: @JMclassifiedsBoxTitle;
+    white-space: nowrap;
+  }
+  &.description {
+    font-weight: normal;
+  }
+	//favourite
+	.fav_icon {
+		display: inline-block;
+		vertical-align: top;
+		background-image: url("../images/classifieds/favourite.png");
+		background-repeat: no-repeat;
+		height: @JMclassifiedsFavouriteIconHeight;
+		width: @JMclassifiedsFavouriteIconWidth;
+		margin: 0 5px;
+	}
+	//featured
+	.prom_ico {
+		display: inline-block;
+		vertical-align: top;
+		background-image: url("../images/classifieds/featured.png");
+		background-repeat: no-repeat;
+		height: @JMclassifiedsFeaturedIconHeight;
+		width: @JMclassifiedsFeaturedIconWidth;
+		margin: 0 5px;
+	}
+	//auction
+	.auction_icon	{
+		display: inline-block;
+		vertical-align: top;
+		background-image: url("../images/classifieds/auction.png");
+		background-repeat: no-repeat;
+		height: @JMclassifiedsAuctionIconHeight;
+		width: @JMclassifiedsAuctionIconWidth;
+		margin: 0 5px;
+	}
+	//icon space
+	span.fav_icon,
+	span.prom_ico,
+	span.auction_icon,
+  span.new_icon,
+  span.type_button {
+		margin-top: 10px !important;
+  }
+}
+
+//distance column
+#dj-classifieds .col_distance {
+  vertical-align: middle;
+  .show_distance,
+  .show_on_map {
+    overflow: hidden;
+    position: relative;
+    min-width: 54px; 
+    min-height: 37px;
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+  }
+  .show_distance {
+    margin-top: 0px;
+    height: auto;
+  }
+  .show_on_map span {
+    background: url('../images/classifieds/show_on_map.png') top center no-repeat;
+    display: inline-block;
+    min-width: 54px; 
+    min-height: 37px;    
+  }
+  .show_distance span {
+    background: url('../images/classifieds/show_distance.png') center center no-repeat;
+    display: block;
+    min-width: 52px; 
+    min-height: 40px;
+    cursor: pointer; 
+    vertical-align: middle;
+    position: relative;
+  }
+}
+
+//table promotions
+#dj-classifieds table.dj-items,
+#dj-classifieds .dj-items-table2 {
+  tr.promotion.p_bg td,
+  .item_row.promotion.p_bg .item_col {
+      background: @JMclassifiedsPromoBackground;
+  }
+  tr.promotion.p_border td,
+  .item_row.promotion.p_border .item_col {
+      border-bottom: 3px solid @JMclassifiedsPromoBorderColor;
+      border-top: 3px solid @JMclassifiedsPromoBorderColor;
+      border-right: 1px dotted @JMclassifiedsPromoBorderColor;
+      border-left: none;
+      &:first-child {
+        border-left: 3px solid @JMclassifiedsPromoBorderColor;
+      }
+      &:last-child {
+        border-right: 3px solid @JMclassifiedsPromoBorderColor;
+      }
+  }
+  tr.promotion.p_bold td,
+  .item_row.promotion.p_bold .item_col {
+    font-weight: bold;
+    &.name a {
+      font-weight: bold;
+    }
+  }
+}
+
+// TABLE CLASSIC
+// -------------------------- 
+
+//old favourite image
+#dj-classifieds .dj-items-table img.fav_ico {
+	display: none;
+}
+
+// TABLE RWD
+// -------------------------- 
+
+#dj-classifieds .dj-items-table2 {	
+	display: table;
+  table-layout: fixed;
+  .item_row {
+		display: table-row;
+	}
+	.item_row .item_col {
+		display: table-cell;
+	}
+	.item_col.col_display {
+		text-align: center;
+	}
+}
+
+#dj-classifieds .dj-items-table2 .main_title .item_col.name a {
+	font-size: inherit;
+	text-transform: none;
+	margin: 0!important;
+}
+
+// TABLE SMART
+// -------------------------- 
+
+#dj-classifieds .dj-items .item_row {
+	width: 100%;
+	margin-bottom: @JMbaseSpace;
+}
+
+#dj-classifieds .dj-items_order_by_in	{
+	color: @JMtableHeadFontColor;
+  text-align: center;
+	padding: 15px 8px;
+	font-weight: 600;
+	background: @JMtableHeadBackground; 
+	.border-radius(5px);
+	margin: 0 0 @JMbaseSpace;
+	.dj-items_order_by_label {		
+		display: none;
+	}
+	.dj-items_order_by_values {
+		display: inline-block;
+		a {
+			color: jmdarken(@JMtableHeadFontColor, 15%);
+			text-decoration: none;
+			&:hover,
+			&.active {
+				color: @JMtableHeadFontColor;
+			}
+		}
+	}
+}
+
+#dj-classifieds .dj-items .item_row {
+	.item_row_in {
+		border-bottom: 1px solid @JMclassifiedsBoxBorder;
+	  border-right: 1px solid @JMclassifiedsBoxBorder;
+	  border-left: 1px solid @JMclassifiedsBoxBorder;
+		padding: 20px;
+	  .box-shadow(0px 2px 1px -1px @JMclassifiedsBoxBorderBottom);
+	  .border-radius(5px);
+	  background: @JMclassifiedsBoxBackground;
+	  color: @JMclassifiedsBoxText; 
+	}
+	.item_outer {
+		width: @JMclassifiedsSmartTableContentWidth;
+		float: left;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.item_outer_in {
+		width: 100%;	
+		display: table;
+	}
+	.item_outer_in .item_img_box{
+		display: table-cell;
+		vertical-align: top;
+	}
+	.item_img_box_in {
+		padding-right: @JMbaseSpace;
+		img {
+			max-width: none;
+		}
+	}
+	.item_outer_in .item_content {
+		display: table-cell;
+		vertical-align: top;
+		width: 100%;
+	}
+	
+	.item_outer_in .item_content_in {
+		padding-right: 25px;
+	}
+	.item_content .item_title h3 {
+		display: inline-block;
+		font-weight: 600;
+	  font-size: @JMclassifiedsTableTitleFontSize;
+	  line-height: 29px;
+	  text-transform: uppercase;
+	  color: @JMclassifiedsBoxTitle;
+	  margin: 0;
+	}
+	.item_content .item_title + div {
+	  margin-top: 5px;
+	}
+	//type
+	.item_content .item_title .item_type {
+		display: inline-block;
+		vertical-align: top; 
+		margin: 0 5px;
+	}
+	.item_content .item_title {
+		//favourite
+		.fav_icon {
+			display: inline-block;
+			vertical-align: top;
+			background-image: url("../images/classifieds/favourite.png");
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: @JMclassifiedsFavouriteIconHeight;
+			width: @JMclassifiedsFavouriteIconWidth;
+			margin: 5px 5px 0;
+		}
+		//featured
+		.prom_ico	{
+			display: inline-block;
+			vertical-align: top;
+			background-image: url("../images/classifieds/featured.png");
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: @JMclassifiedsFeaturedIconHeight;
+			width: @JMclassifiedsFeaturedIconWidth;
+			margin: 5px 5px 0;
+		}
+		//auction
+		.auction_icon	{
+			display: inline-block;
+			vertical-align: top;
+			background-image: url("../images/classifieds/auction.png");
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: @JMclassifiedsAuctionIconHeight;
+			width: @JMclassifiedsAuctionIconWidth;
+			margin: 5px 5px 0;
+		}
+		//new icon
+		.new_icon {
+			margin-top: 0;
+			vertical-align: top;
+		}
+	}	
+	.item_content .item_desc {
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.item_cat_region_outer {
+		margin-bottom: 10px;
+		.item_category {
+			display: inline-block;
+		}
+		a {
+			text-decoration: none;
+		}
+		.item_region {
+			display: inline-block;
+		}
+		.item_distance {
+			display: inline-block;
+			background-position: left center;
+			background-repeat: no-repeat;
+			margin-left: 5px;
+			padding-left: 22px;
+			cursor: pointer;
+			&:hover {
+				color: @JMstyle;
+			}
+		}
+	}
+	.item_details {
+		.item_date_start,
+		.item_date_exp,
+		.item_display{
+			background-position: left center;
+			background-repeat: no-repeat;
+			padding-left: 22px;
+			float: right;
+			clear: both;
+		}
+	}
+}
+
+// separator
+#dj-classifieds {
+	.dj-items_order_by_in .item_orderby_separator,
+	.dj-items .item_row .item_custom_fields .item_custom_field_separator,
+	.dj-items .item_row .item_cat_region_outer .item_cat_region_separator {
+		width: 2px;
+		height: 2px;
+		background: jmlighten(@JMclassifiedsBoxText, 10%);
+		display:inline-block;
+		vertical-align: middle;
+		margin: 0 8px;
+	}
+}
+
+#dj-classifieds {
+	.dj-items_order_by_in .item_orderby_separator {
+		background: jmlighten(@JMtableHeadBackgroundHover, 20%);
+	}
+}
+
+#dj-classifieds .dj-items .item_row {
+	.item_content .item_custom_fields {
+		margin-bottom: 10px;	
+	}
+	.item_content .item_custom_fields .item_cf_box {
+		display: inline-block;
+	}
+	.item_details {
+		width: @JMclassifiedsSmartTableDetailsWidth;
+		float: right;
+		text-align: right;
+	}
+	.item_details .item_price {
+		font-size: @JMclassifiedsSmartTablePriceFontSize;
+		font-weight: bold;
+		line-height: 1.1;
+		word-wrap: break-word;
+		margin-bottom: 10px;
+		color: @JMstyle;
+	}
+	.item_details .item_price .row_negotiable {
+		display: block;
+		margin-top: 5px;
+		font-size: @JMclassifiedsSmartTablePriceNegotiableFontSize;
+		line-height: 1.2;
+	}
+}
+
+//promotion
+#dj-classifieds .dj-items .item_row.p_bg .item_row_in {
+	background: @JMclassifiedsPromoBackground;
+}
+
+#dj-classifieds .dj-items .item_row.p_border .item_row_in {
+	padding: 18px;
+  .box-shadow(none);
+  border: 3px solid @JMclassifiedsPromoBorderColor;
+}
+
+// images- smart table
+
+#dj-classifieds .dj-items .item_row {
+	.item_cat_region_outer .item_region .item_distance{
+		background-image: url("../images/classifieds/distance.png");
+	}
+	.item_details .item_date_start,
+	.item_details .item_date_exp {
+		background-image: url("../images/classifieds/added.png");
+	}
+	.item_details .item_display {
+		background-image: url("../images/classifieds/hits.png");
+	}
+}
+
+// Blog
+// -------------------------- 
+
+//sorting
+#dj-classifieds .blog_sorting_box {
+  margin: 0 0 @JMbaseSpace;
+  #blogorder_select {
+    min-width: 250px;
+  }
+}
+
+//new icon
+#dj-classifieds span.new_icon {
+  display: inline-block;
+  background: @JMclassifiedsNewIconBackground;
+  color: @JMclassifiedsNEwIconFontColor;
+  font-size: @JMclassifiedsNewIconFontSize;
+  font-weight: bold;
+  line-height: 25px;
+  vertical-align: middle;
+  padding: 0 10px;
+  margin: 2px;
+}
+
+//blog grid
+#dj-classifieds .djcf_items_blog {
+  margin-left: -(@JMbaseSpace/2);
+  margin-right: -(@JMbaseSpace/2);
+  .item_box {
+    float: left;
+  }
+  .item_box_in {
+    position: relative;
+    margin: 0 (@JMbaseSpace/2) @JMbaseSpace;
+    .box-sizing(border-box);
+    color: @JMclassifiedsBoxText; 
+  }
+  .item_box_in2 {
+    padding: 20px;
+    background: @JMclassifiedsBoxBackground;
+    border-left: 1px solid @JMclassifiedsBoxBorder;
+    border-right: 1px solid @JMclassifiedsBoxBorder;
+    border-bottom: 1px solid @JMclassifiedsBoxBorderBottom;
+    .box-shadow(0px 2px 1px -1px @JMclassifiedsBoxBorder);
+    .box-sizing(border-box);
+    .border-radius(3px);
+  }
+  .title {
+    color: @JMclassifiedsBoxTitle;
+    margin-bottom: 10px;
+    padding: 0 0 10px;
+    text-transform: uppercase;
+    h2 {
+      display: inline;
+      margin-right: 5px;
+      vertical-align: middle;
+      line-height: (@JMclassifiedsBoxTitleFontSize+10);
+      font-size: @JMclassifiedsBoxTitleFontSize;
+      font-weight: 600;
+			+ * {
+				margin-left: 0 !important;
+			}
+    }
+  }
+  .item_img {
+    text-align: center;
+    margin-bottom: 16px;
+		padding-bottom: 20px;
+    position: relative;
+    &:after {
+	    position: absolute;
+	    content:'';
+	    width: 62px;
+	    height: 2px;
+	    left: 0;
+	    bottom: 0;
+	    background: @JMstyle;
+		}
+  }
+  .item_box_right .item_img {
+    float: left;
+    padding-right: 20px;
+  }
+  .item_img + .item_desc {
+    display: table-cell;
+  }
+  .item_box_bottom .item_desc {
+    display: block;
+  }
+  .item_desc .label_title {
+    display: block;
+    padding-left: 30px;
+    line-height: 20px;
+  }
+  span.desc_info {
+    display: block;
+    padding-bottom: 20px;
+    font-size: 13px;
+    line-height: 1.5;
+    padding-left: 30px;
+  }
+  img.fav_ico {
+    vertical-align: middle;
+  }
+}
+
+//blog icons
+#dj-classifieds .blog_det {
+  .item_desc .label_title,
+  .region, 
+  .category,
+  .price,
+  .cf_box {
+    font-weight: 600;
+    color: @JMclassifiedsBoxTitle;
+    border-bottom: 1px dotted;
+    margin: 0 0 15px;
+    padding-bottom: 15px;
+    font-size: @JMclassifiedsBoxLabelsFontSize;
+    line-height: 1.2;
+  }
+  .category a {
+    text-decoration: none;
+  }
+  .item_desc .label_title {
+    border: none;
+    margin: 0;
+  }
+  div:nth-last-child(2) {
+    border: none;
+  }
+  .region,
+  .category, 
+  .price {
+    .label_title {
+      height: 20px;
+      width: 20px;
+      float: left;
+      margin-right: 10px;
+    }
+  }
+  .cf_box .label_title {
+    height: 20px;
+    display: inline-block;
+    padding-left: 30px;
+  }
+  .region,
+  .category,  
+  .price,
+  .cf_box {
+    border-color: @JMclassifiedsBorder;
+  }
+}
+
+#dj-classifieds {
+  .djcf_items_blog .item_desc .label_title,
+  .blog_det .price .label_title,
+  .blog_det .region .label_title,
+  .blog_det .category .label_title,
+  .blog_det .cf_box .label_title {
+    background-position: left top;
+    background-repeat: no-repeat;
+  }
+}
+
+#dj-classifieds {
+  .djcf_items_blog .item_desc .label_title {
+    background-image: url("../images/@{JMimgDir}/desc.png");
+  }
+  .blog_det .price .label_title {
+    background-image: url("../images/@{JMimgDir}/price.png");
+  }
+  .blog_det .region .label_title {
+    background-image: url("../images/@{JMimgDir}/region.png");
+  }
+  .blog_det .category .label_title {
+    background-image: url("../images/@{JMimgDir}/category.png");
+  }
+  .blog_det .cf_box .label_title {
+    background-image: url("../images/@{JMimgDir}/details.png");
+  }
+}
+
+//blog promotions
+#dj-classifieds .djcf_items_blog {
+  .promotion.p_bg .item_box_in2 {
+      background: @JMclassifiedsPromoBackground;
+      padding: 19px;
+      border: 1px solid @JMclassifiedsPromoBorderColor;
+  }
+  .promotion.p_border {
+    position: relative;
+    .item_box_in2 {
+      padding: 17px;
+      border: 3px solid @JMclassifiedsPromoBorderColor;
+    }
+    .blog_det .category,
+    .blog_det .region, 
+    .blog_det .price,
+    .blog_det .cf_box {
+      border-color: @JMclassifiedsPromoBorderColor;
+    }
+  }
+  .promotion.p_bold {
+    font-weight: bold;
+  }
+  //type
+	.type_button {
+		margin-left: 5px !important;
+		margin-right: 5px !important;
+	}
+	//featured
+  .promotion.p_special {
+    .item_box_in2 {
+      position: relative;
+    }
+		//old
+		span.p_special_img {
+			display: none;
+		}
+		//new
+		span.p_special_icon {
+			display: inline-block;
+			vertical-align: middle;
+			width: @JMclassifiedsFeaturedIconWidth;
+			height: @JMclassifiedsFeaturedIconHeight;
+      background-image: url("../images/classifieds/featured.png");
+      background-repeat: no-repeat;
+			background-position: center center;
+			margin: 0 5px;
+    }
+  }
+	//favourite
+	.fav_icon {
+		display: inline-block;
+		vertical-align: middle;
+		height: @JMclassifiedsFavouriteIconHeight;
+		width: @JMclassifiedsFavouriteIconWidth;
+		background-image: url("../images/classifieds/favourite.png");
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0 5px;
+	}
+	//auction
+	.auction_icon {
+		display: inline-block;
+		vertical-align: middle;
+		width: @JMclassifiedsAuctionIconWidth;
+		height: @JMclassifiedsAuctionIconHeight;
+		background-image: url('../images/classifieds/auction.png');
+		background-repeat: no-repeat;
+		background-position: center center;
+		margin: 0 5px;
+	}
+}
+
+//see details
+#dj-classifieds .see_details_box {
+  font-family: inherit;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  padding: 3px;
+  .transition(all 0.2s ease-in);
+  border: 1px solid @JMstyleClassifiedsSeedetailsBorder;
+  .border-radius(3px);
+  &:hover {
+    cursor: pointer;
+    border-color: transparent;
+    background: @JMstyleClassifiedsSeedetailsActiveBackground;
+  }
+  a {
+    color: @JMstyleClassifiedsSeedetailsFont;
+    text-decoration: none!important;
+  }
+  &:hover a {
+    color: @JMclassifiedsSeedetailsActiveFont;
+  }
+}
+
+// Category Tree
+// -------------------------- 
+
+#dj-classifieds .dj-cattree-box {
+  &.cols1 .dj-cattree {
+    width: 100%;
+  }
+  &.cols2 .dj-cattree {
+    width: 50%;
+  }
+  &.cols3 .dj-cattree {
+    width: 33.3%;
+  }
+  &.cols4 .dj-cattree {
+    width: 25%;
+  }
+  &.cols5 .dj-cattree {
+    width: 20%;
+  }
+  .dj-cattree {
+    float: left;
+    margin: 10px 0;
+    li {
+      padding: 0 15px 0 0;
+      background: none;
+      a img.cat_tree_icon {
+        height: 25px;
+        margin: 3px 5px 3px 0;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+// User adverts / items
+// -------------------------- 
+
+#dj-classifieds .dj-useradverts {
+  .main_title {
+    .main_title_box_in {
+      color: @JMtableHeadFontColor;
+      text-align: center!important;
+      white-space: nowrap;
+      padding: 15px 8px;
+      font-weight: 600;
+      background: @JMtableHeadBackground;
+      border-left: 1px solid @JMtableHeadBackgroundHover;
+      
+      &:hover {
+        background: @JMtableHeadBackgroundHover;
+      }
+    }
+    a {
+      color: @JMtableHeadFontColor;
+      text-decoration: none;
+      img {
+        margin: 0 8px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .main_title_box {
+    width: 20%;
+    float: left;
+    overflow: hidden;
+    &:first-child {
+      width: 40%;
+      .main_title_box_in {
+      	.border-radius(5px 0 0 5px);
+        border-left: none;
+      }
+    }
+    &:nth-last-child(2) {
+    	.main_title_box_in {
+    		.border-radius(0 5px 5px 0);
+    	}
+    }
+  }
+  .row_ua {
+    margin: @JMbaseSpace 0 0;
+    .row_ua1,
+		.row_ua2 {
+			background: @JMclassifiedsBoxBackground;
+			border-left: 1px solid @JMclassifiedsBoxBorder;
+			border-right: 1px solid @JMclassifiedsBoxBorder;
+			border-bottom: 1px solid @JMclassifiedsBoxBorderBottom;
+			.box-shadow(0px 2px 1px -1px @JMclassifiedsBoxBorder);
+			.box-sizing(border-box);
+			.border-radius(5px);
+			color: @JMclassifiedsBoxText;
+			margin: 0 0 10px;
+		}
+    .row_ua1 {
+      border-bottom: 1px solid @JMclassifiedsBoxBorder;
+      .row_ua1_in {
+        display: table;
+        width: 100%;
+      }
+      .col_ua {
+        padding: 20px;
+        border-left: 1px dotted @JMclassifiedsBoxBorder;
+        display: table-cell;
+        .box-sizing(border-box);
+        &:first-child {
+          border-left: none;
+        } 
+      }
+      .icon_name {
+        width: 45%;
+        .icon {
+          float:left;
+          margin-right: @JMbaseSpace;
+        }
+        .title {
+          font-weight: 600;
+          font-size: @JMclassifiedsTableTitleFontSize;
+          color: @JMclassifiedsBoxTitle;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+        .c_name {
+          font-size: 0.9em;
+          display: block;
+          margin-top: 3px;
+        }
+      }
+      .col_ua_row + .col_ua_row {
+        margin: 10px 0 0;
+      }
+      .public_status {
+        width: 45%;
+        vertical-align: middle;
+      } 
+      .advert_active {
+        width: 10%;
+        vertical-align: middle;
+      }
+    }
+    .row_ua2 { 
+      padding: 20px;
+      text-align: right;
+      .row_ua2_in {
+        margin: -5px 0 0;
+        .button {
+          margin: 5px 0 0 10px;
+        }
+      }
+    }
+		.row_ua_orders {
+			line-height: @JMbaseSpace;
+			.row_ua_orders_title {
+				text-align: right;
+				color: @JMstyle;
+				cursor: pointer;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			.item_col .clear_both {
+				display: none;
+			}
+		}		
+  } 
+}
+
+#dj-classifieds .dj-useradverts a.button {
+  margin: 5px;
+}
+
+// Add Item
+// -------------------------- 
+
+#dj-classifieds .dj-additem {
+  form {
+    padding:0;
+    margin: 0;
+  }
+  .additem_djform {
+    margin-bottom: 20px;
+  }
+  .djform_row {
+    border-bottom: 1px dotted @JMclassifiedsBorder;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .label {
+    background: none;
+    text-shadow: none;
+    color: inherit;
+    font-size: inherit;
+    .border-radius(0);
+    padding: 0;
+  }
+  .label {
+    display: inline-block;
+    font-weight: bold;
+    text-align: right;
+    width: 25%;
+    .box-sizing(border-box);
+    padding: 10px;
+    margin: 0;
+    vertical-align: middle;
+    span {
+      font-size: 0.9em;
+      font-weight: normal;
+      line-height: 1.5;
+      white-space: normal;
+    }
+    img {
+      vertical-align: top;
+    }
+  }
+  .djform_row.extra_fields {
+    margin: 0;
+    padding: 0;
+    border: none;
+    .radiofield_box,
+    .radiofield_box div {
+      float: none!important;
+    }
+		.radiofield_box label {
+			display: inline-block;
+			margin: 0 4px;
+		}
+  }
+  .djform_field {
+    display: inline-block;
+    width: 70%;
+    .box-sizing(border-box);
+    vertical-align: middle;
+    img {
+      margin: 5px;
+    }
+    span.radio_label {
+			margin: 0 0 0 7px;
+      vertical-align: middle;
+    } 
+  }
+  #after_cat_0 select,
+  #after_reg_0 select{
+    margin-top: 5px;
+  }
+  .mce-container {
+    max-width: 400px;
+    border-color: @JMinputBorder;
+  }
+  .terms_and_conditions {
+    text-align: center;
+    > label {
+      display: none;
+    }
+    .label_terms {
+      font-weight: bold;
+      margin: 0 5px;
+      display: inline-block;
+    }
+    .djform_field {
+      width: 100%;
+    }
+  }
+  .djform_row .toggle-editor {
+    float: none;
+  }
+}
+
+//messages
+#dj-classifieds .dj-additem {
+  #guest_email_info,
+  #verification_alert,
+  #imageslimitalert,
+  #mapalert {
+    color: #FF0000;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    display: none;
+  }
+  #mapalert{
+    margin-top:20px;
+  }
+	.djform_row .reg_loader,
+  #guest_email_loader{
+    display: none; 
+    margin: 5px 0 0 10px;
+    vertical-align: top;
+  }
+}
+
+//form submit buttons
+#dj-classifieds .dj-additem {
+  .classifieds_buttons {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    .button {
+      margin: 0 10px;
+    }
+  }
+}
+
+//price
+#dj-classifieds .dj-additem {
+  .price_neg_box {
+    margin: 5px 0 0;
+    span {
+      margin-left: 5px;
+    }
+  }
+  select.price_currency {
+    width: 100px;
+  }
+}
+
+//map intro
+#dj-classifieds .dj-additem .djmap_intro {   
+    margin-bottom:20px;
+    text-align: center;
+    .button {
+      .insert-btn();
+      cursor:pointer;
+      display: inline-block;
+      margin: 10px 5px 0;
+    }
+  .djmap_intro_desc {
+    text-align: center;
+  }
+}
+
+#dj-classifieds .dj-additem #djmap {
+  width: 85%!important;
+  height: 300px!important;
+  margin: 0 auto;
+  img { 
+    max-width: none;
+  }
+  label { 
+    width: auto;
+    display:inline; 
+  }
+}
+
+//images
+#dj-classifieds .dj-additem .images_box {
+  .img_info {
+    margin-bottom: 15px;
+    .img_info_row{
+      margin-bottom: 5px;
+    }
+    span{
+      font-weight: bold;
+    }
+  }
+  .additem_djform_in {
+    padding: 0;
+  }
+  #itemImagesWrap {
+      margin: 0 0 20px 0;
+  }
+  #itemImages .itemImage {
+    position: relative;
+    float: left;
+    margin: 0 2px 2px 0;
+    overflow: hidden;
+    max-width: 100%;
+    img {
+      float: none;
+      margin: 0;
+      padding: 0;
+      height: 150px;
+      max-width: 600px;
+    }
+    .imgMask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: auto;
+      width: 100%;
+      height: 150px;
+      background: url('../images/classifieds/img_bg.png') repeat;
+      .opacity(0);
+      .transition(opacity 0.2s ease-out);
+      cursor: move;
+      input.editTitle {
+        background: transparent url('../images/classifieds/img_edit.png') 6px center no-repeat;
+      }
+      .delBtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: url('../images/classifieds/img_delete.png') no-repeat;
+        cursor: pointer;
+        .opacity(50);
+        .transition(opacity 0.2s ease-out);
+        &:hover {
+          .opacity(100);
+        }
+      }
+    }
+    &:hover,
+    &.active {
+      .imgMask {
+        .opacity(100);
+      }
+    }
+    input.itemInput {
+      position: absolute;
+      bottom: 0;
+      .box-sizing(border-box);
+      padding: 6px 6px 6px 28px;
+      margin: 0;
+      border: 0;
+      width: 100%;
+      background-color: transparent;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      .transition(all 0.2s ease-out);
+      border-radius: 0;
+      box-shadow: none;
+      height: auto;
+      border: none !important;
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.25);
+        .box-shadow(none);
+      }
+    }
+  }
+}
+
+//invalid inputs
+#dj-classifieds .dj-additem {
+  .label.invalid {
+    color: #ff0000;
+  }
+  input.invalid,
+  select.invalid,
+  textarea.invalid {
+    border: 1px solid #ff0000;
+  }
+}
+
+//inputs width
+#dj-classifieds .dj-additem {
+  input[type="text"],
+  .djform_row select,
+  .djform_row textarea {
+    max-width: 400px;
+    width: 100%!important;
+    .box-sizing(border-box);
+  }
+}
+
+//promo
+#dj-classifieds .dj-additem .prom_rows {
+  .promotions_info {
+    font-weight: normal;
+    font-size: 14px;
+    color: #999;
+  }
+  .label {
+    width: 25%;
+    margin: 0;
+  }
+  .djform_field {
+    width: 74%;
+  }
+  .djform_prom_v,
+  .djform_prom_img,
+  .djform_prom_desc {
+    float: left;
+    padding-left: 20px;
+    .box-sizing(border-box);
+  }
+  .djform_prom_v {
+    width: 28%;
+    padding-top: 20px;
+    label{
+      display:inline-block;
+      margin: 0 5px;
+      vertical-align: middle;
+    }
+  }
+  .djform_prom_img {
+    width: 25%;
+  }
+  .djform_prom_desc  {
+    width: 47%;
+  }
+}
+
+//renew
+#dj-classifieds .dj-renewitem .djform_field_category{
+  padding-top: 5px;
+}
+
+//additems - auctions
+#dj-classifieds .djform_row.autoclose_binding {
+	text-align: center;
+	> label {
+		display: none!important;
+	}
+	#bid_autoclose span {
+		display: block;
+	}
+	#bid_autoclose label {
+		display: inline-block;
+	}
+}
+
+//shipping + attachemnts
+#dj-classifieds .dj-additem .shippins_rows {
+	.djform_prom_v {
+		padding-top: 10px;
+	}
+	.shipping_price {
+		input {
+			max-width: 100px;
+			margin: 0 5px;
+		}
+	}
+	.djc_uploader_table {
+		margin: 0;
+	}
+}
+
+//buynow
+#dj-classifieds .dj-additem {
+	#buynow_quantity_box {
+		input {
+			float: left;
+		}
+		input + select {
+			clear: both;
+			float: left;
+			margin-top: 5px;
+		}
+	}
+	#buynow_config {
+		input[type="text"],
+		select {
+			max-width: 400px;
+			width: 100%!important;
+			.box-sizing(border-box);
+		}
+		.bn-option-outer,
+		.bn_field_outer {
+			margin-bottom: 5px;
+		}
+		span.button {
+			margin-left: 25%;
+			.insert-btn();
+		}
+		#buynow_options2_info {
+			display: block;
+			font-weight: bold;
+			margin: 10px 0;
+			text-align: center;
+		}
+		+ script + .djform_row {
+			margin-top: @JMbaseSpace;
+		}
+	}
+}
+
+// Single Advert
+// -------------------------- 
+
+//advert title
+#dj-classifieds .dj-item .title_top {
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  position: relative;
+  text-align: left;
+  border-bottom: 1px dotted @JMclassifiedsBorder;
+  h2 {
+    display: inline;
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+    color: @JMheadingColor;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .sb_top {
+    float: right;
+    margin: 6px 0 0;
+    //min-width: 170px;
+  }
+  .button {
+    margin: 1px 0 1px 10px;
+    float: right;
+    vertical-align: middle;
+    background-image: none;
+    padding: 0 10px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 25px;
+    cursor: pointer;
+    .transition(none);
+  }
+  span.new_icon {
+    vertical-align: middle;
+    margin: 0 5px;
+  }
+  //favourite
+	.fav_icon_link {
+		.fav_icon {
+			display: inline-block;
+			vertical-align: middle;
+			background-image: url("../images/classifieds/favourite.png");
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: @JMclassifiedsFavouriteIconHeight;
+			width: @JMclassifiedsFavouriteIconWidth;
+			margin: 0 5px;
+			&.fav_icon_na {
+				background-image: url("../images/classifieds/addtofavourite.png");
+			}
+		}
+		.fav_label,
+		.nfav_label {
+			display: inline-block;
+			font-size: 13px;
+			vertical-align: middle;
+			margin: 0 5px;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.fav_label {
+			color: @JMclassifiedsFavouriteFontColor;
+		}
+		.nfav_label {
+			color: @JMclassifiedsModuleSearchLabelFontColor;
+			&:hover {
+				color: @JMstyle;
+			}
+		}
+	}
+}
+
+#dj-classifieds .dj-item .general_det_in {
+  padding-left: @JMbaseSpace;
+}
+
+//images
+#dj-classifieds .dj-item .images_wrap {
+  float: left;
+  max-width: 100%;
+  .images .djc_images {
+    padding: 20px;
+    background: @JMclassifiedsImagesBackground;
+    .border-radius(5px);
+  }
+  .djc_mainimage a {
+    display: block;
+  }
+  .djc_thumbnails {
+    margin-top: 10px;
+    margin-left: -1px;
+  }
+  .djc_thumbnails .djc_thumbnail {
+    float: left;
+    &.new_row {
+			clear: both;
+		}
+    a {
+      display: block;
+    }
+    img {
+      padding-left: 1px;
+      .box-sizing(border-box);
+    }
+  }
+}
+
+#dj-classifieds .dj-item .djc_thumbnails.djc_thumbs_gal2 .djc_thumbnail{ max-width:50%; }
+#dj-classifieds .dj-item .djc_thumbnails.djc_thumbs_gal3 .djc_thumbnail{ max-width:33.3%; }
+#dj-classifieds .dj-item .djc_thumbnails.djc_thumbs_gal4 .djc_thumbnail{ max-width:25%; }
+#dj-classifieds .dj-item .djc_thumbnails.djc_thumbs_gal5 .djc_thumbnail{ max-width:20%; }
+#dj-classifieds .dj-item .djc_thumbnails.djc_thumbs_gal6 .djc_thumbnail{ max-width:16.6%; }
+#dj-classifieds .dj-item .djc_thumbnails.djc_thumbs_gal7 .djc_thumbnail{ max-width:14.2%; }
+#dj-classifieds .dj-item .djc_thumbnails.djc_thumbs_gal8 .djc_thumbnail{ max-width:12.5%; }
+#dj-classifieds .dj-item .djc_thumbnails.djc_thumbs_gal9 .djc_thumbnail{ max-width:11.1%; }
+#dj-classifieds .dj-item .djc_thumbnails.djc_thumbs_gal10 .djc_thumbnail{ max-width:10%; } 
+
+//details
+#dj-classifieds .dj-item .general_det {
+  float: right;
+  &.no_images {
+    width: 100%;
+  }
+  span.row_label {
+    border-bottom: 1px dotted @JMclassifiedsBorder;
+    padding: 0 0 10px 30px;
+    display: block;
+    margin: 0 0 10px;
+  }
+}
+
+//space between advert parts
+#dj-classifieds .dj-item {
+  .localization_det, 
+  .images, 
+  .description,
+  .video_box,
+	.additional,
+  .ask_form_abuse_outer {
+    margin-bottom: @JMbaseSpace;
+  }
+}
+
+//left padding for details
+#dj-classifieds .dj-item {
+  .description .desc_content,
+  .custom_det .row,
+  .additional .row,
+	.additional ul,
+  .localization_det .row,
+  .general_det .row_value,
+  #google_map_box,
+  .fb_iframe_widget {
+    padding-left: 30px;
+    display: block;
+  }
+}
+
+//margin for rows
+#dj-classifieds .dj-item {
+  .row_gd,
+  .row {
+    margin: 0 0 @JMbaseSpace;
+  }
+}
+
+//contact part
+#dj-classifieds .dj-item .general_det .djcf_contact {
+  margin: 0;
+  .contact_mainrow,
+  .contact_row {
+    margin: 0 0 @JMbaseSpace;
+  }
+  .contact_row .row_label {
+    background: none;
+    border: none;
+    margin: 0;
+    display: block;
+    line-height: normal;
+  }
+  .contact_row .row_value {
+    display: block;
+  }
+}
+
+//profile
+#dj-classifieds .dj-item .profile_item_box {
+  .profile_img {
+    display: block;
+    padding: 0 0 5px;
+  }
+  .profile_name_data {
+    display: inline-block;  
+  }
+  .profile_row {
+    margin: 0 0 10px;
+  }
+  .profile_row .profile_row_label {
+    display: block;
+  }
+}
+
+#dj-classifieds .dj-additem .djform_field .radiofield_box,
+#dj-classifieds .dj-additem .djform_field .radiofield_box div {
+  float: none !important;
+}
+
+//labels
+#dj-classifieds .dj-item span.row_label {
+  font-weight: 600;
+  color: @JMheadingColor;
+}
+
+#dj-classifieds .dj-item .general_det {
+  .djcf_contact span.row_label,
+  .added span.row_label,
+  .user_name span.row_label {
+    line-height: 20px;
+  }
+}
+
+// auctions
+#dj-classifieds .dj-item .auction .bids_title h2 {
+    border-bottom: 1px dotted @JMclassifiedsBorder;
+    padding: 0 0 10px 30px;
+    display: block;
+    margin: 0 0 10px;
+    font-size: @JMclassifiedsBoxLabelsFontSize;
+    font-weight: 600;
+		line-height: 20px;
+    color: @JMheadingColor;
+}
+
+#dj-classifieds .dj-item {
+	.auction.row_content,
+	.auction.row_bottom {
+		margin: 0 0 @JMbaseSpace;
+	}
+}
+
+#dj-classifieds .dj-item .auction.row_gd .bids_title h2 {
+	font-size: inherit;
+}
+
+#dj-classifieds .dj-item .auction #djbid_message,
+#dj-classifieds .dj-item .auction #djbid_alert,
+#dj-classifieds .dj-item .auction .bids_close_info,
+#dj-classifieds .dj-item .auction .no_bids_row {
+	font-weight: bold;
+	margin: 5px 0;
+}
+
+#dj-classifieds .dj-item .auction #djbid_message:empty,
+#dj-classifieds .dj-item .auction #djbid_alert:empty,
+#dj-classifieds .dj-item .auction .bids_close_info:empty {
+	display: none;
+}
+
+#dj-classifieds .dj-item .auction #djbid_message {
+	background: #DFF0D8;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  color: #468847;
+  .border-radius(5px);
+  margin-left: 30px;
+}
+
+#dj-classifieds .dj-item .auction #djbid_alert,
+#dj-classifieds .dj-item .auction .bids_close_info {
+	background: #F2DEDE;
+  display: block;
+  line-height: 40px;
+  text-align: center;
+  color: #B94A48;
+  .border-radius(5px);
+  margin-left: 30px;
+}
+
+#dj-classifieds .dj-item .auction {
+	.bids_list,
+	.bids_box,
+	.bids_login_info {
+		padding: 0 0 0 30px;
+	}
+}
+
+#dj-classifieds .dj-item .auction .bids_list {
+	margin: 0 0 10px;
+}
+
+#dj-classifieds .dj-item .auction .bids_row_title .bids_col {
+    background: @JMclassifiedsModuleSearchLabelBackground;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 4px 10px;
+    color: @JMclassifiedsModuleSearchLabelFontColor;
+    .box-sizing(border-box);
+    margin: 0 0 10px;
+}
+
+#dj-classifieds .dj-item .auction .bids_row_title .bids_col_date {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#dj-classifieds .dj-item .auction .bids_row_title .bids_col:first-child {
+  .border-radius(3px 0 0 3px);
+}
+
+#dj-classifieds .dj-item .auction .bids_row_title .bids_col:nth-last-child(2) {
+	.border-radius(0 3px 3px 0);
+}
+
+#dj-classifieds .dj-item .auction .bids_col {
+	float: left;
+	width: 33.33%;
+}
+
+#dj-classifieds .dj-item .auction .bids_col_bid {
+	text-align: right;
+	font-weight: bold;
+}
+
+#dj-classifieds .dj-item .auction .bids_box {
+	margin-top: 10px;
+	.bids_info {
+		margin: 0 0 5px;
+	}
+}
+
+#dj-classifieds .dj-item .auction .bids_info .bid_label {
+  display: none;
+}
+
+#dj-classifieds .dj-item .auction .bid_del_icon {
+	position: relative;
+	text-decoration: none;
+	&:after {
+		content: '\00D7';
+		margin: 0 3px;
+	}
+}
+
+#dj-classifieds .dj-item .general_det .price_wrap .auctions_link {
+	display: block;
+	width: 100%;
+	margin: 5px 0 0;
+	.box-sizing(border-box);
+	text-decoration: none;
+	color: @white;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+#dj-classifieds .dj-item .auction {
+	.bids_input,
+	.bids_button {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 5px 0 0;
+	}
+}
+
+#dj-classifieds .dj-item .auction .bids_login_info {
+	a {
+		color: @JMstyle;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+//icons
+#dj-classifieds {
+.dj-item .general_det .djcf_contact span.row_label {
+    background: url("../images/@{JMimgDir}/desc.png") no-repeat left top;
+  }
+  .dj-item .general_det .added span.row_label {
+    background: url("../images/@{JMimgDir}/added.png") no-repeat left top;
+  }
+  .dj-item .general_det .user_name span.row_label {
+    background: url("../images/@{JMimgDir}/created.png") no-repeat left top;
+  }
+  .dj-item .description h2 {
+    background: url("../images/@{JMimgDir}/desc.png") no-repeat left top;
+  }
+  .dj-item .custom_det h2 {
+    background: url("../images/@{JMimgDir}/details.png") no-repeat left top;
+  }
+  .dj-item .localization_det h2 {
+    background: url("../images/@{JMimgDir}/region.png") no-repeat left top;
+  }
+  .dj-item .additional h2 {
+    background: url("../images/@{JMimgDir}/details.png") no-repeat left top;
+  }
+  .dj-item .video_box h2 {
+    background: url("../images/@{JMimgDir}/video.png") no-repeat left top;
+  }
+  .dj-item .djcf_comments h2 {
+    background: url("../images/@{JMimgDir}/comments.png") no-repeat left top;
+  }
+  .dj-item .auction .bids_title h2 {
+  	background: url("../images/@{JMimgDir}/price.png") no-repeat left top;
+  }
+}
+
+//price
+#dj-classifieds .dj-item .general_det .price_wrap {
+  line-height: 1.5;
+  background: @JMstyleClassifiedsPriceBackground;
+  border-bottom: 4px solid @JMstyleClassifiedsPriceBorder;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 25px;
+  color: @white;
+  .border-radius(5px);
+  .row_value {
+    padding-left: 10px;
+  }
+  span.row_label {
+    padding: 0 0 0 30px;
+    border: none;
+    display: inline-block;
+    line-height: 20px;
+    margin: 0;
+    font-size: 1.4em;
+    color: @white;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url("../images/classifieds/price_white.png");
+  }
+  span.row_value {
+    display: inline-block;
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.3;
+  }
+  .row_negotiable {
+    margin: 5px 0 0 0;
+    text-align: center;
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    color: @JMstyleClassifiedsPriceNegotiableFont;
+  }
+	//buynow
+	.buynow_outer  {
+		margin: 20px 0 0;
+		form {
+			margin: 0;
+		}
+		input[type='text'] {
+			max-width: @JMclassifiedsSmallInputWidth;
+			margin: 0 5px;
+		}
+		.button {
+			display: inline-block;
+			text-shadow: none;
+			#gradient .vertical(@JMbuttonInnerBackground, @JMbuttonInnerActiveBackground);
+			color: @JMstyleButtonInnerFontColor !important;
+			margin: 2px;
+			&:hover,
+			&:active {
+				background: @JMbuttonInnerActiveBackground;
+			}
+		}
+	}
+	.buynow_quantity + label {
+		display: inline-block;
+		margin: 5px;
+	}
+}
+
+//abuse and contact form
+#dj-classifieds #ask_form {
+  width: 100%;
+  label.invalid{
+    color: #ff0000;
+  }
+}
+
+#dj-classifieds #djabuseForm {
+  br {
+    height: 0;
+    clear: both;
+  }
+  label + br {
+    display: none;
+  }
+}
+
+//forms
+#dj-classifieds #ask_form,
+#dj-classifieds #abuse_form {
+	width: 100%;
+	form {
+		margin: 20px 0 0;
+	}
+	label {
+		font-size: 0.9em;
+	}
+	textarea,
+	select,
+	input[type="text"],
+	input[type="email"],
+	input[type="file"] {
+		.box-sizing(border-box);
+		margin-bottom: 20px;
+		max-width: 400px;
+		width: 100%;
+	}
+	.calendar,
+	.radiofield_box,
+	#recaptcha_widget_div {
+		margin: 0 0 10px;
+	}
+	.radio_label {
+		margin: 0 0 0 5px;
+	}
+}
+
+#dj-classifieds {
+  .button#ask_form_button,
+  .button#abuse_form_button {
+    margin: 0 16px 0 0;
+  }
+  .button#ask_form_button,
+  .button#abuse_form_button,
+  .gm_drive_dir input.button {
+    font-family: inherit;
+    font-size: 13px;
+    background-image: none!important;
+    background: none;
+    filter: none!important;
+    text-shadow: none;
+    box-shadow: none;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 9px 20px;
+    height: auto;
+    line-height: 1.1;
+    .transition(all 0.2s ease-in);
+    width: 310px;
+    max-width: 100%;
+    &:hover {
+      color: @JMclassifiedsSeedetailsActiveFont!important;
+      border: 1px solid transparent!important;
+    }
+  }
+  .button#ask_form_button,
+  .gm_drive_dir input.button {
+    border: 1px solid @JMstyleClassifiedsSeedetailsBorder!important;
+    color: @JMstyleClassifiedsSeedetailsFont!important;
+    &:hover {
+      background: @JMstyleClassifiedsSeedetailsActiveBackground;
+    }
+  }
+}
+
+#dj-classifieds .button#abuse_form_button {
+  border: 1px solid @JMclassifiedsAbuseButtonBorder!important;
+  color: @JMclassifiedsAbuseButtonFont!important;
+  &:hover {
+    background: @JMclassifiedsAbuseButtonActiveBackground!important;
+  }
+}
+
+#dj-classifieds .dj-item {
+  .description,
+  .custom_det,
+  .localization_det,
+  .additional,
+  .video_box,
+  .djcf_comments {
+    h2 {   
+      border-bottom: 1px dotted @JMclassifiedsBorder;
+      font-size: @JMclassifiedsBoxLabelsFontSize;
+      color: @JMheadingColor;
+      font-weight: @JMheadingFontWeight;
+      line-height: 20px;
+      margin: 0 0 10px;
+      padding: 0 0 10px 30px;
+    }
+  }
+}
+
+//description
+#dj-classifieds .dj-item .description {
+  clear: both;
+}
+
+//localization
+#dj-classifieds .dj-item .localization_det {
+  float: right;
+  width: 47%;
+  margin-left: 3%;
+  .row {
+    margin-bottom: 15px;
+  }
+  #google_map_box #map {
+    max-width: 100%;
+    img {
+      max-width: none;
+      .box-sizing(content-box);
+    }
+  }
+  form.gm_drive_dir {
+    margin: 0;
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .inputbox {
+      margin: 0 0 5px;
+      .box-sizing(border-box);
+      max-width: 165px;
+    }
+  }
+  .gm_drive_dir_l {
+    padding-top: 5px;
+    display: inline-block;
+    &:hover {
+      cursor: pointer;
+    }
+    span {
+      background: url("../images/classifieds/show_on_map.png") no-repeat center top;
+      display: inline-block;
+      height: 37px;
+      margin: 0 5px;
+      vertical-align: middle;
+      width: 54px;
+      cursor: auto;
+    }
+  }
+  .geo_coordinates,
+  .map_info{
+    margin-top: 10px;
+  }
+  .geo_coordinates span {
+    white-space: nowrap;
+    margin-left: 2px;
+  }
+  .gm_drive_dir input.button {
+    display: inline-block;
+    width: auto!important;
+    margin-bottom: 5px;
+  }
+}
+
+//specific details
+#dj-classifieds .dj-item  .custom_det {
+  float: left;
+  width: 47%;
+  margin-right: 3%;
+  .row {
+    margin: 0 0 10px;
+  }
+  span.row_label {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+//additional
+#dj-classifieds .dj-item  .additional {
+	.row {
+    margin: 0 0 10px;
+  }
+  span.row_label {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+//video box
+#dj-classifieds .dj-item .video_box {
+  float: left;
+  width: 100%; 
+  h2 {
+    margin: 0 0 15px;
+  }
+  .row{
+    text-align: center;
+    margin-bottom: 0px;
+  }
+}
+
+#dj-classifieds .videoWrapper {
+  margin: 0 auto;
+  max-width: 600px;
+  .videoWrapper-in {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: auto;
+      width: 100%;
+      height: 100%;
+			border: none;
+    } 
+  }
+}
+
+//additional
+#dj-classifieds .dj-item .additional {
+  clear: both;
+  .row {
+    margin: 0 0 10px;
+  }
+}
+
+//comments
+#dj-classifieds .dj-item .djcf_comments {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+}
+
+//pagebreak
+#dj-classifieds .dj-item-in .intro_desc_content + .djcf_tabs {
+  margin: @JMbaseSpace 0 0;
+}
+
+#dj-classifieds .nav-tabs .nav-toggler {
+  cursor: pointer;
+}
+
+#dj-classifieds .nav-tabs .nav-toggler.active {
+  cursor: auto;
+}
+
+//addthis bottom
+#dj-classifieds .dj-item .sb_bottom {
+  margin: 20px;
+  float: left;
+  width: 100%;
+}
+
+//bottom position
+#dj-classifieds .djcf-ad-item-bottom {
+	margin-top: @JMbaseSpace;
+}
+
+#dj-classifieds .djcf-ad-item-bottom .moduletable {
+	margin-bottom: 0;
+}
+
+// komento
+#dj-classifieds .dj-item #section-kmt .kmt-title {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 33px;
+}
+
+#dj-classifieds .dj-item #section-kmt .kmt-toolbar {
+	margin-top: 10px;
+}
+
+// Search view
+// -------------------------- 
+
+#dj-classifieds .search_res_details {
+    padding: 0 0 10px;
+}
+
+// User Points
+// -------------------------- 
+
+#dj-classifieds .userpoints .points_available {
+  text-align: right;
+  font-size: 1.2em;
+  padding-right: 5px;
+  margin: 10px 0;
+  span{
+    font-weight: bold;
+    display: inline-block;
+  }
+}
+
+.djcf_user_points .djcf_upoints_box,
+.jm-module.white-ms .djcf_user_points .djcf_upoints_box {
+    border-bottom: 1px solid @JMborder;
+}
+
+// User Profile
+// -------------------------- 
+
+#dj-classifieds .profile_outer {
+  .profile_box {
+    display: table;
+    width: 100%;
+  }
+  .profile_img {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .profile_name_data {
+    display: table-cell;
+    vertical-align: top;   
+  }
+  .profile_name_data .profile_data {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: @JMbaseSpace;
+  }
+  .profile_row {
+    clear: both;
+  }
+  .profile_row_label {
+    .box-sizing(border-box);
+    float: left;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+    text-align: right;
+    width: 25%;
+    vertical-align: middle;
+  }
+  .profile_row_value {
+    float: left;
+    width: 75%;
+    padding: 10px;
+    .box-sizing(border-box);
+    vertical-align: middle;
+  }
+}
+
+// Points Packages
+// -------------------------- 
+
+#dj-classifieds .pointspackages .pp_price {
+  font-weight: bold;
+	font-size: 30px;
+  margin-bottom: 10px;
+	color: @JMstyle;
+}
+
+//divs
+#dj-classifieds .pointspackages {
+	.paymentdetails {
+		margin: 0 -(@JMbaseSpace /2) @JMbaseSpace;
+	}
+	.djcf_prow {
+		padding: 0 (@JMbaseSpace /2) @JMbaseSpace;
+		width: 33.33%;
+		float: left;
+		.box-sizing(border-box);
+	}
+	.djcf_prow_col_desc {
+		margin: 0 0 (@JMbaseSpace / 2);
+	}
+	.djcf_prow_details_title {
+		font-weight: 400;
+		font-size: inherit;
+		color: @JMstyle;
+		cursor: pointer;
+		margin: 10px 0;
+		position: relative;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:after {
+			content: '+';
+			margin: 0 3px;
+		}
+		&.active:after {
+			content: '-';
+		}
+	}
+}
+
+#dj-classifieds .pointspackages table.paymentdetails td.table_payment table td.td2 {
+  border-left: none;
+  width: 70%;
+}
+
+#dj-classifieds .pointspackages h3 {
+  font-size: 1.3em;
+  margin: 0 0 10px 0;
+}
+
+#dj-classifieds table.paymentdetails {
+  width: 100%;
+  &.first {
+    margin-bottom: 20px;
+  }
+  .payment_td {
+    border: 1px solid @JMclassifiedsBorder;
+  }
+  td.td_pdetails {
+    padding: 20px 0 0;
+    div.pd_row {
+      padding: 10px 0 0;
+      margin-top: 10px;
+      border-top: 1px solid @JMclassifiedsBorder;
+      display: inline-block;
+      width: 100%;
+      &:first-child {
+        padding: 0;
+        margin: 0;
+        border: none;
+      }
+      .djcfpay_label {
+        font-weight: bold;
+      }
+    }
+    div.pd_row_total {
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-weight: bold;
+      background: @JMclassifiedsBoxBackground;
+      span {
+        float: none;
+        padding: 0;
+      }
+    }
+    div span {
+      padding: 0 5px;
+    }
+    div span.price {
+      float: right;
+    }
+  }
+  td.td_title {
+    background: none;
+    font-weight: normal;
+    padding: 0;
+    line-height: 1.5;
+    border-bottom: none;
+    border-top: none;
+  }
+  .table_payment {
+    padding: 10px 0 0;
+     table td {
+      vertical-align: middle;
+    }
+    table td.td1 img,
+    table td.td3 img {
+      vertical-align: middle;
+    }
+    table td.td2 {
+      border-left: 1px solid @JMclassifiedsBorder;
+      border-right: 1px solid @JMclassifiedsBorder;
+      padding: 20px;
+      vertical-align: top;
+      table {
+        margin-top: 10px;
+        th {
+          text-align: left;
+        }
+        select,
+        input {
+          margin: 5px;
+        }
+      }
+    }
+    table td.td2 {
+      padding: 20px;
+    }
+    table div.email_box span {
+      margin: 10px 0 5px;
+      display: block;
+    }
+    table div.email_box input.validate-email {
+      width: 200px;
+    }
+  }
+}
+
+#dj-classifieds table.paymentdetails td.table_payment a.button {
+  margin: 5px;
+}
+
+#dj-classifieds table.paymentdetails td.td_pdetails div.pd_row_tax{
+	clear: both;
+	overflow: auto;
+}
+
+//plans
+#dj-classifieds .pointspackages {
+	.djcf_prow_details_content {
+		.djcf_prow_desc_label {
+			display: inline-block;
+			width: 100%;
+			max-width: 200px;
+		}
+		.djcf_prow_desc_value {
+			display: inline-block;
+		}
+	}
+	.icon_active,
+	.icon_unactive {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background: url("../images/classifieds/icon_active.png");
+		vertical-align: middle;
+	}
+	.icon_unactive {
+		background: url("../images/classifieds/icon_unactive.png");
+	}
+}
+
+// Warning page
+// -------------------------- 
+
+#dj-classifieds .djcf_warning_outer {
+	.djcf_warning_outer_in {
+		padding: 10px 20px;
+	}
+	.djcf_war_content {
+		text-align: center;
+	}
+	.djcf_war_link {
+		text-align: center;
+	}
+	.djcf_war_buttons {
+		margin: 20px 0 10px;
+		text-align: center;
+		width: 100%;
+	}
+	.djcf_war_buttons .button {
+		margin: 0 10px;
+		float: none;
+	}
+}
+
+// Checkout
+// -------------------------- 
+
+#dj-classifieds .djcf_checkout_outer {
+	.djcf_checkout_det {
+		padding: 10px 20px;
+		.ch_row_total {
+			padding: 20px;
+			background: @JMclassifiedsBoxBackground;
+			margin: @JMbaseSpace 0;
+			.ch_label {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.ch_value {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: (@JMbaseFontSize * 2);
+				color: @JMstyle;
+				margin: 0 5px;
+			}
+		}
+		.ch_row_button {
+			.button {
+				float: left;
+			}
+			form .button {
+				margin-left: @JMbaseSpace;
+			}
+		}
+		form {
+			margin: 0;
+		}
+		.ch_row {
+			margin: 10px 0;
+		}
+		.ch_label {
+			font-weight: bold;
+		}
+	}
+}
+
+// Module Items
+// -------------------------- 
+
+.mod_djclassifieds_items {
+  .items {
+    margin-left: -(@JMbaseSpace/2);
+    margin-right: -(@JMbaseSpace/2);
+  }
+  .item {
+    display: inline-block;
+    width:100%;
+    margin: @JMbaseSpace 0 0;
+    padding: 0;
+    position: relative;
+    &:first-child {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .items-col {
+    float: left;
+    .icol-in {
+      padding: 0 (@JMbaseSpace/2) 0;
+    }
+  }
+  
+  .items-cols1 .items-col {width: 100%;}
+  .items-cols2 .items-col {width: 49.9%;}
+  .items-cols3 .items-col {width: 33.3%;}
+  .items-cols4 .items-col {width: 24.9%;}
+  .items-cols5 .items-col {width: 19.9%;}
+  .items-cols6 .items-col {width: 16.6%;}
+  .items-cols7 .items-col {width: 14.2%;}
+  .items-cols8 .items-col {width: 12.4%;}
+  .items-cols9 .items-col {width: 11.1%;}
+  .items-cols10 .items-col {width: 9.9%;}
+  
+  div.title {
+    float: left;
+    width: 100%;
+    a.title {
+      font-size: @JMclassifiedsBoxTitleFontSize;
+      line-height: 1.1;
+      font-weight: 600;
+      text-decoration: none;
+      padding-bottom: 12px;
+      margin-bottom: 11px;
+      display: inline-block;
+      position: relative;
+      text-transform: uppercase;
+      &:after {
+        position: absolute;
+        content:'';
+        width: 62px;
+        height: 2px;
+        left: 0;
+        right: auto;
+        bottom: 0;
+        background: @JMstyle;
+      }
+    }
+    span.category a.title_cat {
+      font-weight: 600;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    span {
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    span.date {
+      font-size: 13px;
+    }
+    span.price {
+      font-size: 22px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    span.date,
+    span.category,
+    span.region,
+    span.type, 
+    span.price {
+      padding-bottom: 3px;
+      display: block;
+    }
+    img {
+      float: left;
+      vertical-align: top;
+      margin-bottom: 20px;
+      margin-right: 20px !important;
+    }
+  }
+  .desc {
+    font-size: 13px;
+    line-height: 1.5;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+  }
+}
+
+.jm-image-block .mod_djclassifieds_items .title img {
+  float: none;
+  display: block;
+}
+
+.mod_djclassifieds_items div.title a.title,
+.jm-module.white-ms .mod_djclassifieds_items div.title a.title {
+  &:hover {
+    color: @JMstyleHeadingHoverColor;
+  }
+}
+
+.mod_djclassifieds_items div.title a.title,
+.mod_djclassifieds_items div.title span,
+.jm-module.white-ms .mod_djclassifieds_items div.title a.title,
+.jm-module.white-ms .mod_djclassifieds_items div.title span {
+    color: @JMmoduleTitleColor;
+}
+
+.mod_djclassifieds_items div.title span.category a.title_cat,
+.jm-module.white-ms .mod_djclassifieds_items div.title span.category a.title_cat {
+    color: @JMclassifiedsModuleItemsCategoryFontColor;
+}
+
+.mod_djclassifieds_items div.title span,
+.jm-module.white-ms .mod_djclassifieds_items div.title span {
+    color: @JMmoduleTitleColor;
+}
+
+.jm-bottom {
+  .mod_djclassifieds_items div.title a.title:hover {
+    color: @JMstyleLight;
+  }
+  .mod_djclassifieds_items div.title a.title:after {
+    background: @JMstyleButtonActiveBackground;
+  }
+  .mod_djclassifieds_items .item:before,
+  .mod_djclassifieds_items .item:after {
+    border-color: @JMstyleInnerMenuBorderColor;
+  }
+  .mod_djclassifieds_items div.title span.category a.title_cat {
+    color: @JMstyleLight;
+  }
+  .djcf_user_points .djcf_upoints_box {
+    border-bottom: 1px solid @JMstyleInnerMenuBorderColor;
+  }
+}
+
+.jm-bottom {
+  .mod_djclassifieds_items div.title a.title,
+  .mod_djclassifieds_items div.title span {
+    color: @JMmenuInnerLinkColor;
+  }
+}
+
+.jm-footer,
+.jm-offcanvas {
+  .mod_djclassifieds_items div.title a.title,
+  .mod_djclassifieds_items div.title span {
+    color: @JMmenuInnerLinkColor;
+  }
+  .mod_djclassifieds_items div.title a.title:hover {
+  	color: @JMstyle;
+  }
+  .mod_djclassifieds_items .item:before,
+  .mod_djclassifieds_items .item:after {
+    border-color: @JMmenuFootermodBorderColor;
+  }
+  .mod_djclassifieds_items div.title span.category a.title_cat {
+    color: @JMclassifiedsModuleItemsCategoryFontColor;
+  }
+  .djcf_user_points .djcf_upoints_box {
+    border-bottom: 1px solid @JMmenuFootermodBorderColor;
+  }
+}
+
+// Module Items Slider
+// -------------------------- 
+
+.mod_djclassifieds_items.mod_djcf_slider {
+  position: relative;
+  .items-outer {
+    overflow: hidden;
+    padding: 0 40px;
+    .box-sizing(border-box);
+  }
+  .items {
+    overflow: hidden;
+    margin: 10px 0 0 0px;
+  }
+  .items-content {
+    .opacity(0);      
+  }
+  
+  .items-cols1 .item-box {width: 100%;}
+  .items-cols2 .item-box {width: 49.9%;}
+  .items-cols3 .item-box {width: 33.3%;}
+  .items-cols4 .item-box {width: 24.9%;}
+  .items-cols5 .item-box {width: 19.9%;}
+  .items-cols6 .item-box {width: 16.6%;}
+  .items-cols7 .item-box {width: 14.2%;}
+  .items-cols8 .item-box {width: 12.4%;}
+  .items-cols9 .item-box {width: 11.1%;}
+  .items-cols10 .item-box {width: 9.9%;}
+  
+  .items-content .item-box {
+    float: left;
+  }
+  .items-content .item-box .item {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  .items-content .item-box .item-box-in {
+    padding: 0 5px 5px;
+  }
+  .djcf_slider_left,
+  .djcf_slider_right {
+    width: 30px;
+    height: 30px;
+    left: 5px;
+    right: auto;
+    top: 50px;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    display: none;
+    background: #75796F url('../images/classifieds/slider_arrow_left.png') center 8px no-repeat;
+    .border-radius(3px);
+    color: #fff;
+    font-weight: bold;
+  }
+  .djcf_slider_right {
+    background: #75796F url('../images/classifieds/slider_arrow_right.png') center 8px no-repeat;
+    left: auto;
+    right: 5px;
+  }
+  .djcf_slider_right.blocked {
+    background: #CCCCCC url('../images/classifieds/slider_arrow_right.png') center 8px no-repeat;
+  }
+  .djcf_slider_left.blocked {
+    background: #CCCCCC url('../images/classifieds/slider_arrow_left.png') center 8px no-repeat;
+  }
+  .djcf_slider_loader {   
+    position: absolute;
+    width: 100%;
+    height: 31px;
+    top: 50px;
+    left: 0;
+    right: auto;
+  }
+  .djcf_slider_loader_img {
+    width: 31px;
+    height: 31px;
+    margin: 0 auto;
+    background: url('../images/classifieds/slider_loader.gif') top left no-repeat;
+  }
+  .item:before,
+  .item:after {
+    display: none!important;
+  }
+}
+
+// Menu Module
+// -------------------------- 
+
+.djcf_menu .newad_link_bottom {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#jm-allpage .djcf_menu a.button {
+  padding: 8px 15px 7px;
+}
+
+.djcf_user_points,
+.djcf_user_menu,
+.jm-module.white-ms .djcf_user_points,
+.jm-module.white-ms .djcf_user_menu {
+  ul.menu li:hover > a,
+  ul.menu li.active > a {
+    color: @JMstyleMenuActiveFontColor;
+  }
+}
+
+.jm-bottom .djcf_user_points,
+.jm-bottom .djcf_user_menu {
+  ul.menu {
+    li:hover > a,
+    li.active > a {
+      color: @JMstyleInnerMenuActiveFontColor;
+    }
+    > li {
+      border-bottom: 1px solid @JMstyleInnerMenuBorderColor;
+    }
+  }
+}
+
+//classfieds menu arrows
+/* V */
+.jm-bottom .djcf_menu .menu > li.active:after,
+.jm-bottom .djcf_menu .menu > li.active:hover:after {
+  border-color: @JMstyleInnerMenuArrowColor transparent transparent transparent;
+  border-color: @JMstyleInnerMenuArrowColor rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
+}
+
+/* > */
+.jm-bottom .djcf_menu .menu > li:hover:after  {
+  border-color: transparent transparent transparent @JMstyleInnerMenuArrowColor;
+  border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) @JMstyleInnerMenuArrowColor;
+}
+
+.tags .djcf_menu .menu > li.active:after {
+  display: none!important;
+}
+
+.tags .djcf_menu .menu > li:hover:after {
+  top: 12px;
+}
+
+// Module Search
+// -------------------------- 
+
+.dj_cf_search {
+	form {
+		margin: 0;
+	}
+	//default inputs
+	div {
+		input[type="text"],
+		select {
+			width: 100%;
+			.box-sizing(border-box);
+			margin: 0;
+		}
+		&:empty {
+			display: none;
+		}
+	}
+	.djcf_se_row {
+		margin: 0 0 20px;
+		div	{
+			margin: 20px 0 0;
+		}
+	}
+  //small inputs
+	.search_price {
+		.label1,
+		.label2 {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		input[type="text"] {
+			width: @JMclassifiedsSmallInputWidth;
+			margin: 0 5px;
+		}
+	}
+	.from_class,
+	.to_class {
+		display: inline-block;
+		vertical-align: middle;
+		+ input[type='text'] {
+			width: @JMclassifiedsSmallInputWidth !important;
+			margin: 0 5px;
+		}
+		+ select {
+			margin: 0 5px;
+		}
+	}
+	
+	//extrafields
+	.search_ex_fields {
+		&.no_fields {
+			display: none;
+		}
+		.djseform_field {
+			margin: 0 0 10px;
+		}
+	}
+
+	//radio / checkbox reset
+  input[type="radio"], 
+  input[type="checkbox"] {
+		width: auto;
+    height: auto;
+    line-height: normal;
+    vertical-align: middle;
+		margin: 0 5px 0 0;
+  }
+
+	//geolocation
+	.search_radius {
+		&.se_radius_geoloc {
+			input[type='text'] {
+				margin-bottom: 10px;
+			}
+			.se_geoloc_or_label {
+				display: none;
+			}
+			.se_geoloc_icon {
+				.insert-btn();
+				padding: 0;
+				width: 38px;
+				height: 38px;
+				cursor: pointer;
+				vertical-align: middle;
+				text-align: center;
+				&:before {
+					content: "\e062";
+					line-height: 40px;
+					font-size: 20px;
+					display: inline-block;
+					font-family: 'Glyphicons Halflings';
+					font-style: normal;
+					font-weight: normal;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+				}
+			}
+		}
+	}
+	//label
+	label, 
+  span.label {
+    background: @JMclassifiedsModuleSearchLabelBackground;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1em;
+    margin: 0 0 10px;
+    padding: 5px 10px;
+    vertical-align: middle;
+    width: 100%;
+    color: @JMclassifiedsModuleSearchLabelFontColor;
+    .box-sizing(border-box);
+    .border-radius(3px);
+		text-shadow: none;
+		cursor: default;
+  }
+  .range_label {
+	  display: none;
+	}
+	.search_only_video,
+  .search_only_images,
+  .search_also_18,
+	.search_only_auctions	{
+		.label {
+			display: inline-block;
+			line-height: 1.2;
+			background: none;
+			color: inherit;
+			margin: 0;
+			padding: 0;
+			width: auto;
+		}
+	}
+	.se_checkbox,
+	.radiofield_box {
+		label {
+			display: inline;
+			margin: 0;
+			padding: 0 4px;
+			background: none !important;
+		}
+	}
+	//buttons
+	.search_buttons {
+		clear: both;
+		margin: 10px 0 0;
+		a.reset_button {
+			margin: 10px;
+		}
+		.button + .button {
+			margin-left: 10px;
+		}
+	}
+	//accordion
+  .djfields_accordion_c .label,
+	.djfields_accordion_o .label{
+		position: relative;
+		cursor: pointer;
+		margin-bottom: 0;
+	}
+	.djfields_accordion_c .label.active,
+	.djfields_accordion_o .label.active {
+		margin-bottom: 10px;
+	}
+	.djfields_accordion_c .label:after,
+	.djfields_accordion_o .label:after {
+		content: '+';
+		position: absolute;
+		right: 5px;
+		left: auto;
+	}
+	.djfields_accordion_c .label.active:after,
+	.djfields_accordion_o .label.active:after {
+		content: '-';
+	}
+}
+
+// Module Search Horizontal
+// -------------------------- 
+
+.dj_cf_search.dj_cf_search_horizontal {
+	.cf();
+	.search_type,
+	.search_time,
+	.search_price {
+		float: left; 
+		width: 31.33%;
+		.box-sizing(border-box);
+		margin-right: 2%;
+	}
+	.search_radius,
+	.search_regions,
+	.search_cats {
+		.cf();
+		input[type="text"],
+		select {
+			float: left;
+			width: 31.33%;
+			margin-right: 2%;
+		}
+		div	{
+			margin: 0;
+		}
+		//second row
+		div div div {
+			input[type="text"],
+			select {
+				margin-top: 20px;
+			}
+		} 
+		.clear_both {
+			display: none;
+		}
+	}
+	.search_only_video,
+  .search_only_images,
+  .search_also_18,
+	.search_only_auctions	{
+		clear: both;
+	}
+	.search_radius {
+		&.se_radius_geoloc {
+			//geolocation
+			input[type='text'] {
+				margin-bottom: 0;
+			}
+			.se_geoloc_icon {
+				float: left;
+				margin-right: 2%;
+			}
+		}	
+	}
+	//extrafields
+	.search_ex_fields {
+    .cf();
+	}
+	.search_ex_fields .djseform_field {
+	  float: left;
+	  width: 31.33% !important;
+	  .box-sizing(border-box);
+	}
+	.search_ex_fields .djseform_field + .djseform_field {
+		margin-left: 2%;
+	}
+	div.search_ex_fields .djseform_field:nth-of-type(3n+1) {
+    clear: both;
+    margin-left: 0;
+    margin-right: 0;
+	}
+}
+
+.white-ms .dj_cf_search label, 
+.white-ms .dj_cf_search span.label {
+  background: #f6f6f6;
+}
+
+// Module user points
+// -------------------------- 
+
+.djcf_user_points .djcf_upoints_box {
+  padding: 10px 0;
+  .djcf_upoints{
+    font-size: 1.2em;
+    margin-left: 10px;
+    display: inline-block;
+  }
+}
+
+// Module Maps
+// -------------------------- 
+
+.djmod_map img {
+  max-width: none;
+}
+
+#djmod_map_box #djmod_map img {
+  .box-sizing(content-box);
+  max-width: none;
+}
+
+.djmod_map_places_search .pac-input {
+	width: 400px;
+	margin: 0 0 20px;
+}
+
+.djmod_map_places_search .user_pos {
+	display: none;
+}
+
+// Module Category Tree
+// --------------------------
+
+.mod_djclassifieds_cattree {
+	.dj-cattree-box ul.dj-cattree {
+		float: left;
+		margin: 0;
+	}
+	.dj-cattree-box li {
+		padding: 0;
+		margin: 0 0 5px;
+		background-image: none!important;
+	}
+	.dj-cattree-box > li {
+		margin: 0 0 30px;
+	}
+	.dj-cattree-box ul.dj-cattree li.lvl0 > a {
+		display: block;
+		font-weight: bold;
+		text-align: center;
+		margin: 0 0 10px;
+	}
+	.dj-cattree-box ul.dj-cattree li a img.cat_tree_icon {
+		float: left;
+		height: 25px;
+		margin: 0 10px 0 0;
+	}
+	.dj-cattree-box ul.dj-cattree > li > a > img.cat_tree_icon {
+		float: none!important;
+		height: auto;
+		display: block;
+		margin: 0 auto 10px!important;
+		text-align: center;
+	}
+	.dj-cattree-box li.lvl0.items_cat_type .title {
+		margin-bottom: 10px;
+	}
+	.dj-cattree-box li.lvl0.items_cat_type .title h2 {
+		margin-bottom: 10px;
+		font-weight: bold;
+	}
+	.dj-cattree-box li.lvl0 .title h2,
+	.dj-cattree-box li.lvl0 .title h2 a{
+		font-size: 13px;
+		line-height: 18px;
+	}
+	.dj-cattree-box li.lvl0.items_cat_type .title .cat_desc {
+		font-weight: normal;
+	}
+	.dj-cattree-box.cols2 .dj-cattree {
+		width: 49.9%;
+	}
+	.dj-cattree-box.cols3 .dj-cattree {
+		width: 33.3%;
+	}
+	.dj-cattree-box.cols4 .dj-cattree {
+		width: 24.9%;
+	}
+	.dj-cattree-box.cols5 .dj-cattree {
+		width: 19.9%;
+	}
+}
+
+// Tooltips
+// -------------------------- 
+
+.djcf_label,
+.djcf{
+	z-index: 1000;
+	margin: 20px 0;
+}
+
+.djcf .tip,
+.djcf_label .tip {
+  border: 1px solid @JMclassifiedsBorder;
+  background: @JMclassifiedsTooltipBackground;
+  padding: 15px;
+  max-width: 800px;
+  min-width: 200px;
+} 
+
+.djcf_label .tip {
+  max-width: 400px;
+  min-width: 0;
+} 
+
+.djcf .tip-title {
+  font-weight: bold;
+	font-size: 1.2em;
+	margin: 0;
+}
+
+.djcf .tip-title,
+.djcf .tip-text {
+	margin: 10px 0;
+}
+
+.djcf .tip-text,
+.djcf_label .tip-title {	
+  font-size: 0.9em;
+}
+
+.djcf .tip-text .tp_desc,
+.djcf .tip-text .tp_contact,
+.djcf .tip-text .tp_price,
+.djcf .tip-text .row_location {
+	padding: 0 0 15px;
+}
+
+.djcf .tip-text .row_location,
+.djcf .tip-text .row_contact {
+	width: 35%;
+	float: left;
+	margin-right: 5%;	
+}
+
+.djcf .tip-text .row_price{
+	width: 20%;
+	float: left;
+}
+
+.tip-text .images_box img {
+	margin-right: 5px;
+}
+
+.tip-text .row_title,
+.tip-text .title {
+  font-weight: bold;
+  margin: 0 0 5px;
+  padding: 0 0 5px;
+}
+
+.djcf_prom {
+	z-index: 9999;
+	.tip {
+		background: transparent;
+		border: none;
+	}
+}
+
+img.callendar {
+  cursor: pointer;
+}
+
+#dj-classifieds .dj-item_button {
+  margin-left: 5px;
+} 
+
+//modal window
+#lbPrevLink, #lbNextLink { 
+  background: none; 
+  .transition(none);
+} 
+
+//multiupload
+#multiuploader_file,
+#uploader_container {
+  .plupload_button {
+		.insert-btn();
+		font-family: @JMbaseFontFamily;
+		margin: 2px;
+	}
+	.plupload_hidden {
+		display: none;
+	}
+}
+
+.djc_uploader_table td {
+	vertical-align: middle;
+}
+

@@ -1,0 +1,169 @@
+//--------------------------------------------------------------
+// Copyright (C) joomla-monster.com
+// License: http://www.joomla-monster.com/license.html Joomla-Monster Proprietary Use License
+// Website: http://www.joomla-monster.com
+// Support: info@joomla-monster.com
+//---------------------------------------------------------------
+
+// MIXINS
+//---------------------------------------------------------------
+
+//For clearing floats like a boss h5bp.com/q
+.cf() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.box-shadow2(@shadow1, @shadow2) {
+  -webkit-box-shadow: @shadow1, @shadow2;
+     -moz-box-shadow: @shadow1, @shadow2;
+          box-shadow: @shadow1, @shadow2;
+}
+
+.box-shadow3(@shadow1, @shadow2, @shadow3) {
+  -webkit-box-shadow: @shadow1, @shadow2, @shadow3;
+     -moz-box-shadow: @shadow1, @shadow2, @shadow3;
+          box-shadow: @shadow1, @shadow2, @shadow3;
+}
+
+.box-shadow4(@shadow1, @shadow2, @shadow3, @shadow4) {
+  -webkit-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4;
+     -moz-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4;
+          box-shadow: @shadow1, @shadow2, @shadow3, @shadow4;
+}
+
+.box-shadow5(@shadow1, @shadow2, @shadow3, @shadow4, @shadow5) {
+  -webkit-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
+     -moz-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
+          box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
+}
+
+.rotate3d(@x, @y, @z, @a) {
+  -webkit-transform: rotate3d(@x, @y, @z, @a);
+     -moz-transform: rotate3d(@x, @y, @z, @a);
+      -ms-transform: rotate3d(@x, @y, @z, @a);
+       -o-transform: rotate3d(@x, @y, @z, @a);
+          transform: rotate3d(@x, @y, @z, @a);
+}
+
+.rotateY(@x) {
+  -webkit-transform: rotateY(@x);
+     -moz-transform: rotateY(@x);
+      -ms-transform: rotateY(@x);
+       -o-transform: rotateY(@x);
+          transform: rotateY(@x);
+}
+
+.translateRotate(@x, @y, @z) {
+  -webkit-transform: translate(@x, @y) rotate(@z);
+     -moz-transform: translate(@x, @y) rotate(@z);
+      -ms-transform: translate(@x, @y) rotate(@z);
+       -o-transform: translate(@x, @y) rotate(@z);
+          transform: translate(@x, @y) rotate(@z);
+}
+
+.translateXRotate(@x, @y) {
+  -webkit-transform: translateX(@x) rotate(@y);
+     -moz-transform: translateX(@x) rotate(@y);
+      -ms-transform: translateX(@x) rotate(@y);
+       -o-transform: translateX(@x) rotate(@y);
+          transform: translateX(@x) rotate(@y);
+}
+
+.translateYRotate(@x, @y) {
+  -webkit-transform: translateY(@x) rotate(@y);
+     -moz-transform: translateY(@x) rotate(@y);
+      -ms-transform: translateY(@x) rotate(@y);
+       -o-transform: translateY(@x) rotate(@y);
+          transform: translateY(@x) rotate(@y);
+}
+
+.translateY(@x) {
+  -webkit-transform: translateY(@x);
+     -moz-transform: translateY(@x);
+      -ms-transform: translateY(@x);
+       -o-transform: translateY(@x);
+          transform: translateY(@x);
+}
+
+.translateX(@x) {
+  -webkit-transform: translateX(@x);
+     -moz-transform: translateX(@x);
+      -ms-transform: translateX(@x);
+       -o-transform: translateX(@x);
+          transform: translateX(@x);
+}
+
+.scaleY(@ratio) {
+  -webkit-transform: scaleY(@ratio);
+     -moz-transform: scaleY(@ratio);
+      -ms-transform: scaleY(@ratio);
+       -o-transform: scaleY(@ratio);
+          transform: scaleY(@ratio);
+}
+
+.scaleX(@ratio) {
+  -webkit-transform: scaleX(@ratio);
+     -moz-transform: scaleX(@ratio);
+      -ms-transform: scaleX(@ratio);
+       -o-transform: scaleX(@ratio);
+          transform: scaleX(@ratio);
+}
+
+.animation(@animation) {
+  -webkit-animation: @animation;
+     -moz-animation: @animation;
+      -ms-animation: @animation;
+       -o-animation: @animation;
+          animation: @animation;   
+}
+
+.perspective(@perspective) {
+  -webkit-perspective: @perspective;
+     -moz-perspective: @perspective;
+       -o-perspective: @perspective;
+      -ms-perspective: @perspective;
+          perspective: @perspective;
+}
+
+.transformstyle(@transformstyle) {
+  -webkit-transform-style: @transformstyle;
+     -moz-transform-style: @transformstyle;
+       -o-transform-style: @transformstyle;
+      -ms-transform-style: @transformstyle;
+          transform-style: @transformstyle;
+}
+
+.transform(@transform) {
+  -webkit-transform: @transform;
+     -moz-transform: @transform;
+       -o-transform: @transform;
+      -ms-transform: @transform;
+          transform: @transform;
+}
+
+.filter(@filterString) {
+  -webkit-filter: @filterString;
+     -moz-filter: @filterString;
+       -o-filter: @filterString;
+      -ms-filter: @filterString;
+          filter: @filterString;
+}
+
+.grayscale(@grayscale) { 
+  -webkit-filter: grayscale(@grayscale);
+  -moz-filter: grayscale(@grayscale);
+  -ms-filter: grayscale(@grayscale);
+  -o-filter: grayscale(@grayscale);
+  filter: grayscale(@grayscale);
+}

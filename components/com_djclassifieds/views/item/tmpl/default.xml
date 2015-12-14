@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_DJCLASSIFIEDS_SINGLE_ITEM_VIEW">
+	</layout>
+	<fields name="request">
+		<fieldset name="request" >
+			<field name="id" type="sql" default="0" default_name="COM_DJCLASSIFIEDS_ITEM" label="COM_DJCLASSIFIEDS_ITEM_DESC" query="SELECT id, CONCAT(name,' (',id,') ') as title FROM #__djcf_items WHERE date_exp>now() AND published=1 ORDER BY name" key_field="id" value_field="title"  />
+		</fieldset>
+	</fields>	
+</metadata>

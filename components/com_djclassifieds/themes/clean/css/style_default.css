@@ -1,0 +1,194 @@
+/*
+* DJ-Classifieds Default Theme	
+* DJ-Extensions.com
+* version 1.0.0 for Classifieds 3.4
+*/
+
+/* DEFAULT STYLES */
+
+/* headings */
+
+#dj-classifieds h1,
+#dj-classifieds h2,
+#dj-classifieds h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font-style: normal;
+	font: inherit;
+	vertical-align: baseline;
+	text-transform: none;
+	text-shadow: none;
+	border: none;
+	background: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	letter-spacing: normal;
+	white-space: normal;
+}
+
+/* links */
+
+#dj-classifieds a {
+	text-decoration: none;
+}
+
+#dj-classifieds a:hover {
+	text-decoration: underline;
+}
+
+/* inputs */
+
+#dj-classifieds form {
+  padding: 0;
+  margin: 0;
+}
+
+#dj-classifieds select,
+#dj-classifieds textarea,
+#dj-classifieds input[type="text"],
+#dj-classifieds input[type="password"],
+#dj-classifieds input[type="datetime"],
+#dj-classifieds input[type="datetime-local"],
+#dj-classifieds input[type="date"],
+#dj-classifieds input[type="month"],
+#dj-classifieds input[type="time"],
+#dj-classifieds input[type="week"],
+#dj-classifieds input[type="number"],
+#dj-classifieds input[type="email"],
+#dj-classifieds input[type="url"],
+#dj-classifieds input[type="search"],
+#dj-classifieds input[type="tel"],
+#dj-classifieds input[type="color"] {
+	font-style: normal;
+	margin: 0;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.dj_cf_search div input[type="text"],
+.dj_cf_search div select,
+.dj_cf_maps input[type="text"] {
+	font-style: normal;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#dj-classifieds .dj-additem select,
+#dj-classifieds .dj-additem textarea,
+#dj-classifieds .dj-additem input[type="text"],
+#dj-classifieds .dj-additem input[type="password"],
+#dj-classifieds .dj-additem input[type="datetime"],
+#dj-classifieds .dj-additem input[type="datetime-local"],
+#dj-classifieds .dj-additem input[type="date"],
+#dj-classifieds .dj-additem input[type="month"],
+#dj-classifieds .dj-additem input[type="time"],
+#dj-classifieds .dj-additem input[type="week"],
+#dj-classifieds .dj-additem input[type="number"],
+#dj-classifieds .dj-additem input[type="email"],
+#dj-classifieds .dj-additem input[type="url"],
+#dj-classifieds .dj-additem input[type="search"],
+#dj-classifieds .dj-additem input[type="tel"],
+#dj-classifieds .dj-additem input[type="color"] {
+  max-width: 400px;
+  width: 100% !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#dj-classifieds label.invalid,
+#dj-classifieds .label.invalid {
+  color: #ff0000;
+}
+#dj-classifieds input.invalid,
+#dj-classifieds select.invalid,
+#dj-classifieds textarea.invalid {
+  border: 1px solid #ff0000;
+}
+
+#dj-classifieds textarea {
+	line-height: 1.2;
+}
+
+#dj-classifieds input[type="radio"],
+#dj-classifieds input[type="checkbox"] {
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* buttons */
+
+#dj-classifieds .button,
+.dj_cf_search button.button,
+.dj_cf_search a.button,
+.dj_cf_search span.button,
+.dj_cf_regions_selects button.button,
+.djcf_menu .button,
+#multiuploader_file .plupload_button,
+#uploader_container .plupload_button {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 20px;
+	text-decoration: none;
+	font-size: 13px;
+	font-family: inherit;
+	font-weight: 400;
+	color: #ffffff;
+	padding: 11px 30px;
+	margin: 0;
+	height: auto;
+	width: auto;
+	border: none;
+	background: #26b0cd;
+	text-transform: none;
+	text-shadow: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	cursor: pointer;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#dj-classifieds .button:hover,
+.dj_cf_search button.button:hover,
+.dj_cf_search a.button:hover,
+.dj_cf_search span.button:hover,
+.dj_cf_regions_selects button.button:hover,
+.djcf_menu .button:hover,
+#dj-classifieds .button:focus,
+.dj_cf_search button.button:focus,
+.dj_cf_search a.button:focus,
+.dj_cf_search span.button:focus,
+.dj_cf_regions_selects button.button:focus,
+.djcf_menu .button:focus,
+#multiuploader_file .plupload_button:hover,
+#uploader_container .plupload_button:hover,
+#multiuploader_file .plupload_button:focus,
+#uploader_container .plupload_button:focus {
+	background: #49c3dd;
+	text-decoration: none;
+}
+
+#multiuploader_file .plupload_hidden,
+#uploader_container .plupload_hidden {
+  display: none;
+}
+
+/* pagination */
+
+#dj-classifieds .pagination {
+	margin: 30px 0 0;
+	padding: 0;
+	text-align: center;
+}
+
+/* menu */
+
+.djcf_menu .nav li {
+  padding: 0;
+  background: none;
+}
